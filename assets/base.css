@@ -307,7 +307,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: calc(var(--font-heading-scale) * 2.8rem);
 }
 
 @media only screen and (min-width: 750px) {
@@ -3509,7 +3509,26 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+/* mk - button */
+.button-green{
+  margin: 0 auto;
+  width: max-content;
+  background: #009845;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.button-green::hover{
 
+}
 /* Loading spinner */
 .loading__spinner {
   position: absolute;

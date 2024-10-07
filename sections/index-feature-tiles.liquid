@@ -1,0 +1,203 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .index-feature-tiles .number{
+      font-size:60px;
+      line-height: 60px;
+      color: #fff;
+      font-weight: 700;
+    }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .index-feature-tiles .number{
+      font-size:80px;
+      line-height: 80px;
+    }
+  }
+  .index-feature-tiles .highlight-cards-section {
+    text-align: left;
+    margin: 20px 0;
+  }
+  .index-feature-tiles .highlight-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .index-feature-tiles .highlight-card{
+    position: relative;
+  }
+ .index-feature-tiles .details-position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    padding: 30px;
+ }
+ .index-feature-tiles .details-position h5{
+    margin-top: 4px;
+    letter-spacing: -0.4px;
+    font-weight: 600;
+    color:#fff;
+    margin-bottom: 0;
+ }
+ .index-feature-tiles .details-position p{
+    margin-top: 10px;
+    letter-spacing: -0.4px;
+    font-weight: 600;
+    color:#fff;
+    margin-bottom: 0;
+ }
+.index-feature-tiles img{
+  width: 100%;
+  height: 100%;
+ }
+ @media(max-width:767px){
+    .index-feature-tiles .highlight-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .index-feature-tiles .details-position h5{
+      font-size:20px;
+      letter-spacing: -0.2px;
+    }    
+    .index-feature-tiles .details-position p{
+      font-size:16px;
+      letter-spacing: -0.2px;
+    }  
+ }
+{%- endstyle -%}
+<div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+    <section class="highlight-cards-section section-{{ section.id }}-padding">
+      <header>
+        <h2>{{ section.settings.section_title }}</h2>
+        <p>{{ section.settings.section_subtitle }}</p>
+      </header>
+      <div class="highlight-cards">
+        {% for block in section.blocks %}
+          <div class="highlight-card" data-analytics-id="card-{{ block.id }}">
+            {% if block.settings.background_image != blank %}
+              <img  class="small-hide" src="{{ block.settings.background_image | img_url: '' }}" alt="{{ block.settings.title }}" width="" height="">
+            {% endif %}
+            {% if block.settings.mobilebackground_image != blank %}
+            <img class="medium-hide large-up-hide" src="{{ block.settings.mobilebackground_image | img_url: '' }}" alt="{{ block.settings.title }}" width="" height="">
+            {% endif %} 
+            <div class="details-position">
+              <div class="number">{{ block.settings.title }}</div>
+              <h5>{{ block.settings.subtitle }}</h5>
+              <p>{{ block.settings.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="highlight-cards-button center">
+        <a href="{{ section.settings.url }}" class="button-green">
+            {{ section.settings.button_text }}
+         {% render 'button-arrow' %}
+        </a>
+     </div>
+    </section>
+  </div>
+
+{% schema %}
+{
+  "name": "Feature Tiles Section",
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "full_width",
+        "default": true,
+        "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "section_subtitle",
+      "label": "Section Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "button text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "button Link"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Desktop Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "mobilebackground_image",
+            "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "20+"
+        },
+        {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "Sub Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Pioneering Probiotic Science for Over Two Decades"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Tiles Section"
+    }
+  ]
+}
+{% endschema %}
