@@ -106,9 +106,7 @@
                               </div>
                               <div class="link makro--link product-360-link ">
                                 {{ block.settings.cta_text_1 }} 
-                                 {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}
+                                {% render 'arrow-svg' %}
                               </div>
                             </div>
                           </a>
@@ -144,9 +142,7 @@
                               </div>
                               <div class="link makro--link product-360-link">
                                 {{ block.settings.cta_text_2 }} 
-                                {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}
+                                {% render 'arrow-svg' %}
                               </div>
                             </div>
                           </a>
@@ -161,8 +157,11 @@
         <a href="{{ menu_item.url }}">{{ menu_item.title }}
          
         </a>
-        {% endif %} {% elsif block.type == 'about' %} {% assign
-        images_block_with_product = true %} {% if menu_item.links != blank and
+        {% endif %} 
+        {% elsif block.type == 'about' %} 
+        {% assign
+        images_block_with_product = true %}
+         {% if menu_item.links != blank and
         images_block_with_product == true %}
         <div href="{{ menu_item.url }}" class="navbar_link dropdown_toggle_"
           >{{ menu_item.title }}
@@ -186,261 +185,7 @@
         </div
         >
         <div class="dropdown_menu dropdown-content">
-          <div class="megamenu-about-content-main animate__animated animate__fadeInDown">
-              <div class="megamenu-about-content">
-                <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                           <a href="{{ block.settings.cta_link_1 }}">
-                          <img
-                            src="{{ block.settings.desktop_images_1 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="desktop-img"
-                          />
-                          <img
-                            src="{{ block.settings.mobile_images_1 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="mobile-img"
-                          />
-                           </a>
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                            <a href="{{ block.settings.cta_link_1 }}">
-                              <h5>{{ block.settings.header_text_1 }}</h5>
-                            </a>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ block.settings.paragraph_text_1 }}</p>
-                          </div>
-                        </div>
-                        <div class="link makro--link product-360-link">
-                          <a href="{{ block.settings.cta_link_1 }}"
-                            >{{ block.settings.cta_text_1 }}
-                             {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                           <a href="{{ block.settings.cta_link_2 }}">
-                          <img
-                            src="{{ block.settings.desktop_images_2 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="desktop-img"
-                          />
-                          <img
-                            src="{{ block.settings.mobile_images_2 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="mobile-img"
-                          />
-                           </a>
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                             <a href="{{ block.settings.cta_link_2 }}">
-                              <h5>{{ block.settings.header_text_2 }}</h5>
-                             </a>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ block.settings.paragraph_text_2 }}</p>
-                          </div>
-                        </div>
-                        <div class="link makro--link product-360-link">
-                          <a href="{{ block.settings.cta_link_2 }}"
-                            >{{ block.settings.cta_text_2 }} 
-                            {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                 <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                           <a href="{{ block.settings.cta_link_3 }}">
-                          <img
-                            src="{{ block.settings.desktop_images_3 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="desktop-img"
-                          />
-                          <img
-                            src="{{ block.settings.mobile_images_3 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="mobile-img"
-                          />
-                           </a>
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                             <a href="{{ block.settings.cta_link_3 }}"><h5>{{ block.settings.header_text_3 }}</h5></a>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ block.settings.paragraph_text_3 }}</p>
-                          </div>
-                        </div>
-                        <div class="link makro--link product-360-link">
-                          <a href="{{ block.settings.cta_link_3 }}"
-                            >{{ block.settings.cta_text_3 }} 
-                            {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                 <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                           <a href="{{ block.settings.cta_link_4 }}">
-                          <img
-                            src="{{ block.settings.desktop_images_4 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="desktop-img"
-                          />
-                          <img
-                            src="{{ block.settings.mobile_images_4 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="mobile-img"
-                          />
-                           </a>
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                             <a href="{{ block.settings.cta_link_4 }}"><h5>{{ block.settings.header_text_4 }}</h5></a>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ block.settings.paragraph_text_4 }}</p>
-                          </div>
-                        </div>
-                        <div class="link makro--link product-360-link">
-                          <a href="{{ block.settings.cta_link_4 }}"
-                            >{{ block.settings.cta_text_4 }} 
-                            {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                 <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                           <a href="{{ block.settings.cta_link_5 }}">
-                          <img
-                            src="{{ block.settings.desktop_images_5 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="desktop-img"
-                          />
-                          <img
-                            src="{{ block.settings.mobile_images_5 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="mobile-img"
-                          />
-                           </a>
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                             <a href="{{ block.settings.cta_link_5 }}"><h5>{{ block.settings.header_text_5 }}</h5></a>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ block.settings.paragraph_text_5 }}</p>
-                          </div>
-                        </div>
-                        <div class="link makro--link product-360-link">
-                          <a href="{{ block.settings.cta_link_5 }}"
-                            >{{ block.settings.cta_text_5 }} {% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                  <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                           <a href="{{ block.settings.cta_link_6 }}">
-                          <img
-                            src="{{ block.settings.desktop_images_6 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="desktop-img"
-                          />
-                          <img
-                            src="{{ block.settings.mobile_images_6 | img_url: 'master' }}"
-                            alt="Product Image"
-                            class="mobile-img"
-                          />
-                           </a>
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                             <a href="{{ block.settings.cta_link_6 }}">
-                            <h5>{{ block.settings.header_text_6 }}</h5>
-                             </a>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ block.settings.paragraph_text_6 }}</p>
-                          </div>
-                        </div>
-                        <div class="link makro--link product-360-link">
-                          <a href="{{ block.settings.cta_link_6 }}"
-                            >{{ block.settings.cta_text_6 }}{% if settings.arrowsvg != blank %}
-                                    {{ settings.arrowsvg }}
-                                {% endif %}</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-           
-          </div>
+          tessssssssssss
         </div>
         {% else %}
         <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
