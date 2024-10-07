@@ -160,16 +160,17 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
-        endif
-      endif
-    %}
-
+    
+    
+      {% if section.settings.menu != blank %}
+        {% if section.settings.menu_type_desktop == 'dropdown'  %}
+          {% render 'header-megamenu', menu:section.settings.menu %}
+        {% elsif section.settings.menu_type_desktop != 'drawer'  %}
+          {% render 'header-mega-menu'  %}
+        {% endif %}
+      {% endif %}
+  
+  
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -201,10 +202,6 @@
       {%- endif -%}
     {%- endif -%}
 
-    {% if section.settings.menu != blank %}
-      
-      {% render 'header-megamenu', menu:section.settings.menu %}
-    {% endif %}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
@@ -755,20 +752,14 @@
         },
         {
           "type": "text",
-          "id": "link_text_1",
-          "label": "Link Text 1",
-          "default": "Shop All Bakeware"
+          "id": "menu_heading_2",
+          "label": "Header Text 2",
+          "default": "Menu Heading 2"
         },
         {
-          "type": "url",
-          "id": "link_url_1",
-          "label": "Link URL 1"
-        },
-        {
-          "type": "text",
-          "id": "header_text",
-          "label": "Header Text",
-          "default": "Bakeware Bestsellers"
+          "type": "link_list",
+          "id": "inner_menu_2",
+          "label": "Select a menu"
         },
         {
           "type": "image_picker",
@@ -835,104 +826,6 @@
           "id": "cta_text_2",
           "label": "CTA Text 2",
           "default": "Shop Now"
-        },
-        {
-          "type": "image_picker",
-          "id": "new_img",
-          "label": "Slide 1 Image"
-        },
-        {
-          "type": "text",
-          "id": "slide_1_heading",
-          "label": "Slide 1 Heading",
-          "default": "Summer Sale Up to 25%"
-        },
-        {
-          "type": "textarea",
-          "id": "slide_1_text",
-          "label": "Slide 1 Text",
-          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        },
-        {
-          "type": "url",
-          "id": "slide_1_link",
-          "label": "Slide 1 Link"
-        },
-        {
-          "type": "image_picker",
-          "id": "new_img_2",
-          "label": "Slide 2 Image"
-        },
-        {
-          "type": "text",
-          "id": "slide_2_heading",
-          "label": "Slide 2 Heading",
-          "default": "Winter Sale Up to 30%"
-        },
-        {
-          "type": "textarea",
-          "id": "slide_2_text",
-          "label": "Slide 2 Text",
-          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        },
-        {
-          "type": "url",
-          "id": "slide_2_link",
-          "label": "Slide 2 Link"
-        },
-        {
-          "type": "image_picker",
-          "id": "new_img_3",
-          "label": "Slide 3 Image"
-        },
-        {
-          "type": "text",
-          "id": "slide_3_heading",
-          "label": "Slide 3 Heading",
-          "default": "Spring Sale Up to 15%"
-        },
-        {
-          "type": "textarea",
-          "id": "slide_3_text",
-          "label": "Slide 3 Text",
-          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        },
-        {
-          "type": "url",
-          "id": "slide_3_link",
-          "label": "Slide 3 Link"
-        },
-         {
-          "type": "text",
-          "id": "header-text_new",
-          "label": "header text new"
-        },
-        {
-          "type":"header",
-          "content":"Block 1"
-        },
-        {
-          "type":"product",
-          "id":"prod1",
-          "label":"Select Product"
-        },
-        {
-          "type":"header",
-          "content":"Block 2"
-        },
-        {
-          "type":"product",
-          "id":"prod2",
-          "label":"Image"
-        },
-        {
-          "type":"header",
-          "content":"Block 3"
-        },
-        {
-          "type":"product",
-          "id":"prod3",
-          "label":"Image"
         }
       ]
     },
@@ -1172,3 +1065,4 @@
   ]
 }
 {% endschema %}
+
