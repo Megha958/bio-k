@@ -1,1 +1,106 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Welcome to our store","link":""}}},"block_order":["announcement-bar-0"],"settings":{"color_scheme":"scheme-1","show_line_separator":true,"show_social":false,"auto_rotate":false,"change_slides_speed":5,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","settings":{"logo_position":"middle-left","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-1","enable_country_selector":true,"enable_language_selector":true,"enable_customer_avatar":true,"mobile_logo_position":"center","margin_bottom":0,"padding_top":20,"padding_bottom":20}}},"order":["announcement-bar","header"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcementbar_layouts_hzMwAK": {
+      "type": "announcementbar-layouts",
+      "blocks": {
+        "simple_TbJJTE": {
+          "type": "simple",
+          "settings": {
+            "announcement_message": "Join Our Kommunity and get a $4.00 Discount!",
+            "cta_text": "Join Now",
+            "cta_link": "",
+            "cta_color": "#ffffff",
+            "announcement_message_2": "",
+            "cta_text_2": "",
+            "cta_link_2": "",
+            "announcement_message_3": "",
+            "cta_text_3": "",
+            "cta_link_3": ""
+          }
+        },
+        "countdown_rnwcab": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "announcement_message": "Welcome to our Store",
+            "countdown_end_date": "October 26, 2024 22:15:10",
+            "cta_text": "Shop now",
+            "cta_link": "",
+            "cta_color": "#ffffff"
+          }
+        },
+        "ann_grid_mH4YJc": {
+          "type": "ann_grid",
+          "disabled": true,
+          "settings": {
+            "announcement_message": "Welcome to our Store",
+            "cta_text": "Shop now",
+            "cta_link": "",
+            "cta_color": "#ffffff",
+            "announcement_message_2": "Welcome to our Store",
+            "cta_text_2": "Shop now",
+            "cta_link_2": "",
+            "announcement_message_3": "Welcome to our Store",
+            "cta_text_3": "Shop now",
+            "cta_link_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "simple_TbJJTE",
+        "countdown_rnwcab",
+        "ann_grid_mH4YJc"
+      ],
+      "settings": {
+        "background_color": "#606d22",
+        "text_color": "#FCFBF7"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "enable_transparent_header": false,
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "mobile_logo_position": "center",
+        "slide_1_heading": "Summer Sale Up to 25%",
+        "slide_1_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "slide_1_link": "",
+        "slide_2_heading": "Winter Sale Up to 30%",
+        "slide_2_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "slide_2_link": "",
+        "slide_3_heading": "Spring Sale Up to 15%",
+        "slide_3_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "slide_3_link": "",
+        "header-text_new": "",
+        "prod1": "",
+        "prod2": "",
+        "prod3": "",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcementbar_layouts_hzMwAK",
+    "header"
+  ]
+}
