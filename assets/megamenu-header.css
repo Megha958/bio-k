@@ -372,9 +372,25 @@
     border-radius: 15px;
   }
   
-  
-
-  
-  
-  
+  .case-studies-section .case-studies{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .about-menus{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .about-menus .megamenu-first{
+    width: 25%;
+    margin-right: 20px;
+  }
+  .about-menus .megamenu-second{
+    width: 50%;
+    margin-right: 20px;
+  }
+  .about-menus .megamenu-third{
+    width: 25%;
+  }
   

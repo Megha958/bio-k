@@ -184,8 +184,115 @@
           </span>
         </div
         >
-        <div class="dropdown_menu dropdown-content">
-          tessssssssssss
+        <div class="dropdown_menu">
+          <div class="">
+            <div class="">
+              <div class="dropdown_menu-inner animate__animated animate__fadeInDown about-menus">
+                <div class="megamenu-first">
+                  <div class="megamenu-row-inner-first">
+                    <div class="header-list-megamenu">
+                      <div class="header-main-list-megamenu">
+                        <div class="header-list-megamenu-inner">
+                          <span class="header-header-text">{{ block.settings.menu_heading }}</span>
+                          <div class="header-header-text-list">
+                            <ul class="cust-inner-menu">
+                              {% for link in linklists[block.settings.inner_menu].links %}
+                                <li>
+                                  <a href="{{ link.url }}">{{ link.title }}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="megamenu-second">
+                  <div class="header-list-megamenu-inner">
+                    <span class="header-header-text">{{ block.settings.menu_heading_2 }}</span>
+                    <div class="case-studies-section">
+                    <div class="case-studies">
+                      <!-- First Case Study -->
+                      <div class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ block.settings.case_study_image_1 | img_url: 'large' }}" alt="{{ block.settings.case_study_title_1 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ block.settings.case_study_title_1 }}</h3>
+                          <p class="case-study-date">{{ block.settings.case_study_date_1 }}</p>
+                        </div>
+                      </div>
+
+                      <!-- Second Case Study -->
+                      <div class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ block.settings.case_study_image_2 | img_url: 'large' }}" alt="{{ block.settings.case_study_title_2 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ block.settings.case_study_title_2 }}</h3>
+                          <p class="case-study-date">{{ block.settings.case_study_date_2 }}</p>
+                        </div>
+                      </div>
+
+                      <!-- Third Case Study -->
+                      <div class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ block.settings.case_study_image_3 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_3 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ block.settings.case_study_title_3 }}</h3>
+                          <p class="case-study-date">{{ block.settings.case_study_date_3 }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+                </div>
+                <div class="megamenu-third">
+                  <div class="">
+                    <div class="image-width-text-header">
+                      <div class="product-360-category-main">
+                          <a href="{{ block.settings.cta_link_1 }}" class="product-360-category-inner">
+                            <div class="product-360-image">
+                              <div class="image">
+                                <img
+                                  src="{{ block.settings.desktop_image_1 | img_url: 'master' }}"
+                                  alt="Product Image"
+                                  class="desktop-img"
+                                />
+                                <img
+                                  src="{{ block.settings.mobile_image_1 | img_url: 'master' }}"
+                                  alt="Product Image"
+                                  class="mobile-img"
+                                />
+                              </div>
+                            </div>
+                            <div class="product-360-text-area">
+                              <div class="product-360-header-main">
+                                <div class="common-h5 product-360-header">
+                                  <h5>{{ block.settings.header_text_1 }}</h5>
+                                </div>
+                                <div class="product-360-para">
+                                  <p>{{ block.settings.paragraph_text_1 }}</p>
+                                </div>
+                              </div>
+                              <div class="link makro--link product-360-link ">
+                                {{ block.settings.cta_text_1 }} 
+                                {% render 'arrow-svg' %}
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
         </div>
         {% else %}
         <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
