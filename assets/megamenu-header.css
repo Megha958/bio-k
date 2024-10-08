@@ -1,6 +1,6 @@
 .navbar_item.dropdown{
   padding:30px 0;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .header-header-text{
   color: var(--Green, #009845);
@@ -406,6 +406,7 @@
     gap: 20px;
     align-items: flex-start;
     margin-bottom:15px;
+    text-decoration: unset;
 }
 .case-studies-section .case-studies {
   display: flex;
@@ -424,4 +425,10 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+}
+.header .dropdown:hover .navbar_link {
+  color: #009845;
+}
+.header .dropdown:hover .navbar_link span.chevron {
+  transform: rotate(180deg);
 }

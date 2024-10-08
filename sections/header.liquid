@@ -204,9 +204,32 @@
 
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+      {% render 'header-search', input_id: 'Search-In-Modal' %} 
+      <span class="ly-custom-1000"></span>
+
+     
       <div class="desktop-localization-wrapper">
+        testtt
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
+          <noscript class="small-hide medium-hide">
+            {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
+              1233
+              <div class="localization-form__select">
+                <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScript">{{ 'localization.country_label' | t }}</h2>
+                <select class="localization-selector link" name="country_code" aria-labelledby="HeaderCountryMobileLabelNoScript">
+                  {%- for country in localization.available_countries -%}
+                    <option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
+                      {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
+            {%- endform -%}
+          </noscript>
+
+          <localization-form class="small-hide medium-hide no-js-hidden">
             {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
@@ -217,7 +240,24 @@
         {% endif %}
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
+          <noscript class="small-hide medium-hide">
+            {%- form 'localization', id: 'HeaderLanguageMobileFormNoScript', class: 'localization-form' -%}
+              <div class="localization-form__select">
+                <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScript">{{ 'localization.language_label' | t }}</h2>
+                <select class="localization-selector link" name="locale_code" aria-labelledby="HeaderLanguageMobileLabelNoScript">
+                  {%- for language in localization.available_languages -%}
+                    <option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected{% endif %}>
+                      {{ language.endonym_name | capitalize }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+            {%- endform -%}
+          </noscript>
+
+          <localization-form class="small-hide medium-hide no-js-hidden">
             {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
@@ -227,7 +267,13 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+
+      <a href="{{ section.settings.button_link }}" class="find-in-store-btn" target="_blank">
+        <span class="icon-location">
+          {% render 'location-icon' %}
+        </span> {{ section.settings.button_text }}
+      </a>
+      
 
       {%- if shop.customer_accounts_enabled -%}
         <a
@@ -539,6 +585,17 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Find in Store"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
     {
       "type": "color_scheme",
@@ -889,7 +946,11 @@
       "label": "First Case Study Date",
       "default": "May, 2024"
     },
-
+    {
+      "type": "url",
+      "id": "case_study_link_1",
+      "label": "case_study_link_1"
+    },
 
     {
       "type": "image_picker",
@@ -909,60 +970,70 @@
       "default": "May, 2024"
     },
     {
+      "type": "url",
+      "id": "case_study_link_2",
+      "label": "case_study_link_2"
+    },
+    {
       "type": "image_picker",
       "id": "case_study_image_3",
       "label": "Third Case Study Image"
     },
-        {
-          "type": "text",
-          "id": "case_study_title_3",
-          "label": "Third Case Study Title",
-          "default": "Link between Probiotics and Immune Health"
-        },
-        {
-          "type": "text",
-          "id": "case_study_date_3",
-          "label": "Third Case Study Date",
-          "default": "June, 2024"
-        },
-        {
-          "type": "image_picker",
-          "id": "product1_bg",
-          "label": "Product BG Image 1"
-        },
-        {
-          "type": "image_picker",
-          "id": "desktop_image_1",
-          "label": "Desktop Image 1"
-        },
-        {
-          "type": "image_picker",
-          "id": "mobile_image_1",
-          "label": "Mobile Image 1"
-        },
-        {
-          "type": "text",
-          "id": "header_text_1",
-          "label": "Header Text 1",
-          "default": "Summer Sale Up to 25%"
-        },
-        {
-          "type": "textarea",
-          "id": "paragraph_text_1",
-          "label": "Paragraph Text 1",
-          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-        },
-        {
-          "type": "url",
-          "id": "cta_link_1",
-          "label": "CTA Link 1"
-        },
-        {
-          "type": "text",
-          "id": "cta_text_1",
-          "label": "CTA Text 1",
-          "default": "Shop Now"
-        }
+    {
+      "type": "text",
+      "id": "case_study_title_3",
+      "label": "Third Case Study Title",
+      "default": "Link between Probiotics and Immune Health"
+    },
+      {
+        "type": "text",
+        "id": "case_study_date_3",
+        "label": "Third Case Study Date",
+        "default": "June, 2024"
+      },
+      {
+        "type": "url",
+        "id": "case_study_link_3",
+        "label": "case_study_link_3"
+      },
+      {
+      "type": "image_picker",
+        "id": "product1_bg",
+        "label": "Product BG Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "desktop_image_1",
+        "label": "Desktop Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image_1",
+        "label": "Mobile Image 1"
+      },
+      {
+        "type": "text",
+        "id": "header_text_1",
+        "label": "Header Text 1",
+        "default": "Summer Sale Up to 25%"
+      },
+      {
+        "type": "textarea",
+        "id": "paragraph_text_1",
+        "label": "Paragraph Text 1",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+      },
+      {
+        "type": "url",
+        "id": "cta_link_1",
+        "label": "CTA Link 1"
+      },
+      {
+        "type": "text",
+        "id": "cta_text_1",
+        "label": "CTA Text 1",
+        "default": "Shop Now"
+      }
       ]
     }
   ]
