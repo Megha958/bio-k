@@ -274,7 +274,7 @@ noscript .localization-selector.link {
 .header__icons--localization {
   align-items: center;
   min-height: 4.4rem;
-  position:relative;
+  /* position:relative; */
   z-index:9;
 }
 
