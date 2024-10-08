@@ -14,35 +14,36 @@
         color: {{ section.settings.highlight_color }};
     }
 {%- endstyle -%}
-<div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
-   <div class="faq-section">
-    <h2>{{ section.settings.title }}</h2>
-    <p>{{ section.settings.subtitle }}</p>
-    <p>{{ section.settings.description }}</p>
-  
-    <div class="faq">
-      {% for block in section.blocks %}
-        <div class="faq-item">
-          <div class="faq-question" data-index="{{ forloop.index0 }}">
-            <div class="faq-data">
-            <h5>{{ block.settings.question }}   </h5>
-                <span class="toggle-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#081F2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </span>
+<div class="content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+    <div class="faq-section">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.subtitle }}</p>
+        <p>{{ section.settings.description }}</p>
+    
+        <div class="faq">
+        {% for block in section.blocks %}
+            <div class="faq-item">
+            <div class="faq-question" data-index="{{ forloop.index0 }}">
+                <div class="faq-data">
+                <h5>{{ block.settings.question }}   </h5>
+                    <span class="toggle-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#081F2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </div>
             </div>
-          </div>
-          <div class="faq-answer" {% if forloop.first %}style="display: block;"{% endif %}>
-            <p>{{ block.settings.answer }}</p>
-          </div>
+            <div class="faq-answer" {% if forloop.first %}style="display: block;"{% endif %}>
+                <p>{{ block.settings.answer }}</p>
+            </div>
+            </div>
+        {% endfor %}
         </div>
-      {% endfor %}
     </div>
-  </div>
+    </div>
 </div>
   <style>
-    
     .faq-data{
         display: flex;
         align-items: center;
@@ -51,6 +52,10 @@
     .faq-section{
         max-width: 850px;
         margin: 0 auto;
+    }
+    .faq-item{
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
     }
     .faq-answer {
       display: none;
@@ -97,6 +102,12 @@
             "id": "full_width",
             "default": true,
             "label": "t:sections.rich-text.settings.full_width.label"
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:sections.all.colors.label",
+            "default": "scheme-1"
         },
       {
         "type": "text",
