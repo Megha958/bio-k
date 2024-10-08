@@ -119,7 +119,14 @@
         "faq_pVBqTx": {
           "type": "faq",
           "settings": {
-            "question": "",
+            "question": "Where can I find Bio-K+ products?",
+            "answer": ""
+          }
+        },
+        "faq_PtbRjE": {
+          "type": "faq",
+          "settings": {
+            "question": "When should I take Bio-K+ products?",
             "answer": ""
           }
         },
@@ -142,6 +149,7 @@
         "faq_Ncramp",
         "faq_Tgi3ew",
         "faq_pVBqTx",
+        "faq_PtbRjE",
         "faq_8bYFHV",
         "faq_QD8xQY"
       ],
