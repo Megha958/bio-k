@@ -64,7 +64,7 @@
       ],
       "settings": {
         "background_color": "#009845",
-        "text_color": "#FCFBF7"
+        "text_color": "#fcfbf7"
       }
     },
     "header": {
@@ -93,6 +93,25 @@
         "about_9WgMcc": {
           "type": "about",
           "settings": {
+            "menu": "Bio-K+ Science",
+            "menu_heading": "More Bio-K+",
+            "inner_menu": "more-bio-k",
+            "menu_heading_2": "Bio-K+ Case Studies",
+            "case_studies_title": "Bio-K+ Case Studies",
+            "case_study_image_1": "shopify://shop_images/image_22.png",
+            "case_study_title_1": "The Cholesterol Controversy – and How Probiotics Might Help",
+            "case_study_date_1": "May, 2024",
+            "case_study_image_2": "shopify://shop_images/image_23.png",
+            "case_study_title_2": "Understanding the Link between the Microbiome and Chronic Inflammation",
+            "case_study_date_2": "May, 2024",
+            "case_study_image_3": "shopify://shop_images/image_24.png",
+            "case_study_title_3": "Link between Probiotics and Immune Health",
+            "case_study_date_3": "June, 2024",
+            "desktop_image_1": "shopify://shop_images/card.png",
+            "header_text_1": "Why Bio-K+?",
+            "paragraph_text_1": "Learn why you should start your probiotics journey with Bio-K+",
+            "cta_link_1": "",
+            "cta_text_1": "Explore Now"
           }
         }
       },
