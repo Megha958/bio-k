@@ -216,7 +216,7 @@
      
       <div class="desktop-localization-wrapper">
         testtt
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+        
           <noscript class="small-hide medium-hide">
             {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
               1233
@@ -243,7 +243,7 @@
               </div>
             {%- endform -%}
           </localization-form>
-        {% endif %}
+        
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
           <noscript class="small-hide medium-hide">
