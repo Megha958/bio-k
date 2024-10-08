@@ -176,13 +176,10 @@ noscript .localization-selector.link {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   scroll-padding: 0.5rem 0;
-  /* min-height: 8.2rem; */
-  /* max-height: 20.65rem; */
   max-width: 30rem;
   min-width: 15rem;
-  /* width: max-content; */
-     width: 280px;
-    height: 250px;
+ width: 170px;
+/* height: 250px; */
 }
 /* width */
 .disclosure__list::-webkit-scrollbar {
@@ -289,7 +286,10 @@ noscript .localization-selector.link {
   .localization-form:only-child
   .localization-form__select
   img {
-  display: none;
+  display: inline-block !important;
+  width: 16px;
+  height: auto;
+  margin: 0 5px 0 0;
 }
 .header__icons--localization
   .localization-form:only-child
@@ -362,6 +362,9 @@ noscript .localization-selector.link {
 
 .menu-drawer__localization noscript .localization-form__select {
   padding: initial;
+}
+.localization-form__select:after{
+  display:none;
 }
 @media only screen and (max-width: 1199px) {
   .header__localization .disclosure .localization-form__select{
