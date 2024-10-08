@@ -162,8 +162,8 @@
         "background_image": "shopify://shop_images/Frame_5416.png",
         "bottomsubtitle": "Backed by science, proven by results",
         "bottomdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "button_text": "",
-        "url": "",
+        "button_text": "Explore Bio-K+ FAQ",
+        "url": "shopify://pages/faq",
         "padding_top": 40,
         "padding_bottom": 52
       }
