@@ -40,10 +40,10 @@
     "index_text_6r9HAF": {
       "type": "index-text",
       "settings": {
-        "full_width": true,
-        "rich_text": "",
+        "full_width": false,
+        "rich_text": "<p>We're on a mission to <strong>empower your wellness</strong> journey with <strong>probiotics that work</strong>. Our exclusive, scientifically-proven formulas deliver the gut health <strong>results you can feel</strong> and trust.<br/></p>",
         "text_color": "#000000",
-        "highlight_color": "#00FF00",
+        "highlight_color": "#009845",
         "content_alignment": "center",
         "padding_top": 40,
         "padding_bottom": 52
