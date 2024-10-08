@@ -366,6 +366,9 @@ noscript .localization-selector.link {
 .menu-drawer__localization noscript .localization-form__select {
   padding: initial;
 }
+.localization-form__select:after{
+  display:none;
+}
 @media only screen and (max-width: 1199px) {
   .header__localization .disclosure .localization-form__select{
     display:none;
