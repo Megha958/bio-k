@@ -1,0 +1,12 @@
+.announcement-button a{
+    text-decoration: unset;
+}
+
+body .header{
+    margin: 0 80px;
+    max-width: unset;
+    padding: 0 !important;
+}
+.header__icon.header__icon--cart{
+    display: none;
+}
