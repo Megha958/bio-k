@@ -24,13 +24,14 @@
       {% for block in section.blocks %}
         <div class="faq-item">
           <div class="faq-question" data-index="{{ forloop.index0 }}">
-            <h5>{{ block.settings.question }} 
+            <div class="faq-data">
+            <h5>{{ block.settings.question }}   </h5>
                 <span class="toggle-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#081F2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </span>
-            </h5>
+            </div>
           </div>
           <div class="faq-answer" {% if forloop.first %}style="display: block;"{% endif %}>
             <p>{{ block.settings.answer }}</p>
@@ -41,6 +42,12 @@
   </div>
 </div>
   <style>
+    
+    .faq-data{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .faq-section{
         max-width: 850px;
         margin: 0 auto;
@@ -52,12 +59,14 @@
     .faq-question {
       cursor: pointer;
     }
-    .faq-question.active .toggle-icon {
+    .faq-question.active .toggle-icon svg{
       transform: rotate(0deg);
       display: inline-block;
     }
+    .faq-question .toggle-icon svg{
+        transform: rotate(45deg);
+    }
   </style>
-  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const faqItems = document.querySelectorAll('.faq-item');
