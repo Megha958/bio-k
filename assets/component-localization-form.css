@@ -182,7 +182,7 @@ noscript .localization-selector.link {
   min-width: 15rem;
   /* width: max-content; */
      width: 280px;
-    height: 250px;
+    /* height: 250px; */
 }
 /* width */
 .disclosure__list::-webkit-scrollbar {
