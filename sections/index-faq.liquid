@@ -1,0 +1,103 @@
+<div class="faq-section">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.subtitle }}</p>
+    <p>{{ section.settings.description }}</p>
+  
+    <div class="faq">
+      {% for block in section.blocks %}
+        <div class="faq-item">
+          <div class="faq-question" data-index="{{ forloop.index0 }}">
+            <h3>{{ block.settings.question }}</h3>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer" {% if forloop.first %}style="display: block;"{% endif %}>
+            <p>{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <style>
+    .faq-answer {
+      display: none;
+      transition: max-height 0.3s ease-out;
+    }
+    .faq-question {
+      cursor: pointer;
+    }
+    .faq-question.active .toggle-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item, index) => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          faqItems.forEach((otherItem, otherIndex) => {
+            if (otherIndex !== index) {
+              otherItem.querySelector('.faq-answer').style.display = 'none';
+              otherItem.querySelector('.faq-question').classList.remove('active');
+            }
+          });
+          const answer = item.querySelector('.faq-answer');
+          const isVisible = answer.style.display === 'block';
+          answer.style.display = isVisible ? 'none' : 'block';
+          question.classList.toggle('active', !isVisible);
+        });
+      });
+    });
+  </script>
+
+  {% schema %}
+  {
+    "name": "FAQ Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Your Bio-K+ Questions, Answered"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Backed by science, proven by results"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Section",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
