@@ -1,0 +1,284 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+    .section-{{ section.id }} .rich-text-content strong {
+        color: {{ section.settings.highlight_color }};
+    }
+{%- endstyle -%}
+<div class="content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+    <div class="faq-section">
+        {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.subtitle != blank %}
+         <p class="subtext">{{ section.settings.subtitle }}</p>
+        {% endif %}
+        {% if section.settings.description != blank %}
+         <p class="subtext">{{ section.settings.description }}</p>
+        {% endif %}
+        <div class="faq">
+        {% for block in section.blocks %}
+            {% if block.settings.question != blank %}
+            <div class="faq-item">
+                <div class="faq-question" data-index="{{ forloop.index0 }}">
+                    <div class="faq-data">
+                    <h5>{{ block.settings.question }}   </h5>
+                        <span class="toggle-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#081F2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="faq-answer" {% if forloop.first %}style="display: block;"{% endif %}>
+                    <p>{{ block.settings.answer }}</p>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div class="faq-bottom custom-banner" style="background-image: url({{ section.settings.background_image | img_url: '' }});">
+            {% if section.settings.bottomsubtitle != blank %}
+            <div class="content">
+                <h5>{{section.settings.bottomsubtitle}}</h5>
+                <p>{{section.settings.bottomdescription }}</p>
+            </div>
+            {% endif %}
+            {% if section.settings.button_text != blank %}
+                <a href="{{section.settings.url}}" class="button">{{section.settings.button_text}}</a>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+</div>
+  <style>
+    .faq-bottom.custom-banner{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 30px 20px;
+        margin-top: 50px;
+    }
+    .faq-section .custom-banner .content h5,.faq-bottom.custom-banner p{
+        margin:0 0;
+    }
+    .faq-bottom.custom-banner h5{
+        color: #fff;
+    }
+    .faq-data h5{
+        margin: 30px 0;
+    }
+    .faq-data p{
+        margin-top: 0px;
+    }
+    .faq-data{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .faq-section{
+        max-width: 850px;
+        margin: 0 auto;
+    }
+    .faq-section .subtext{
+        font-weight: 600;
+    color: #000;
+    font-size: 16px;
+    line-height: 25px;
+}
+    .faq-item{
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        transition: all 0.3s ease-in-out;
+    }
+    .faq-answer {
+      display: none;
+      padding-bottom: 24px;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    .faq-question {
+      cursor: pointer;
+    }
+    .faq-question.active .toggle-icon svg{
+      transform: rotate(0deg);
+      display: inline-block;
+    }
+    .faq-question .toggle-icon svg{
+        transform: rotate(45deg);
+    }
+    @media(max-width:767px){
+        .faq-data h5{
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .faq-bottom.custom-banner {
+            display: block;
+        }
+        .faq-bottom.custom-banner .button{
+            width:100%; 
+        }
+        .faq-bottom.custom-banner h5 {
+            font-size: 20px;
+        }
+        .faq-bottom.custom-banner p{
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }      
+        .faq-section h2{
+            font-size: 32px;
+            letter-spacing: 0;
+            margin-bottom: 5px;
+        } 
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item, index) => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          faqItems.forEach((otherItem, otherIndex) => {
+            if (otherIndex !== index) {
+              otherItem.querySelector('.faq-answer').style.display = 'none';
+              otherItem.querySelector('.faq-question').classList.remove('active');
+            }
+          });
+          const answer = item.querySelector('.faq-answer');
+          const isVisible = answer.style.display === 'block';
+          answer.style.display = isVisible ? 'none' : 'block';
+          question.classList.toggle('active', !isVisible);
+        });
+      });
+    });
+  </script>
+
+  {% schema %}
+  {
+    "name": "FAQ Section",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "full_width",
+            "default": true,
+            "label": "t:sections.rich-text.settings.full_width.label"
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:sections.all.colors.label",
+            "default": "scheme-1"
+        },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Your Bio-K+ Questions, Answered"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Backed by science, proven by results"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "header",
+        "content": "Bottom Details"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "bottomsubtitle",
+        "label": "Bottom Subtitle",
+        "default": "Backed by science, proven by results"
+      },
+      {
+        "type": "textarea",
+        "id": "bottomdescription",
+        "label": "Bottom Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "button text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "button Link"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Section",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
