@@ -11,6 +11,7 @@
   "sections": {
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -48,10 +49,60 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "index_feature_tiles_MHxXw3": {
+      "type": "index-feature-tiles",
+      "blocks": {
+        "card_tadng4": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_5482.png",
+            "mobilebackground_image": "shopify://shop_images/Frame_5482.png",
+            "title": "20+",
+            "subtitle": "",
+            "description": "Pioneering Probiotic Science for Over Two Decades"
+          }
+        },
+        "card_4XHRLU": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_5483.png",
+            "mobilebackground_image": "shopify://shop_images/Frame_5483.png",
+            "title": "50+",
+            "subtitle": "",
+            "description": "Pioneering Probiotic Science for Over Two Decades"
+          }
+        },
+        "card_pzgyAi": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_5481_2.png",
+            "mobilebackground_image": "shopify://shop_images/Frame_5481_2.png",
+            "title": "#1",
+            "subtitle": "",
+            "description": "Pioneering Probiotic Science for Over Two Decades"
+          }
+        }
+      },
+      "block_order": [
+        "card_tadng4",
+        "card_4XHRLU",
+        "card_pzgyAi"
+      ],
+      "settings": {
+        "full_width": true,
+        "section_title": "",
+        "section_subtitle": "",
+        "button_text": "",
+        "url": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "featured_collection",
-    "index_text_6r9HAF"
+    "index_text_6r9HAF",
+    "index_feature_tiles_MHxXw3"
   ]
 }
