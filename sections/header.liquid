@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
+  {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+{%- endif -%}
 
 <style>
   header-drawer {
@@ -97,6 +100,9 @@
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
+  <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 {%- liquid
   for block in section.blocks
@@ -209,8 +215,7 @@
 
      
       <div class="desktop-localization-wrapper">
-        testtt
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+      
           <noscript class="small-hide medium-hide">
             {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
               1233
@@ -237,7 +242,7 @@
               </div>
             {%- endform -%}
           </localization-form>
-        {% endif %}
+        
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
           <noscript class="small-hide medium-hide">
