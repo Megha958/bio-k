@@ -3529,6 +3529,15 @@ details-disclosure > details {
 .button-green::hover{
 
 }
+.custom-slider .slick-track{
+  gap: 30px;
+  display: flex;
+}
+.linkonly{
+  color: #000;
+  text-decoration: none;
+}
+
 /* Loading spinner */
 .loading__spinner {
   position: absolute;
