@@ -56,6 +56,7 @@ span.icon-location {
     .find-in-store-btn{
         width: 100%;
         min-width: 165px;
+        justify-content: center;
     }
     .navabar-desktop{
         display:none;
@@ -69,5 +70,6 @@ span.icon-location {
   .find-in-store-btn {
     min-width: 155px;
     font-size: 14px;
+    padding:5px 12px;
   }
 }
