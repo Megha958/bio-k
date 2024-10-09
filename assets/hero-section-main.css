@@ -114,4 +114,10 @@
     .hero-mobile {
       display: none;
     }
+    .hero-text {
+      left: 30px;
+      right: 30px;
+      top: 30px;
+      width: 100%;
+    }
   }
