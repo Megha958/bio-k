@@ -86,6 +86,9 @@
     .hero-text h1{
       font-size: 40px;
     }
+   .hero-text a{
+     font-size:14px;
+   }
  }
   @media only screen and (max-width: 990px) {
     .navbar.navabar-desktop{
