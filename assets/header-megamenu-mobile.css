@@ -24,63 +24,7 @@
   }
   
   
-  .card-items-main .card_items .main_heading {
-    font-size: 32px;
-  }
-  .card-product-img {
-    background-color: #fafafa;
-    border-radius: 10px;
-  }
-  
-  .card-product-img .image {
-    width: 240px;
-    height: 240px;
-    margin: auto;
-  }
-  
-  .label {
-    border-radius: 5px;
-    padding: 0px 8px 2px 8px;
-    text-transform: uppercase;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    background: #ffffff;
-  }
-  
-  .label p {
-    margin: 0;
-  }
-  .logo_header_card {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #FAECEA;
-    padding: 10px;
-    border-radius: 100px;
-    display: flex;
-  }
-  .card-product-img {
-    position: relative;
-  }
-  
-  .header-wrap-title {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #000000;
-  }
-  .header-wrap-para {
-    padding-top: 5px;
-  }
-  .header-wrap-para,
-  .price_root {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #999999;
-    /* font-family: "Inter", sans-serif; */
-  }
+ 
   .card-header {
     display: flex;
     justify-content: space-between;
