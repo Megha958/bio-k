@@ -30,7 +30,7 @@
         {% for block in section.blocks %}
             {% if block.settings.question != blank %}
             <div class="faq-item">
-                <div class="faq-question" data-index="{{ forloop.index0 }}">
+                <div class="faq-question {% if forloop.index0 == 0 %} active{% endif %}" data-index="{{ forloop.index0 }}">
                     <div class="faq-data">
                     <h5>{{ block.settings.question }}   </h5>
                         <span class="toggle-icon">
@@ -121,11 +121,13 @@
     }
     .faq-question .toggle-icon svg{
         transform: rotate(45deg);
+        width: 15px;
     }
     @media(max-width:767px){
         .faq-data h5{
             margin: 20px 0;
             font-size: 16px;
+            letter-spacing: 0;
         }
         .faq-bottom.custom-banner {
             display: block;
@@ -148,18 +150,42 @@
         } 
     }
   </style>
-  <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
 
   <script>
-    $(document).ready(function() {
-        $('.faq-question').on('click', function() {
-          const $question = $(this);
-          const $answer = $question.next('.faq-answer');
-          $('.faq-answer').not($answer).slideUp();
-          $('.faq-question').not($question).removeClass('active');
-          $question.toggleClass('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      const questions = document.querySelectorAll('.faq-question');
+    
+      // Open the first FAQ by default
+      if (questions.length > 0) {
+        questions[0].classList.add('active');
+        const firstAnswer = questions[0].nextElementSibling;
+        if (firstAnswer && firstAnswer.classList.contains('faq-answer')) {
+          firstAnswer.style.display = 'block';
+        }
+      }
+    
+      questions.forEach(function(question) {
+        question.addEventListener('click', function() {
+          // Close all other answers
+          questions.forEach(function(q) {
+            if (q !== question) {
+              q.classList.remove('active');
+              const answer = q.nextElementSibling;
+              if (answer && answer.classList.contains('faq-answer')) {
+                answer.style.display = 'none';
+              }
+            }
+          });
+    
+          // Toggle the clicked question
+          const answer = question.nextElementSibling;
+          if (answer && answer.classList.contains('faq-answer')) {
+            const isOpen = question.classList.toggle('active');
+            answer.style.display = isOpen ? 'block' : 'none';
+          }
         });
       });
+    });
   </script>
 
   {% schema %}

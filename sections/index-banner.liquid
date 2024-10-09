@@ -1,6 +1,8 @@
+{{ 'index-banner.css' | asset_url | stylesheet_tag }}
+
 <section class="power-sec index-banner">
     <div class="power-inner">
-      <div class="container">
+      <div class="page-width">
         <div class="power-grid">
           <div class="power-left">
             {% for block in section.blocks %}
@@ -52,16 +54,33 @@
     </div>
   </section>
   <script>
-    $(document).ready(function() {
+    {% comment %} $(document).ready(function() {
       $('.faq-question').on('click', function() {
         const $question = $(this);
         const $answer = $question.next('.faq-answer');
         $answer.slideToggle();
         $question.toggleClass('active');
       });
-    });
+    }); {% endcomment %}
   </script>
   <style>
+    .swiper-button-div .swiper-button-prev:hover,
+.swiper-button-div .swiper-button-next:hover{
+  background: #c3d957;
+}
+.swiper-button-div .swiper-button-prev,
+.swiper-button-div .swiper-button-next{
+    background-color: #606d22;
+    color: #fcfbf7;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
     section.power-sec {
         content: "";
         left: 0;
@@ -89,6 +108,7 @@
     }
     .faq-section-banner{
         margin-bottom:20px;
+        border-top: 1px solid #fff;
     }
   </style>
 
