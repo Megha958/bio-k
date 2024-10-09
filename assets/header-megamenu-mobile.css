@@ -22,57 +22,7 @@
     width: 100%;
     background: white;
   }
-  
-  
- 
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-  }
-  .price {
-    display: flex;
-  }
-  .price_no_active {
-    color: #cccccc;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-  }
-  .price_root {
-    color: #000000;
-  }
-  
-  .header-wrap-title p,
-  .header-wrap-para p {
-    margin: 0px;
-  }
-  .review-header {
-    padding-top: 15px;
-  }
-  .review-header-inner {
-    display: flex;
-    gap: 5px;
-  }
-  .count-start {
-    color: #000000;
-    font-size: 12px;
-    font-weight: 900;
-    line-height: 18px;
-  }
-  .count-reviews-number {
-    color: #999999;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-  }
-  .review-start-align svg {
-    width: 12px;
-    height: 12px;
-  }
-  .count_reviews {
-    margin-top: -1px;
-  }
+
   .slide_bar {
     display: none;
   }
@@ -100,11 +50,7 @@
     padding: 0px 20px;
   }
   
-  .slider_product-mobile {
-    display: flex;
-    gap: 20px;
-    /* overflow-x: scroll; */
-  }
+ 
   .toggle-open,
   .inner-navabar-mobile {
     position: relative;
@@ -114,14 +60,7 @@
     padding: 25px 20px;
     gap: 20px;
   }
-  .toggle-open-align h3,
-  .toggle-close h3 {
-    letter-spacing: 0;
-    text-transform: uppercase;
-  }
-  .megamenu_image_width-text-mobile {
-    padding: 0px 20px;
-  }
+  
   .mobile_navabar {
     display: block;
     position: absolute;
