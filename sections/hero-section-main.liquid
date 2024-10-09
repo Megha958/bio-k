@@ -31,7 +31,11 @@
         <div class="hero-text">
           <h1>{{ section.settings.hero_title }}</h1>
           <p>{{ section.settings.hero_description }}</p>
-          <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_text }}</a>
+          <div class="hero-btns">
+            <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_text }}
+                {% render 'green-arrow' %}
+            </a>
+          </div>
         </div>
         
       </div>
