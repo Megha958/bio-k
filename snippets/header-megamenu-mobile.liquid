@@ -261,10 +261,10 @@
     document.querySelectorAll('.mobile_navabar .nav-toggle-menu').forEach((mobile_li) => {
         if(mobile_li.querySelector('.toggle-open')){
             mobile_li.querySelector('.toggle-close').addEventListener('click',function(){
-                mobile_li.classList.remove('active');
+                mobile_li.classList.add('active');
             });
             mobile_li.querySelector('.toggle-open .toggle-open-align').addEventListener('click',function(){
-                mobile_li.classList.add('active');
+                mobile_li.classList.remove('active');
             });
         }
     })
