@@ -85,7 +85,7 @@
             {% if block.type == 'promotion-images' %}
               {% assign images_block = true %}
               <div class="nav-toggle-menu">
-                <div class="megamenu-mobile-header-list toggle-close common_h3 d-flex">
+                <div class="megamenu-mobile-header-list custom-menu-cmn toggle-close common_h3 d-flex">
                   <li class="list-hidden header-list-main">{{ menu_item.title }}</li>
           
                   <div class="chevron-right-header">
@@ -95,40 +95,118 @@
                 
                 <div class=" toggle-open temporary_display-none animate__animated animate__fadeInRight">
                   <div class="common_h3 d-flex toggle-open-align animate__animated animate__fadeInLeft">
-                    
                      <div class="chevron-right-header">
                         {% render 'arrow-black-left' %}
                       </div>
                       <h3 class="h3">{{ menu_item.title }}</h3>
                   </div>
-                  tab content
-                  <div class="w3-bar w3-black">
-                    <button class="w3-bar-item w3-button" onclick="openCity('tab1')">London</button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('tab2')">Paris</button>
+
+                  <div class="tabstart tab">
+                  <button class="cust-menu-btns tablinks active" onclick="openCity(event, 'tab1')"><span class="cust_nav_header">{{ section.settings.navigation_header_1 }}</span></button>
+                  <button class="cust-menu-btns tablinks" onclick="openCity(event, 'tab2')"><span class="cust_nav_header">{{ section.settings.navigation_header_2 }}</span></button>
+                  </div>
+                 
+                  <div id="tab1" class="custom-tabs tabcontent">
+                    <div class="header-header-text-list">
+                      <ul class="cust-inner-menu">
+                        {% for link in linklists[section.settings.nav_menu_1].links %}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div id="tab2" class="custom-tabs tabcontent" style="display:none">
+                   <div class="header-header-text-list">
+                      <ul class="cust-inner-menu">
+                        {% for link in linklists[section.settings.nav_menu_2].links %}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
                   </div>
 
-                  <div id="tab1" class="w3-container custom-tabs">
-                    <h2>London</h2>
-                    <p>London is the capital city of England.</p>
-                  </div>
-                  
-                  <div id="tab2" class="w3-container custom-tabs" style="display:none">
-                    <h2>Paris</h2>
-                    <p>Paris is the capital of France.</p> 
-                  </div>
-                  
-                  
-          
-                  
+                 <div class="megamenu-mobile-slider">
+             <div class="megamenu-image-with-text-inner cust-menu-padd">
+                    <div class="image-width-text-header">
+                      <div class="product-360-category-main">
+                          <a href="{{ section.settings.cta_link_1 }}" class="product-360-category-inner">
+                            <div class="product-360-image" style="background-image: url({{ section.settings.product1_bg | img_url: 'master' }});">
+                              <div class="image">
+                                <img
+                                  src="{{ section.settings.pdp_image_1 | img_url: 'master' }}"
+                                  alt="Product Image"
+                                />
+                              </div>
+                            
+                            <div class="product-360-text-area">
+                              <div class="product-360-header-main">
+                                <div class="common-h5 product-360-header">
+                                  <h5>{{ section.settings.header_text_1 }}</h5>
+                                </div>
+                                <div class="product-360-para">
+                                  <p>{{ section.settings.paragraph_text_1 }}</p>
+                                </div>
+                              </div>
+                              <div class="link makro--link product-360-link ">
+                                {{ section.settings.cta_text_1 }} 
+                                {% render 'arrow-svg' %}
+                              </div>
+                            </div>
+                            </div>
+                          </a>
+                        </div>
+
+                    </div>
+
+                    <div class="image-width-text-header">
+                      <div class="product-360-category-main">
+                          <a href="{{ section.settings.cta_link_2 }}" class="product-360-category-inner">
+                            <div class="product-360-image" style="background-image: url({{ section.settings.product2_bg | img_url: 'master' }});">
+                              <div class="image">
+                                <img
+                                  src="{{ section.settings.pdp_image_2 | img_url: 'master' }}"
+                                  alt="Product Image"
+                                />
+                              </div>
+                           
+                            <div class="product-360-text-area">
+                              <div class="product-360-header-main">
+                                <div class="common-h5 product-360-header">
+                                  <h5>{{ section.settings.header_text_2 }}</h5>
+                                </div>
+                                <div class="product-360-para">
+                                  <p>{{ section.settings.paragraph_text_2 }}</p>
+                                </div>
+                              </div>
+                              <div class="link makro--link product-360-link ">
+                                {{ section.settings.cta_text_2 }} 
+                                {% render 'arrow-svg' %}
+                              </div>
+                            </div>
+                           </div>
+                          </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+              
+              </div>
                 </div>
               </div>
 
             {% elsif block.type == 'about' %}
               {% assign images_block_with_product = true %}
-              <div class="{% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %}">
+              <div class="cust-about-menu {% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %}">
                 {% if menu_item.links != blank and images_block_with_product == true %}
   
-                  <div class="toggle-close common_h3 d-flex">
+                  <div class="toggle-close custom-menu-cmn common_h3 d-flex">
                     <li class="list-hidden header-list-main">{{ menu_item.title }}</li>
             
                     <div class="chevron-right-header">
@@ -144,8 +222,93 @@
                       <h3 class="h3">{{ menu_item.title }}</h3>
                     </div>
             
-                    <div class="open_text-navbar-cont megamenu_common">
-                       test2
+                    <div class="open_text-navbar-cont">
+                        <div class="header-header-text-list">
+                          <ul class="cust-inner-menu">
+                            {% for link in linklists[section.settings.nav_menu_3].links %}
+                              <li>
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+
+                        <div class="megamenu-mobile-slider ">
+                         <div class="megamenu-image-with-text-inner">
+                            <div class="image-width-text-header">
+                              <div class="product-360-category-main">
+                                  <a href="{{ section.settings.cta_link_2 }}" class="product-360-category-inner">
+                                    <div class="product-360-image" style="background-image: url({{ section.settings.product2_bg | img_url: 'master' }});">
+                                      <div class="image">
+                                        <img
+                                          src="{{ section.settings.pdp_image_2 | img_url: 'master' }}"
+                                          alt="Product Image"
+                                        />
+                                      </div>
+                          
+                                      <div class="product-360-text-area">
+                                        <div class="product-360-header-main">
+                                          <div class="common-h5 product-360-header">
+                                            <h5>{{ section.settings.header_text_2 }}</h5>
+                                          </div>
+                                          <div class="product-360-para">
+                                            <p>{{ section.settings.paragraph_text_2 }}</p>
+                                          </div>
+                                        </div>
+                                        <div class="link makro--link product-360-link ">
+                                          {{ section.settings.cta_text_2 }} 
+                                          {% render 'arrow-svg' %}
+                                        </div>
+                                      </div>
+                                     </div>
+                                    </a>
+                                  </div>
+                                </div>
+                               </div>
+                            </div>
+
+                  <div class="megamenu-second">
+                  <div class="header-list-megamenu-inner cust-header-blogs">
+                    <span class="header-header-text">{{ section.settings.case_studies_title }}</span>
+                    <div class="case-studies-section">
+                    <div class="case-studies">
+                      <!-- First Case Study -->
+                      <a href="{{ section.settings.case_study_link_1 }}" class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ section.settings.case_study_image_1 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_1 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ section.settings.case_study_title_1 }}</h3>
+                          <p class="case-study-date">{{ section.settings.case_study_date_1 }}</p>
+                        </div>
+                      </a>
+
+                      <!-- Second Case Study -->
+                      <a href="{{ section.settings.case_study_link_2 }}" class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ section.settings.case_study_image_2 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_2 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ section.settings.case_study_title_2 }}</h3>
+                          <p class="case-study-date">{{ section.settings.case_study_date_2 }}</p>
+                        </div>
+                      </a>
+
+                      <!-- Third Case Study -->
+                      <a href="{{ section.settings.case_study_link_3 }}" class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ section.settings.case_study_image_3 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_3 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ section.settings.case_study_title_3 }}</h3>
+                          <p class="case-study-date">{{ section.settings.case_study_date_3 }}</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  </div>
+                </div>                      
                     </div>
                   </div>
                 {% else %}  
@@ -245,8 +408,6 @@
 </div>
 
 <script>
-
-
   document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelectorAll('.mobile_navabar .nav-toggle-menu').forEach((mobile_li) => {
         if(mobile_li.querySelector('.toggle-open')){
@@ -262,12 +423,17 @@
 </script>
 
 <script>
-  function openCity(ctabmenu) {
-  var i;
-  var x = document.getElementsByClassName("custom-tabs");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-  document.getElementById(ctabmenu).style.display = "block";  
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 </script>
