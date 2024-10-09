@@ -121,6 +121,8 @@
       border-bottom: 1px solid var(--gray-tones-black-5, rgba(0, 0, 0, 0.05));
       display: flex;
       justify-content: space-between;
+      margin: 0 -30px;
+      padding: 0 30px;
     }
     .cust-menu-btns{
       background: transparent;
