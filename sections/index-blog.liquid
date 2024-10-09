@@ -61,7 +61,6 @@
   <script>
     var swiper = new Swiper(".mySwiperblog-{{ section.id }}", {
         slidesPerView: 1,
-        spaceBetween: 0,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -69,23 +68,18 @@
         breakpoints: {
           0: {
             slidesPerView: 1,
-            spaceBetween: 0,
           },
           575: {
             slidesPerView: 1,
-            spaceBetween: 0,
           },
           750: {
             slidesPerView: 2,
-            spaceBetween: 0,
           },
           1000: {
             slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-            spaceBetween: 0,
           },
           1500: {
             slidesPerView: 6, // Consistent with 1000px breakpoint
-            spaceBetween: 0,
           },
         },
       });
