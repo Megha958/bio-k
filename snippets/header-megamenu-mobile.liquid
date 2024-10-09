@@ -165,7 +165,40 @@
                           </ul>
                         </div>
 
-                        
+                        <div class="megamenu-mobile-slider">
+                         <div class="megamenu-image-with-text-inner">
+                            <div class="image-width-text-header">
+                              <div class="product-360-category-main">
+                                  <a href="{{ section.settings.cta_link_2 }}" class="product-360-category-inner">
+                                    <div class="product-360-image" style="background-image: url({{ section.settings.product2_bg | img_url: 'master' }});">
+                                      <div class="image">
+                                        <img
+                                          src="{{ section.settings.pdp_image_2 | img_url: 'master' }}"
+                                          alt="Product Image"
+                                        />
+                                      </div>
+                           
+                            <div class="product-360-text-area">
+                              <div class="product-360-header-main">
+                                <div class="common-h5 product-360-header">
+                                  <h5>{{ section.settings.header_text_2 }}</h5>
+                                </div>
+                                <div class="product-360-para">
+                                  <p>{{ section.settings.paragraph_text_2 }}</p>
+                                </div>
+                              </div>
+                              <div class="link makro--link product-360-link ">
+                                {{ section.settings.cta_text_2 }} 
+                                {% render 'arrow-svg' %}
+                              </div>
+                            </div>
+                           </div>
+                          </a>
+                        </div>
+                    </div>
+                   </div>
+                    </div>
+ 
                     </div>
                   </div>
                 {% else %}  
