@@ -102,15 +102,10 @@
                   </div>
 
                   <div class="tabstart">
-                   
-                    
+                  <button class="w3-bar-item w3-button" onclick="cust_tab_menu('tab1')"><span class="cust_nav_header">{{ section.settings.navigation_header_1 }}</span></button>
+                  <button class="w3-bar-item w3-button" onclick="cust_tab_menu('tab2')"><span class="cust_nav_header">{{ section.settings.navigation_header_2 }}</span></button>
                   </div>
                  
-                  <div class="w3-bar w3-black">
-                    <button class="w3-bar-item w3-button" onclick="openCity('tab1')"><span class="header-header-text">{{ section.settings.navigation_header }}</span></button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('tab2')">Paris</button>
-                  </div>
-
                   <div id="tab1" class="custom-tabs">
                     <div class="header-header-text-list">
                       <ul class="cust-inner-menu">
@@ -124,12 +119,16 @@
                   </div>
                   
                   <div id="tab2" class="custom-tabs" style="display:none">
-                    <h2>Paris</h2>
-                    <p>Paris is the capital of France.</p> 
+                   <div class="header-header-text-list">
+                      <ul class="cust-inner-menu">
+                        {% for link in linklists[section.settings.nav_menu_2].links %}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
                   </div>
-                  
-                  
-          
                   
                 </div>
               </div>
