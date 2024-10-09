@@ -155,7 +155,17 @@
                     </div>
             
                     <div class="open_text-navbar-cont megamenu_common">
-                       test2
+                        <div class="header-header-text-list">
+                          <ul class="cust-inner-menu">
+                            {% for link in linklists[section.settings.nav_menu_3].links %}
+                              <li>
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+
+                        
                     </div>
                   </div>
                 {% else %}  

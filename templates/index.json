@@ -163,6 +163,72 @@
         "padding_bottom": 36
       }
     },
+    "index_banner_EWLrpf": {
+      "type": "index-banner",
+      "blocks": {
+        "card_87TjyV": {
+          "type": "card",
+          "settings": {
+            "card_number": "01",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "first"
+          }
+        },
+        "card_imfVjf": {
+          "type": "card",
+          "settings": {
+            "card_number": "01",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "first"
+          }
+        },
+        "card_3rnUii": {
+          "type": "card",
+          "settings": {
+            "card_number": "01",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "first"
+          }
+        },
+        "faq_VbAyYh": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_MabKyz": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_A96Rnp": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_87TjyV",
+        "card_imfVjf",
+        "card_3rnUii",
+        "faq_VbAyYh",
+        "faq_MabKyz",
+        "faq_A96Rnp"
+      ],
+      "settings": {
+        "imagebg": "shopify://shop_images/power.png",
+        "heading": "The Power of Three: Bio-K+'s Revolutionary Probiotic Blend",
+        "description": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "button_link": "",
+        "button_text": "Discover Our Formula",
+        "button_color": "#28724F"
+      }
+    },
     "index_feature_tiles_MHxXw3": {
       "type": "index-feature-tiles",
       "blocks": {
@@ -315,6 +381,7 @@
     "featured_collection",
     "index_text_6r9HAF",
     "index_slider_swiper_6eEyrp",
+    "index_banner_EWLrpf",
     "index_feature_tiles_MHxXw3",
     "index_faq_XfU8xk",
     "1728395834aa4757d3"
