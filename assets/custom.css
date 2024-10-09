@@ -100,7 +100,9 @@ span.icon-location {
   min-width: 30px !important;
   width:auto !important;
 }
-
+.localization-selector.link{
+  justify-content: flex-start;
+}
 
 
 @media only screen and (max-width: 990px) {
