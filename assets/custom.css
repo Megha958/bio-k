@@ -54,6 +54,7 @@ span.icon-location {
   padding:20px;
   display:flex;
   justify-content:space-between;
+  border-bottom: 1px solid #f2f2f2;
 }
 .mobile-view-only {
   width: 100%;
