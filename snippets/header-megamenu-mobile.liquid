@@ -85,7 +85,7 @@
             {% if block.type == 'promotion-images' %}
               {% assign images_block = true %}
               <div class="nav-toggle-menu">
-                <div class="megamenu-mobile-header-list toggle-close common_h3 d-flex">
+                <div class="megamenu-mobile-header-list custom-menu-cmn toggle-close common_h3 d-flex">
                   <li class="list-hidden header-list-main">{{ menu_item.title }}</li>
           
                   <div class="chevron-right-header">
@@ -128,7 +128,7 @@
               <div class="{% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %}">
                 {% if menu_item.links != blank and images_block_with_product == true %}
   
-                  <div class="toggle-close common_h3 d-flex">
+                  <div class="toggle-close custom-menu-cmn common_h3 d-flex">
                     <li class="list-hidden header-list-main">{{ menu_item.title }}</li>
             
                     <div class="chevron-right-header">
