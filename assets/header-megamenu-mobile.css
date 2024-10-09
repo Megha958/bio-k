@@ -3,27 +3,9 @@
 
   
   
-  /* Dropdown styles */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background-color: black;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .nav-item:hover .dropdown-content {
-    display: block;
-  }
-  
+ 
   /* megamenu css */
-  
-  .col-25 {
-    width: 25%;
-  }
+
   
   .toggle-open.temporary_display-none {
     position: absolute;
