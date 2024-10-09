@@ -55,6 +55,9 @@ span.icon-location {
   display:flex;
   justify-content:space-between;
 }
+.mobile-view-only {
+  width: 60%;
+}
 .mobile-view-only .search__input.field__input {
   border-radius: 100px;
   background: var(--gray-tones-black-2, rgba(0, 0, 0, 0.02));
