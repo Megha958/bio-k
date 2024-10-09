@@ -103,7 +103,7 @@ noscript .localization-form__select {
   -webkit-appearance: none;
   -moz-appearance: none;
   color: #0d0d0d;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 16px;
   font-weight: 500;
   line-height: 19.36px;

@@ -3,7 +3,7 @@
 }
 
 body .header{
-    margin: 0 80px;
+    margin: 0 5rem;
     max-width: unset;
     padding: 0 !important;
 }
@@ -42,6 +42,8 @@ body .header{
     font-weight: bold;
     font-size: 16px;
     margin-left: 20px;
+    margin-left: 20px;
+    min-width: 185px;
 }
 span.icon-location {
     margin-top: 10px;
@@ -50,7 +52,74 @@ span.icon-location {
 .header header-drawer {
   margin-left: 0;
 }
+.search-localization{
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom: 1px solid #f2f2f2;
+}
+.mobile-view-only {
+  width: 100%;
+}
+.mobile-view-only .search__input.field__input {
+  border-radius: 100px;
+  background: var(--gray-tones-black-2, rgba(0, 0, 0, 0.02));
+}
+.mobile-view-only .field:after{
+  display:none;
+}
+.mobile-view-only .search__button.field__button{
+  left:0;
+  right:unset;
+}
+.mobile-view-only .search__input.field__input {
+  padding-right: 1.5rem;
+  padding-left: 3.75rem;
+}
+.mobile-view-only .field__label{
+  left:calc(var(--inputs-border-width) + 3.75rem);
+}
+.mobile-view-only .field__input:focus~.field__label,.mobile-view-only .field__input:not(:placeholder-shown)~.field__label{
+  display:none;
+}
+.mobile-view-only .field__input:focus, .field__input:not(:placeholder-shown){
+  padding-top:5px;
+}
+.mobile-view-only .reset__button {
+  right: calc(var(--inputs-border-width) + 0rem);
+}
+.search-localization .localization-form:only-child .button,.search-localization .localization-form:only-child .localization-form__select {
+  margin: 0rem 1rem 0rem;
+}
+.search-localization .disclosure__list-wrapper{
+  position: absolute;
+  top: 100%;
+  bottom:unset;
+  right: 0;
+  transform: unset;
+}
+.search-localization #HeaderLanguageForm .localization-form__select{
+  min-width: 30px !important;
+  width:auto !important;
+}
+.search-localization .localization-selector.link{
+  justify-content: flex-start;
+}
+.search-localization #HeaderCountryForm .localization-selector.link{
+  margin:0;
+}
+.search-localization  #HeaderCountryForm .localization-form__select .icon-caret {
+  right: calc(var(--inputs-border-width) + 0rem);
+}
+.megamenu-mobile-inner .desktop-localization-wrapper{
+  padding:0;
+}
 
+@media only screen and (max-width: 1024px) {
+  body .header {
+    margin: 0 20px;
+  }
+}
 
 @media only screen and (max-width: 990px) {
     .header__search.desktop-view-only{
@@ -58,8 +127,9 @@ span.icon-location {
     }
     .find-in-store-btn{
       width: 100%;
-      min-width: 165px;
+      min-width: 185px;
       justify-content: center;
+      padding: 5px 12px;
     }
     .navabar-desktop{
       display:none;
@@ -68,6 +138,7 @@ span.icon-location {
      margin: 0px 15px;
      padding: 10px 0 !important;
     }
+  
 }
 
 @media only screen and (max-width: 768px) {

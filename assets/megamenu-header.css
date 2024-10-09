@@ -275,11 +275,12 @@
     border: 0px 0px 1px 0px;
     display: flex;
     justify-content: space-between;
-    color: #000000;
-    font-family: Cellofy;
+    color: var(--Black, #081F2C);
     font-size: 20px;
-    font-weight: 600;
-    line-height: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; 
+    letter-spacing: -0.4px;
   }
   .open-btn-list-text{
       padding: 25px 20px 25px 20px;
@@ -311,7 +312,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 101%;
+    width: 100%;
     background: #fff;
     overflow: scroll;
     height: calc(100vh - 100%);
@@ -394,6 +395,7 @@
     height: 420px;
     background-repeat: no-repeat;
     background-size: cover;
+    position:relative;
   }
   .megamenu-first-row .product-360-image .image{
     margin-top: 50px;

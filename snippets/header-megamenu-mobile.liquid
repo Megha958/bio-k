@@ -6,10 +6,7 @@
     <div class="megamenu-mobile-inner text-container-navbar">
 
       <div class="search-localization">
-        {% render 'header-search', input_id: 'Search-In-Modal' %} 
-            <span class="ly-custom-1000"></span>
-      
-           
+        {% render 'header-search-mobile', input_id: 'Search-In-Modal' %} 
       <div class="desktop-localization-wrapper">
       
           <noscript class="small-hide medium-hide">
@@ -30,7 +27,7 @@
             {%- endform -%}
           </noscript>
 
-          <localization-form class="small-hide medium-hide no-js-hidden">
+          <localization-form class="no-js-hidden">
             {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
@@ -41,7 +38,7 @@
         
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <noscript class="small-hide medium-hide">
+          <noscript class="">
             {%- form 'localization', id: 'HeaderLanguageMobileFormNoScript', class: 'localization-form' -%}
               <div class="localization-form__select">
                 <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScript">{{ 'localization.language_label' | t }}</h2>
@@ -58,7 +55,7 @@
             {%- endform -%}
           </noscript>
 
-          <localization-form class="small-hide medium-hide no-js-hidden">
+          <localization-form class="no-js-hidden">
             {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
@@ -104,7 +101,23 @@
                       </div>
                       <h3 class="h3">{{ menu_item.title }}</h3>
                   </div>
-                  test
+                  tab content
+                  <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button" onclick="openCity('tab1')">London</button>
+                    <button class="w3-bar-item w3-button" onclick="openCity('tab2')">Paris</button>
+                  </div>
+
+                  <div id="tab1" class="w3-container custom-tabs">
+                    <h2>London</h2>
+                    <p>London is the capital city of England.</p>
+                  </div>
+                  
+                  <div id="tab2" class="w3-container custom-tabs" style="display:none">
+                    <h2>Paris</h2>
+                    <p>Paris is the capital of France.</p> 
+                  </div>
+                  
+                  
           
                   
                 </div>
@@ -158,121 +171,74 @@
       {% endfor %}
 
             <div class="megamenu-mobile-slider">
-              <div class="megamenu-image-with-text-inner">
-                {% if section.settings.new_img %}
-                <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                          <img src="{{ section.settings.new_img | img_url: 'master' }}" alt="{{ section.settings.image_alt_text }}" class="">
+             <div class="megamenu-image-with-text-inner">
+                    <div class="image-width-text-header">
+                      <div class="product-360-category-main">
+                          <a href="{{ section.settings.cta_link_1 }}" class="product-360-category-inner">
+                            <div class="product-360-image" style="background-image: url({{ section.settings.product1_bg | img_url: 'master' }});">
+                              <div class="image">
+                                <img
+                                  src="{{ section.settings.pdp_image_1 | img_url: 'master' }}"
+                                  alt="Product Image"
+                                />
+                              </div>
+                            
+                            <div class="product-360-text-area">
+                              <div class="product-360-header-main">
+                                <div class="common-h5 product-360-header">
+                                  <h5>{{ section.settings.header_text_1 }}</h5>
+                                </div>
+                                <div class="product-360-para">
+                                  <p>{{ section.settings.paragraph_text_1 }}</p>
+                                </div>
+                              </div>
+                              <div class="link makro--link product-360-link ">
+                                {{ section.settings.cta_text_1 }} 
+                                {% render 'arrow-svg' %}
+                              </div>
+                            </div>
+                            </div>
+                          </a>
                         </div>
 
+                    </div>
 
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                            <h5>{{ section.settings.slide_1_heading }}</h5>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ section.settings.slide_1_text }}</p>
-                          </div>
+                    <div class="image-width-text-header">
+                      <div class="product-360-category-main">
+                          <a href="{{ section.settings.cta_link_2 }}" class="product-360-category-inner">
+                            <div class="product-360-image" style="background-image: url({{ section.settings.product2_bg | img_url: 'master' }});">
+                              <div class="image">
+                                <img
+                                  src="{{ section.settings.pdp_image_2 | img_url: 'master' }}"
+                                  alt="Product Image"
+                                />
+                              </div>
+                           
+                            <div class="product-360-text-area">
+                              <div class="product-360-header-main">
+                                <div class="common-h5 product-360-header">
+                                  <h5>{{ section.settings.header_text_2 }}</h5>
+                                </div>
+                                <div class="product-360-para">
+                                  <p>{{ section.settings.paragraph_text_2 }}</p>
+                                </div>
+                              </div>
+                              <div class="link makro--link product-360-link ">
+                                {{ section.settings.cta_text_2 }} 
+                                {% render 'arrow-svg' %}
+                              </div>
+                            </div>
+                           </div>
+                          </a>
                         </div>
-                        <div class="product-360-link">
-                          <a href="{{ section.settings.slide_1_link }}">Shop Now {% render 'icon-menu-arrow-right' %}</a>
-                        </div>
-                      </div>
+
                     </div>
-                  </div>
                 </div>
-                {% endif %}
-            
-                {% if section.settings.new_img_2 %}
-                <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                          <img src="{{ section.settings.new_img_2 | img_url: 'master' }}" alt="{{ section.settings.image_alt_text }}" class="">
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                            <h5>{{ section.settings.slide_2_heading }}</h5>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ section.settings.slide_2_text }}</p>
-                          </div>
-                        </div>
-                        <div class="product-360-link">
-                          <a href="{{ section.settings.slide_2_link }}">Shop Now {% render 'icon-menu-arrow-right' %}</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-            
-                {% if section.settings.new_img_3 %}
-                <div class="image-width-text-header">
-                  <div class="product-360-category-main">
-                    <div class="product-360-category-inner">
-                      <div class="product-360-image">
-                        <div class="image">
-                          <img src="{{ section.settings.new_img_3 | img_url: 'master' }}" alt="{{ section.settings.image_alt_text }}" class="">
-                        </div>
-                      </div>
-                      <div class="product-360-text-area">
-                        <div class="product-360-header-main">
-                          <div class="common-h5 product-360-header">
-                            <h5>{{ section.settings.slide_3_heading }}</h5>
-                          </div>
-                          <div class="product-360-para">
-                            <p>{{ section.settings.slide_3_text }}</p>
-                          </div>
-                        </div>
-                        <div class="product-360-link">
-                          <a href="{{ section.settings.slide_3_link }}">Shop Now {% render 'icon-menu-arrow-right' %}</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
+
+
+              
               </div>
-              </div>
-             <div class="mobile-header__country-n-lang">
-                <span class="ly-custom-0"></span> 
-               {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-                  <noscript class="">
-                    {%- form 'localization', id: '/', class: 'localization-form' -%}
-                      <div class="localization-form__select">
-                        <h2 class="visually-hidden" id="/">{{ 'localization.country_label' | t }}</h2>
-                        <select class="localization-selector link" name="country_code" aria-labelledby="HeaderCountryMobileLabelNoScript">
-                          {%- for country in localization.available_countries -%}
-                            <option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
-                               {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                        {% render 'icon-caret' %}
-                      </div>
-                      <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
-                    {%- endform -%}
-                  </noscript>
-        
-                  <localization-form class="no-js-hidden">
-                    {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                        {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {% endif %}
-             </div>
+            
     </div>
 
   </div>
@@ -295,3 +261,13 @@
   });
 </script>
 
+<script>
+  function openCity(ctabmenu) {
+  var i;
+  var x = document.getElementsByClassName("custom-tabs");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(ctabmenu).style.display = "block";  
+  }
+</script>
