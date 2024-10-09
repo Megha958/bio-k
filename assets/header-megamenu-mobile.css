@@ -131,7 +131,7 @@
       text-align: left;
       margin-top:10px;
     }
-    button.cust-menu-btns.tablinks.active {
+    button.cust-menu-btns.tablinks.active,button.cust-menu-btns.tablinks.active:hover {
       border-bottom: 3px solid var(--Green, #009845);
     }
     .cust_nav_header{
