@@ -95,24 +95,35 @@
                 
                 <div class=" toggle-open temporary_display-none animate__animated animate__fadeInRight">
                   <div class="common_h3 d-flex toggle-open-align animate__animated animate__fadeInLeft">
-                    
                      <div class="chevron-right-header">
                         {% render 'arrow-black-left' %}
                       </div>
                       <h3 class="h3">{{ menu_item.title }}</h3>
                   </div>
-                  tab content
+
+                  <div class="tabstart">
+                   
+                    
+                  </div>
+                 
                   <div class="w3-bar w3-black">
-                    <button class="w3-bar-item w3-button" onclick="openCity('tab1')">London</button>
+                    <button class="w3-bar-item w3-button" onclick="openCity('tab1')"><span class="header-header-text">{{ section.settings.navigation_header }}</span></button>
                     <button class="w3-bar-item w3-button" onclick="openCity('tab2')">Paris</button>
                   </div>
 
-                  <div id="tab1" class="w3-container custom-tabs">
-                    <h2>London</h2>
-                    <p>London is the capital city of England.</p>
+                  <div id="tab1" class="custom-tabs">
+                    <div class="header-header-text-list">
+                      <ul class="cust-inner-menu">
+                        {% for link in linklists[section.settings.nav_menu_1].links %}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
                   </div>
                   
-                  <div id="tab2" class="w3-container custom-tabs" style="display:none">
+                  <div id="tab2" class="custom-tabs" style="display:none">
                     <h2>Paris</h2>
                     <p>Paris is the capital of France.</p> 
                   </div>
@@ -262,7 +273,7 @@
 </script>
 
 <script>
-  function openCity(ctabmenu) {
+  function cust_tab_menu(ctabmenu) {
   var i;
   var x = document.getElementsByClassName("custom-tabs");
   for (i = 0; i < x.length; i++) {
