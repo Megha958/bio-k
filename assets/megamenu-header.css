@@ -314,8 +314,8 @@
     left: 0;
     width: 100%;
     background: #fff;
-    overflow: scroll;
-    height: calc(100vh - 100%);
+    /* overflow: scroll; */
+    height: 100%;
     padding-bottom:20px;
   }
   .megamenu-mobile-slider{
