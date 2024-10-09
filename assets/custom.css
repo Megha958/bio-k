@@ -109,7 +109,7 @@ span.icon-location {
 .search-localization  #HeaderCountryForm .localization-form__select .icon-caret {
   right: calc(var(--inputs-border-width) + 0rem);
 }
-.search-localization  #HeaderCountryForm .desktop-localization-wrapper{
+.megamenu-mobile-inner .desktop-localization-wrapper{
   padding:0;
 }
 
