@@ -104,6 +104,14 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+   .hero-text {
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    width: 100%;
+  }
+}
   
 
   /* Responsive */
@@ -113,11 +121,5 @@
     }
     .hero-mobile {
       display: none;
-    }
-    .hero-text {
-      left: 30px;
-      right: 30px;
-      top: 30px;
-      width: 100%;
     }
   }
