@@ -119,8 +119,9 @@ span.icon-location {
     }
     .find-in-store-btn{
       width: 100%;
-      min-width: 165px;
+      min-width: 185px;
       justify-content: center;
+      padding: 5px 12px;
     }
     .navabar-desktop{
       display:none;
