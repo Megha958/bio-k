@@ -77,7 +77,6 @@
   .hero-mobile {
     display: block;
     background-size: cover;
-    background-position: center;
     padding: 40px 0;
     height: calc(100vh - 100px);
   }
