@@ -88,13 +88,16 @@ span.icon-location {
 .search-localization .localization-form:only-child .button,.search-localization .localization-form:only-child .localization-form__select {
   margin: 0rem 1rem 0rem;
 }
-.disclosure__list-wrapper{
+.search-localization .disclosure__list-wrapper{
   position: absolute;
   top: 100%;
   bottom:unset;
   right: 0;
   transform: unset;
-
+}
+.search-localization #HeaderLanguageLabel .localization-form__select{
+  min-width: 30px !important;
+  width:auto !important;
 }
 
 
