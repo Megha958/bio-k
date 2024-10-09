@@ -109,8 +109,8 @@
     left: 30px;
     right: 30px;
     top: 30px;
-    width: 100%;
-     transform:unset;
+    width: calc(100% - 50px);
+    transform:unset;
   }
 }
   
