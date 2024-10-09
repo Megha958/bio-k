@@ -312,7 +312,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 101%;
+    width: 100%;
     background: #fff;
     overflow: scroll;
     height: calc(100vh - 100%);
