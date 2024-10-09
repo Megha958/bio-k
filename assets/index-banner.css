@@ -234,7 +234,9 @@ a:hover {
 
 img.blog-img {
   margin-right: auto;
-  height: 100%
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 a.join-btn,
@@ -302,7 +304,8 @@ p.blog-access-para,
 p.blog-active-num {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 700
+  font-weight: 700;
+  margin:0;
 }
 
 .blog-left {
@@ -333,7 +336,7 @@ section.bio-sec .container {
   /* width: 119px; */
   width: 100%;
   max-width: 119px;
-  min-width: 119px;
+  min-width: 154px;
 }
 
 .blog-active,
@@ -353,7 +356,8 @@ p.blog-access-para {
 p.blog-active-mem,
 p.blog-active-num {
   color: var(--Green, #009845);
-  line-height: 120%
+  line-height: 120%;
+  margin:0;
 }
 
 p.blog-active-num {
@@ -515,7 +519,8 @@ span.power-span {
 p.power-card-para {
   color: var(--White, #fff);
   font-size: 16px;
-  letter-spacing: -.32px
+  letter-spacing: -.32px;
+  margin: 0;
 }
 
 .power-card.power-card-second {
@@ -544,7 +549,13 @@ p.power-card-para {
     padding: 2px 10px;
     border-radius: 50px;
 }
+.swiper-wrapper {
+  gap: 30px !important;
+}
 @media(max-width:991px){
+  .swiper-wrapper {
+    gap: 15px !important;
+  }
   .power-grid {
     grid-template-columns: 1fr;
   }
@@ -664,9 +675,9 @@ p.power-card-para {
   h3.blog-head {
     font-size: 28px;
 }
-.bio-inner .page-width {
-    padding: 0 0;
-  }
+  .bio-inner .container {
+      padding: 0 0;
+    }
   .blog-btns {
     display: grid;
     gap: 10px;

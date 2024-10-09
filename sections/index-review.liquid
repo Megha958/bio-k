@@ -77,7 +77,6 @@
 
   var swiper = new Swiper(".review-slider", {
     slidesPerView: 1,
-    spaceBetween: 0,
     navigation: {
       nextEl: '.review-{{ section.id }} .swiper-button-next',
       prevEl: '.review-{{ section.id }} .swiper-button-prev',
@@ -85,23 +84,18 @@
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 0,
       },
       575: {
         slidesPerView: 1,
-        spaceBetween: 0,
       },
       750: {
         slidesPerView: 3,
-        spaceBetween: 0,
       },
       1000: {
         slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-        spaceBetween: 0,
       },
       1500: {
         slidesPerView: 4, // Consistent with 1000px breakpoint
-        spaceBetween: 0,
       },
     },
   });

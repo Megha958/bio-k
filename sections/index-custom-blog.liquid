@@ -123,16 +123,11 @@
     .benefits-slider-section .grid__item{
       max-width:100%;
     }
-
-
   }
-
 
 {% endstyle %}
 
-
-
-<div class="main-category Pdp-benefitslider-{{ section.id }}">
+<div class="main-category custom-blog-{{ section.id }}">
 <div class="isolate{% unless section.settings.full_width %} page-width1{% endunless %} section-{{ section.id }}">
     <section class=" section-{{ section.id }}-padding">
     <div class="has-nav-wrapper">
@@ -188,7 +183,6 @@
 <script>
   var swiper = new Swiper(".slider-swiper-blog", {
     slidesPerView: 1,
-    spaceBetween: 0,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -196,23 +190,18 @@
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 10,
       },
       575: {
         slidesPerView: 1,
-        spaceBetween: 10,
       },
       750: {
         slidesPerView: 3,
-        spaceBetween: 20,
       },
       1000: {
         slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-        spaceBetween: 30,
       },
       1500: {
         slidesPerView: 4, // Consistent with 1000px breakpoint
-        spaceBetween: 30,
       },
     },
   });

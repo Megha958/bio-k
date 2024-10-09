@@ -123,14 +123,8 @@
     .benefits-slider-section .grid__item{
       max-width:100%;
     }
-
-
   }
-
-
 {% endstyle %}
-
-
 
 <div class="main-category Pdp-benefitslider-{{ section.id }}">
 <div class="isolate{% unless section.settings.full_width %} page-width1{% endunless %} section-{{ section.id }}">
@@ -183,7 +177,6 @@
 <script>
   var swiper = new Swiper(".slider-swiper", {
     slidesPerView: 1,
-    spaceBetween: 0,
     navigation: {
       nextEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-next',
       prevEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-prev',
@@ -191,23 +184,18 @@
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 0,
       },
       575: {
         slidesPerView: 1,
-        spaceBetween: 0,
       },
       750: {
         slidesPerView: 2,
-        spaceBetween: 0,
       },
       1000: {
         slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-        spaceBetween: 10,
       },
       1500: {
         slidesPerView: 6, // Consistent with 1000px breakpoint
-        spaceBetween: 10,
       },
     },
   });
