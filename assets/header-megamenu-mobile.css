@@ -82,51 +82,7 @@
     margin-bottom: 20px !important;
   }
   
-  /* card items css */
-  
-  .card_items {
-    flex: 1;
-    position: relative;
-  }
-  .card_items > a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .megamenu_first_inner .card_items .image {
-    line-height: 0;
-    margin-bottom: 40px;
-    aspect-ratio: 0 / 0;
-  }
-  .card_items .image img.card-image {
-    position: absolute;
-  }
-  .card_items .main_heading {
-    font-size: 40px;
-    margin: 0 0 10px;
-  }
-  .card_items p.desc {
-    padding-bottom: 27px;
-  }
-  .slider_product-mobile .card_items .image {
-    line-height: 0;
-    margin-bottom: 40px;
-    aspect-ratio: 0 / 0;
-  }
-  
-  
-  /* transparent-header */
-  
-  /*.transparent-header .navbar a {
-    color:#FFFFFF;
-  }*/
-  /*.transparent-header .icon svg path,
-  .transparent-header .header__icon--account svg path,
-  .transparent-header .header__icon--cart svg path{
-       stroke:white;
-  }*/
+ 
   
   @media only screen and (max-width: 1250px) {
     .navbar .navbar-nav {
