@@ -106,6 +106,9 @@ span.icon-location {
 .search-localization #HeaderCountryForm .localization-selector.link{
   margin:0;
 }
+.search-localization  #HeaderCountryForm .localization-form__select .icon-caret {
+  right: calc(var(--inputs-border-width) + 0rem);
+}
 
 @media only screen and (max-width: 990px) {
     .header__search.desktop-view-only{
