@@ -81,6 +81,13 @@
       gap: 20px;
       flex-direction: column;
     }
+    .product-360-image {
+      height: 290px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      object-fit: cover;
+    }
    
   }
 
