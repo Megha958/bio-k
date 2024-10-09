@@ -73,6 +73,7 @@
     }
     .nav-toggle-menu.active .temporary_display-none {
       display: block;
+      padding:30px;
     }
     
     .megamenu-mobile-slider .megamenu-image-with-text-inner {
@@ -101,9 +102,7 @@
       transform: translate(0, -50%);
       width:60%;
     }
-    .megamenu-mobile-header-list .toggle-open{
-      padding: 30px 25px;
-    }
+    
     .megamenu-mobile-header-list .common_h3.d-flex.toggle-open-align{
       display: flex;
       align-items: center;
