@@ -95,9 +95,11 @@
       gap: 10px;
       position: absolute;
       bottom: unset;
-      left: unset;
+      left: 40%;
       right: 20px;
-      width: 60%;
+      top: 50%;
+      transform: translate(0, -50%);
+      width:60%;
     }
   }
 
