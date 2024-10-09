@@ -63,4 +63,13 @@ span.icon-location {
     body .header {
         margin: 10px 15px;
     }
+}
+
+@media only screen and (max-width: 768px) {
+  .find-in-store-btn {
+    width: 100%;
+    min-width: 155px;
+    font-size: 14px;
+    width: 100%;
   }
+}
