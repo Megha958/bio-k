@@ -138,24 +138,29 @@
     <div class="has-nav-wrapper">
         {% if section.settings.heading != blank %}
             <div class="page-width">
-            <h3 class="title center">{{ section.settings.heading }}</h3>
-            <p class="subtext center">{{ section.settings.subheading }}</p>
+                <div class="custom-blog">
+                    <h3 class="title left">{{ section.settings.heading }}</h3>
+                    <p class="subtext left">{{ section.settings.subheading }}</p>
+                </div>
             </div>
         {% endif %}
      
     </div>
     <div class="slider-container">
-      <!-- Swiper Container -->
       <div class="benefits-slider">
-        <div class="slider-swiper swiper mySwiper-{{ section.id }}">
+        <div class="slider-swiper-blog swiper mySwiper-{{ section.id }}">
           <div class="page-width swiper-wrapper swiper-inner" style="overflow:visible;">
             {% for block in section.blocks %}
-                <div class="swiper-slide grid__item">
+                <div class="swiper-slide grid__item" style="background:{{ block.settings.bgcolor }};">
                     <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
                     <div class="benefits-content">
-                    <h5>{{ block.settings.title }}</h5>
-                    <p>{{ block.settings.description }}</p>
-                    <a href="{{ block.settings.link }}" class="linkonly see-products">{{section.settings.button_text}}See Products  {% render 'button-arrow' %}</a> 
+                        <a href="{{ block.settings.link }}" class="linkonly custom-blog-details">
+                        <h5>{{ block.settings.title }}</h5>
+                        <div class="tag-view">
+                            <span style="background:{{  block.settings.tag1color }};">{{ block.settings.tag1 }}</span>
+                            <span style="background:{{  block.settings.tag2color }};">{{ block.settings.tag2 }}</span>
+                        </div>
+                        </a> 
                     </div>
                 </div>
             {%- endfor -%}
@@ -181,33 +186,33 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-  var swiper = new Swiper(".slider-swiper", {
+  var swiper = new Swiper(".slider-swiper-blog", {
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: {
-      nextEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-next',
-      prevEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 10,
       },
       575: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 10,
       },
       750: {
-        slidesPerView: 2,
-        spaceBetween: 0,
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
       1000: {
         slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-        spaceBetween: 10,
+        spaceBetween: 30,
       },
       1500: {
-        slidesPerView: 6, // Consistent with 1000px breakpoint
-        spaceBetween: 10,
+        slidesPerView: 4, // Consistent with 1000px breakpoint
+        spaceBetween: 30,
       },
     },
   });
@@ -215,7 +220,7 @@
 </script>
 {% schema %}
 {
-  "name": "Category Slider",
+  "name": "custom blog  Slider",
   "settings": [
     
     {
@@ -261,6 +266,11 @@
       "name": "Slide",
       "settings": [
         {
+            "type": "color",
+            "id": "bgcolor",
+            "label": "background color"
+        },
+        {
           "type": "image_picker",
           "id": "image",
           "label": "Image"
@@ -272,16 +282,25 @@
           "default": "Pro-Grade Capacity"
         },
         {
-          "type": "textarea",
-          "id": "description",
-          "label": "Description",
-          "default": "Unleash your culinary creativity with this spacious 2-quart powerhouse!"
-        },
-        {
             "type": "text",
-            "id": "button_text",
-            "label": "Button Title"
-        },
+            "id": "tag1",
+            "label": "Tag 1"
+          },
+          {
+            "type": "color",
+            "id": "tag1color",
+            "label": "Tag 1 color"
+          },
+          {
+            "type": "text",
+            "id": "tag2",
+            "label": "Tag 2"
+          },
+          {
+            "type": "color",
+            "id": "tag2color",
+            "label": "Tag 2 color"
+          },
         {
             "type": "url",
             "id": "link",
@@ -292,7 +311,7 @@
   ],
   "presets": [
     {
-      "name": "Category Slider",
+      "name": "custom blog Slider",
       "category": "Custom"
     }
   ]
