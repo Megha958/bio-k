@@ -35,15 +35,6 @@
     justify-content: space-between;
   }
   
-  .text-container-navbar .toggle-close a {
-      color: #000;
-  }
-  
-  .open_text-navbar-cont .megamenu_menu_list {
-    padding: 0px 20px;
-  }
-  
- 
   .toggle-open,
   .inner-navabar-mobile {
     position: relative;
