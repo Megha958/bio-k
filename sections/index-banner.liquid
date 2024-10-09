@@ -16,7 +16,7 @@
           <div class="power-right">
             <h3 class="power-head">{{ section.settings.heading }}</h3>
             <p class="power-para">{{ section.settings.description }}</p>
-            <div class="faq-section">
+            <div class="faq-section-banner">
             {% for block in section.blocks %}
                 {%- case block.type -%}
                 {%- when 'faq' -%}
@@ -87,7 +87,7 @@
         width: 12px;
         height: 12px;
     }
-    .faq-section{
+    .faq-section-banner{
         margin-bottom:20px;
     }
   </style>
