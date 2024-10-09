@@ -103,7 +103,7 @@ span.icon-location {
 .search-localization .localization-selector.link{
   justify-content: flex-start;
 }
-.search-localization .localization-selector.link:last-child{
+.search-localization #HeaderCountryForm .localization-selector.link{
   margin:0;
 }
 
