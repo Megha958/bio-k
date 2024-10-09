@@ -103,13 +103,13 @@
       width:60%;
     }
     
-    .megamenu-mobile-header-list .common_h3.d-flex.toggle-open-align{
+    .megamenu-mobile-header-list .common_h3{
       display: flex;
       align-items: center;
       justify-content: flex-start;
       gap:20px;
     }
-    .megamenu-mobile-header-list .common_h3.d-flex.toggle-open-align h3{
+    .megamenu-mobile-header-list .common_h3 h3{
     	margin:0;
     }
   }
