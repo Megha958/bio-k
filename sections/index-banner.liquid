@@ -1,0 +1,178 @@
+<section class="power-sec index-banner">
+    <div class="power-inner">
+      <div class="container">
+        <div class="power-grid">
+          <div class="power-left">
+            {% for block in section.blocks %}
+                {%- case block.type -%}
+                {%- when 'card' -%}
+                <div class="power-card power-card-{{ block.settings.card_class }}">
+                    <span class="power-span">{{ block.settings.card_number }}</span>
+                    <p class="power-card-para">{{ block.settings.card_text }}</p>
+                </div>
+            {% endcase %}
+            {% endfor %}
+          </div>
+          <div class="power-right">
+            <h3 class="power-head">{{ section.settings.heading }}</h3>
+            <p class="power-para">{{ section.settings.description }}</p>
+            {% for block in section.blocks %}
+                {%- case block.type -%}
+                {%- when 'faq' -%}
+                {% if block.settings.question != blank %}
+                <div class="faq-item second">
+                    <div class="faq-question second">
+                        <div class="faq-data">
+                        <h6>{{ block.settings.question }}   </h6>
+                            <span class="toggle-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="faq-answer second">
+                        <p>{{ block.settings.answer }}</p>
+                    </div>
+                </div>
+                {% endif %}
+             {% endcase %}
+            {% endfor %}
+            <a href="{{ section.settings.button_link }}" class="join-btn" style="color: {{ section.settings.button_color }};">
+              <span>{{ section.settings.button_text }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="{{ section.settings.button_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $(document).ready(function() {
+      $('.faq-question').on('click', function() {
+        const $question = $(this);
+        const $answer = $question.next('.faq-answer');
+        $answer.slideToggle();
+        $question.toggleClass('active');
+      });
+    });
+  </script>
+  <style>
+    section.power-sec {
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: url('{{section.settings.imagebg | img_url:''}}') !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+      }
+      .index-banner h6{
+        margin:10px 0;
+        color: #fff;
+     }
+     .index-banner .faq-answer p{
+        margin:10px 0;
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 0;
+     }
+     .index-banner .toggle-icon svg{
+        width: 12px;
+        height: 12px;
+    }
+  </style>
+
+  {% schema %}
+{
+  "name": "Power Section",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "imagebg",
+        "label": "image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Power of Three: Bio-K+'s Revolutionary Probiotic Blend"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Discover Our Formula"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color",
+      "default": "#28724F"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Power Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "card_number",
+          "label": "Card Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "card_text",
+          "label": "Card Text",
+          "default": "Lacticaseibacillus Casei LBC80R®"
+        },
+        {
+          "type": "text",
+          "id": "card_class",
+          "label": "Card Class",
+          "default": "first"
+        }
+      ]
+    },
+    {
+        "type": "faq",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
