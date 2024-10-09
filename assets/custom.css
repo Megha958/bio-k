@@ -64,6 +64,11 @@ span.icon-location {
   left:0;
   right:unset;
 }
+.mobile-view-only .search__input.field__input {
+  padding-right: 1.5rem;
+  padding-left: 3.75rem;
+}
+
 
 @media only screen and (max-width: 990px) {
     .header__search.desktop-view-only{
