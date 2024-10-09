@@ -54,18 +54,19 @@ span.icon-location {
 
 @media only screen and (max-width: 990px) {
     .header__search{
-        display:none;
+      display:none;
     }
     .find-in-store-btn{
-        width: 100%;
-        min-width: 165px;
-        justify-content: center;
+      width: 100%;
+      min-width: 165px;
+      justify-content: center;
     }
     .navabar-desktop{
-        display:none;
+      display:none;
     }
     body .header {
-        margin: 10px 15px;
+     margin: 0px 15px;
+     padding: 10px 0 !important;
     }
 }
 
