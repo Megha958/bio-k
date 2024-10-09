@@ -16,10 +16,10 @@
 }
 .hero-text h1{
     color: var(--White, #FFF);
-    font-size: 57px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 700;
-    line-height: 55px;
+    line-height: 100%;
     letter-spacing: -1.2px;
     margin:0;
 }
