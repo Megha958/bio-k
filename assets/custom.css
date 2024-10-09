@@ -53,7 +53,10 @@ span.icon-location {
 .mobile-view-only{
   padding:20px;
 }
-
+.search__input.field__input {
+  border-radius: 100px;
+  background: var(--gray-tones-black-2, rgba(0, 0, 0, 0.02));
+}
 
 
 
