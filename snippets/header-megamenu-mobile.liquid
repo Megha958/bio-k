@@ -101,12 +101,12 @@
                       <h3 class="h3">{{ menu_item.title }}</h3>
                   </div>
 
-                  <div class="tabstart">
-                  <button class="cust-menu-btns" onclick="cust_tab_menu('tab1')"><span class="cust_nav_header">{{ section.settings.navigation_header_1 }}</span></button>
-                  <button class="cust-menu-btns" onclick="cust_tab_menu('tab2')"><span class="cust_nav_header">{{ section.settings.navigation_header_2 }}</span></button>
+                  <div class="tabstart tab">
+                  <button class="cust-menu-btns tablinks" onclick="cust_tab_menu('tab1')"><span class="cust_nav_header">{{ section.settings.navigation_header_1 }}</span></button>
+                  <button class="cust-menu-btns tablinks" onclick="cust_tab_menu('tab2')"><span class="cust_nav_header">{{ section.settings.navigation_header_2 }}</span></button>
                   </div>
                  
-                  <div id="tab1" class="custom-tabs">
+                  <div id="tab1" class="custom-tabs tabcontent">
                     <div class="header-header-text-list">
                       <ul class="cust-inner-menu">
                         {% for link in linklists[section.settings.nav_menu_1].links %}
@@ -118,7 +118,7 @@
                     </div>
                   </div>
                   
-                  <div id="tab2" class="custom-tabs" style="display:none">
+                  <div id="tab2" class="custom-tabs tabcontent" style="display:none">
                    <div class="header-header-text-list">
                       <ul class="cust-inner-menu">
                         {% for link in linklists[section.settings.nav_menu_2].links %}
