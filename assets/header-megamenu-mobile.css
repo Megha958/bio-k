@@ -83,6 +83,11 @@
     }
     .megamenu-mobile-inner .common_h3 h3{
       margin:0;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
     }
     
     .megamenu-mobile-slider .megamenu-image-with-text-inner {
