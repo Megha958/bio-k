@@ -55,7 +55,7 @@
   >
     <span>{{ localization.country | image_url: width: 16 | image_tag }} 
      {% comment %} {{ localization.country.name -}}   {% endcomment %}
-      {{ localization.country.currency.iso_code }} ({{- localization.country.currency.symbol }})
+      <!-- {{ localization.country.currency.iso_code }} ({{- localization.country.currency.symbol }}) -->
     </span>
     {% render 'icon-caret' %}
   </button>
@@ -73,7 +73,7 @@
           > 
              {% render 'flag-load-snnipet', selector:country %}
             {{ country.name }}
-            <span class="localization-form__currency">
+            <span class="localization-form__currency ">
              ({{- country.currency.iso_code }} {{ country.currency.symbol }})</span>
           
           </a>
