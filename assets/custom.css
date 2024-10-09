@@ -85,7 +85,7 @@ span.icon-location {
 .mobile-view-only .reset__button {
   right: calc(var(--inputs-border-width) + 0rem);
 }
-.localization-form:only-child .button, .localization-form:only-child .localization-form__select {
+.search-localization .localization-form:only-child .button,.search-localization .localization-form:only-child .localization-form__select {
   margin: 0rem 1rem 0rem;
 }
 
