@@ -298,6 +298,8 @@
     </script>
   <link rel="stylesheet" href="{{ 'swiper-bundle.min.css' | asset_url }}" media="print" onload="this.media='all'">
   {{ 'custom.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
