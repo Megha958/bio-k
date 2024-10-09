@@ -101,6 +101,18 @@
       transform: translate(0, -50%);
       width:60%;
     }
+    .megamenu-mobile-header-list .toggle-open{
+      padding: 30px 25px;
+    }
+    .megamenu-mobile-header-list .common_h3.d-flex.toggle-open-align{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap:20px;
+    }
+    .megamenu-mobile-header-list .common_h3.d-flex.toggle-open-align h3{
+    	margin:0;
+    }
   }
   @media only screen and (max-width: 640px) {
     .product-360-category-main .product-360-image {
