@@ -177,17 +177,17 @@
         "card_imfVjf": {
           "type": "card",
           "settings": {
-            "card_number": "01",
+            "card_number": "02",
             "card_text": "Lacticaseibacillus Casei LBC80R®",
-            "card_class": "first"
+            "card_class": "second"
           }
         },
         "card_3rnUii": {
           "type": "card",
           "settings": {
-            "card_number": "01",
+            "card_number": "03",
             "card_text": "Lacticaseibacillus Casei LBC80R®",
-            "card_class": "first"
+            "card_class": "third"
           }
         },
         "faq_VbAyYh": {
