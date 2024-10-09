@@ -135,7 +135,7 @@
 
             {% elsif block.type == 'about' %}
               {% assign images_block_with_product = true %}
-              <div class="{% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %} about-menus">
+              <div class="cust-about-menu {% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %}">
                 {% if menu_item.links != blank and images_block_with_product == true %}
   
                   <div class="toggle-close custom-menu-cmn common_h3 d-flex">
