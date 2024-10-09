@@ -71,7 +71,7 @@ span.icon-location {
 .mobile-view-only .field__label{
   left:calc(var(--inputs-border-width) + 3.75rem);
 }
-.mobile-view-only .field__input:focus~.field__label{
+.mobile-view-only .field__input:focus~.field__label,.mobile-view-only .field__input:not(:placeholder-shown)~.field__label{
   display:none;
 }
 .mobile-view-only .field__input:focus, .field__input:not(:placeholder-shown){
