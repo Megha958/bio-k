@@ -52,6 +52,8 @@ span.icon-location {
 }
 .search-localization{
   padding:20px;
+  display:flex;
+  justify-content:space-between;
 }
 .mobile-view-only .search__input.field__input {
   border-radius: 100px;
