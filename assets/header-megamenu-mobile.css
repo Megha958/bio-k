@@ -131,6 +131,9 @@
       padding: 20px 0 20px 30px;
       text-align: left;
     }
+    button.cust-menu-btns.tablinks.active {
+      border-bottom: 3px solid var(--Green, #009845);
+    }
     .cust_nav_header{
       color: #000;
       font-family: Montserrat;
