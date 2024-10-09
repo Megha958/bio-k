@@ -47,3 +47,20 @@ span.icon-location {
     margin-top: 10px;
     margin-right: 5px;
 }
+
+
+@media only screen and (max-width: 990px) {
+    .header__search{
+        display:none;
+    }
+    .find-in-store-btn{
+        width: 100%;
+        min-width: 165px;
+    }
+    .navabar-desktop{
+        display:none;
+    }
+    body .header {
+        margin: 10px 15px;
+    }
+  }
