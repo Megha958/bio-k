@@ -100,7 +100,7 @@ span.icon-location {
   min-width: 30px !important;
   width:auto !important;
 }
-.localization-selector.link{
+.search-localization .localization-selector.link{
   justify-content: flex-start;
 }
 
