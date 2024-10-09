@@ -53,7 +53,7 @@ span.icon-location {
 
 
 @media only screen and (max-width: 990px) {
-    .header__search{
+    .header__search.desktop-view-only{
       display:none;
     }
     .find-in-store-btn{
