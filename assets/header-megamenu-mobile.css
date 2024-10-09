@@ -40,11 +40,6 @@
     position: relative;
   }
   
-  .toggle-open-align {
-    padding: 25px 20px;
-    gap: 20px;
-  }
-  
   .mobile_navabar {
     display: block;
     position: absolute;
@@ -53,7 +48,6 @@
     width: 101%;
     background: white;
     overflow: scroll;
-    /* height: 84vh; */
     height: calc(100vh - 100%);
   }
   .language_selecter {
