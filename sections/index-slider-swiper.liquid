@@ -1,0 +1,296 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle.min.js' | asset_url | script_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+{%- endstyle -%}
+{% style %}
+.benefits-slider-section  .swiper-button-next:after , .swiper-button-prev:after{
+    display:none;
+  }
+ .benefits-slider-section .swiper-button-next svg, .swiper-button-prev svg{
+    width:20px; height:20px;
+  }
+  .benefits-slider-section .swiper-button-prev svg{ transform:rotate(0deg);
+}
+.benefits-slider-section .main_heading { 
+  color: #000;
+  font-family: Cellofy;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.8px; 
+}
+.has-nav-wrapper {
+    position: relative;
+}
+  /* Ensure the slider container has relative positioning */
+.benefits-slider-section .slider-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.benefits-slider-section .slider-container .benefits-slider .benefits-slider-swiper {
+  overflow: visible;
+}
+/* Position navigation arrows */
+.benefits-slider-section .slider-navigation {
+  position: absolute;
+  top: -14%;
+  right: 9%; /* Adjust the distance from the right edge as needed */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits-slider-section .swiper-button-prev {
+  margin-bottom: 10px; /* Space between the buttons */
+}
+
+/* Optional: Ensure that the navigation arrows are positioned above the swiper container */
+.benefits-slider-section .benefits-slider {
+  position: relative;
+}
+.benefits-slider-section .swiper-button-prev{ left:-60px;}
+.benefits-slider-section .swiper-button-next{ right:-60px;}
+
+.Pdp-benefitslider .textflex{
+  align-items: start;
+  display: flex;
+}
+.Pdp-benefitslider .textflex .subtext {
+  
+}
+  @media screen and (max-width:767px){
+    .benefits-slider-section .slider-navigation{ display:none; }
+    .benefits-slider-section .slider-container {margin-top: 0;}
+    .template-product main .has-nav-wrapper.page-width {
+        padding: 0;
+    }
+  }
+  @media screen and (max-width:576px){
+    .benefits-slider-section .grid__item{
+      max-width:100%;
+    }
+     .benefits-slider-section .swiper-slide.grid__item img{ height:240px;}
+    .Pdp-benefitslider .benefits-slider-section {
+      margin-left: 0 !important;
+      padding: 0 20px;
+    }
+    .benefits-slider-section .textflex h2 {
+        font-size: 36px;
+        letter-spacing: -0.72px;
+        margin: 0;
+        max-width: 65%;
+    }
+    .Pdp-benefitslider .textflex .subtext {
+        font-size: 24px;
+        margin-left: 0px;
+        position: absolute;
+        right: 20px;
+        top: 50px;
+    }
+    .benefits-slider .benefits-content {
+      padding: 20px;
+    }
+  }
+  @media(max-width:500px){
+    .Pdp-benefitslider .textflex .subtext{
+        right: 0;
+        top: 16px;
+        width: 40%;
+        left: auto;
+    }
+   .template-product main  .benefits-slider-section  .page-width {
+        padding-left: 0;
+        padding-right: 2rem;
+        margin-top: 20px;
+    }
+  }
+{% endstyle %}
+
+
+
+<div class="main-category">
+<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+    <section class=" section-{{ section.id }}-padding">
+    <div class="has-nav-wrapper page-width">
+        {% if section.settings.heading != blank %}
+            <div class="">
+            <h3 class="title">{{ section.settings.heading }}</h3>
+            <p class="subtext">{{ section.settings.subheading }}</p>
+            </div>
+        {% endif %}
+       <div class="slider-navigation slide-nav">
+        <div class="swiper-button-prev nav-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+            <path d="M10.375 1.25L1.625 10L10.375 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      <div class="swiper-button-next nav-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+            <path d="M1.625 1.25L10.375 10L1.625 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="slider-container">
+      <!-- Swiper Container -->
+      <div class="benefits-slider page-width">
+        <div class="benefits-slider-swiper swiper mySwiper-{{ section.id }}">
+          <div class="swiper-wrapper swiper-inner">
+            {% for block in section.blocks %}
+                <div class="swiper-slide grid__item">
+                    <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
+                    <div class="benefits-content">
+                    <h5>{{ block.settings.title }}</h5>
+                    <p>{{ block.settings.description }}</p>
+                    <a href="{{ block.settings.link }}" class="linkonly see-products">{{section.settings.button_text}}See Products  {% render 'button-arrow' %}</a> 
+                    </div>
+                </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>  
+</div>  
+
+<script>
+  var swiper = new Swiper(".benefits-slider-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-next',
+      prevEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      575: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      750: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 3, // Adjust to show 3.5 columns on larger screens
+        spaceBetween: 30,
+      },
+      1500: {
+        slidesPerView: 3, // Consistent with 1000px breakpoint
+        spaceBetween: 32,
+      },
+    },
+  });
+  {% if meta_index == blank %}
+    if( typeof Shopify.designMode == 'undefined' ){
+      document.getElementById('shopify-section-{{ section.id }}').classList.add('hidden');
+    }
+  {% endif %}
+</script>
+{% schema %}
+{
+  "name": "Category Slider",
+  "settings": [
+    
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "One Tool, Lots of Benefits."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Trusted in over 60,000 kitchens"
+    },
+     {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Pro-Grade Capacity"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Unleash your culinary creativity with this spacious 2-quart powerhouse!"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Title"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
