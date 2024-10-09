@@ -117,7 +117,26 @@
       justify-content: space-between;
       gap: 20px;
     }
-    
+    .tabstart{
+      border-bottom: 1px solid var(--gray-tones-black-5, rgba(0, 0, 0, 0.05));
+    }
+    .cust-menu-btns{
+      background: transparent;
+      border: unset;
+      width: 50%;
+      padding: 20px 0;
+      text-align: left;
+    }
+    .cust_nav_header{
+      color: #000;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+    }
+	
+
   }
   @media only screen and (max-width: 640px) {
     .product-360-category-main .product-360-image {
