@@ -57,7 +57,9 @@ span.icon-location {
   border-radius: 100px;
   background: var(--gray-tones-black-2, rgba(0, 0, 0, 0.02));
 }
-
+.field:after{
+  display:none;
+}
 
 
 @media only screen and (max-width: 990px) {
