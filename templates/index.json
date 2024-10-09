@@ -62,6 +62,107 @@
         "padding_bottom": 52
       }
     },
+    "index_slider_swiper_6eEyrp": {
+      "type": "index-slider-swiper",
+      "blocks": {
+        "slide_eXqG8Y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Everyday_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_HQiNx6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Immune_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_3hjCcG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Cognitive_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_YCXpC8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Travel_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_FWjcLA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/image_5.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_MMXp6w": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Everyday_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_C4iDQY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Immune_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_ygWyrw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Cognitive_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_eXqG8Y",
+        "slide_HQiNx6",
+        "slide_3hjCcG",
+        "slide_YCXpC8",
+        "slide_FWjcLA",
+        "slide_MMXp6w",
+        "slide_C4iDQY",
+        "slide_ygWyrw"
+      ],
+      "settings": {
+        "heading": "Precision-Engineered Probiotics",
+        "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific aspects of your gut health and overall wellness.",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "index_feature_tiles_MHxXw3": {
       "type": "index-feature-tiles",
       "blocks": {
@@ -213,6 +314,7 @@
     "hero_section_main_mBxWcA",
     "featured_collection",
     "index_text_6r9HAF",
+    "index_slider_swiper_6eEyrp",
     "index_feature_tiles_MHxXw3",
     "index_faq_XfU8xk",
     "1728395834aa4757d3"
