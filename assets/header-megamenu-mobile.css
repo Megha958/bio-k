@@ -53,6 +53,13 @@
   .language_selecter {
     padding: 0px 20px 40px 10px;
   }
+
+  .product-360-image .image {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
   
   @media only screen and (max-width: 1199px) {
     .navbar {

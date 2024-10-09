@@ -395,6 +395,7 @@
     height: 420px;
     background-repeat: no-repeat;
     background-size: cover;
+    position:relative;
   }
   .megamenu-first-row .product-360-image .image{
     margin-top: 50px;
