@@ -154,7 +154,7 @@
     .cust-about-menu .megamenu-mobile-slider .megamenu-image-with-text-inner{
     	padding:0;
     }
-    .megamenu-mobile-slider .megamenu-image-with-text-inner{
+    .megamenu-mobile-slider .megamenu-image-with-text-inner.cust-menu-padd{
       padding:0;
     }
   }
