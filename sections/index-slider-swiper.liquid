@@ -69,12 +69,17 @@
 .benefits-slider-section .swiper-button-prev{ left:-60px;}
 .benefits-slider-section .swiper-button-next{ right:-60px;}
 
-.Pdp-benefitslider .textflex{
-  align-items: start;
-  display: flex;
+
+.main-category h5{
+    margin: 20px 0 10px;
 }
-.Pdp-benefitslider .textflex .subtext {
-  
+.main-category p{
+    color: #6B7981;
+    letter-spacing: 0;
+    margin: 10px 0;
+}
+.main-category h3{
+    margin-bottom: 5px;
 }
   @media screen and (max-width:767px){
     .benefits-slider-section .slider-navigation{ display:none; }
@@ -88,52 +93,24 @@
       max-width:100%;
     }
      .benefits-slider-section .swiper-slide.grid__item img{ height:240px;}
-    .Pdp-benefitslider .benefits-slider-section {
-      margin-left: 0 !important;
-      padding: 0 20px;
-    }
-    .benefits-slider-section .textflex h2 {
-        font-size: 36px;
-        letter-spacing: -0.72px;
-        margin: 0;
-        max-width: 65%;
-    }
-    .Pdp-benefitslider .textflex .subtext {
-        font-size: 24px;
-        margin-left: 0px;
-        position: absolute;
-        right: 20px;
-        top: 50px;
-    }
+   
     .benefits-slider .benefits-content {
       padding: 20px;
     }
   }
-  @media(max-width:500px){
-    .Pdp-benefitslider .textflex .subtext{
-        right: 0;
-        top: 16px;
-        width: 40%;
-        left: auto;
-    }
-   .template-product main  .benefits-slider-section  .page-width {
-        padding-left: 0;
-        padding-right: 2rem;
-        margin-top: 20px;
-    }
-  }
+
 {% endstyle %}
 
 
 
 <div class="main-category">
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+<div class="isolate{% unless section.settings.full_width %} page-width1{% endunless %} section-{{ section.id }}">
     <section class=" section-{{ section.id }}-padding">
-    <div class="has-nav-wrapper page-width">
+    <div class="has-nav-wrapper">
         {% if section.settings.heading != blank %}
-            <div class="">
-            <h3 class="title">{{ section.settings.heading }}</h3>
-            <p class="subtext">{{ section.settings.subheading }}</p>
+            <div class="page-width">
+            <h3 class="title center">{{ section.settings.heading }}</h3>
+            <p class="subtext center">{{ section.settings.subheading }}</p>
             </div>
         {% endif %}
        <div class="slider-navigation slide-nav">
@@ -151,9 +128,9 @@
     </div>
     <div class="slider-container">
       <!-- Swiper Container -->
-      <div class="benefits-slider page-width">
-        <div class="benefits-slider-swiper swiper mySwiper-{{ section.id }}">
-          <div class="swiper-wrapper swiper-inner">
+      <div class="benefits-slider">
+        <div class="slider-swiper swiper mySwiper-{{ section.id }}">
+          <div class="page-width swiper-wrapper swiper-inner" style="overflow:visible;">
             {% for block in section.blocks %}
                 <div class="swiper-slide grid__item">
                     <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
@@ -173,9 +150,9 @@
 </div>  
 
 <script>
-  var swiper = new Swiper(".benefits-slider-swiper", {
+  var swiper = new Swiper(".slider-swiper", {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 0,
     navigation: {
       nextEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-next',
       prevEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-prev',
@@ -183,31 +160,27 @@
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 0,
       },
       575: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 0,
       },
       750: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 0,
       },
       1000: {
-        slidesPerView: 3, // Adjust to show 3.5 columns on larger screens
-        spaceBetween: 30,
+        slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
+        spaceBetween: 0,
       },
       1500: {
-        slidesPerView: 3, // Consistent with 1000px breakpoint
-        spaceBetween: 32,
+        slidesPerView: 6, // Consistent with 1000px breakpoint
+        spaceBetween: 0,
       },
     },
   });
-  {% if meta_index == blank %}
-    if( typeof Shopify.designMode == 'undefined' ){
-      document.getElementById('shopify-section-{{ section.id }}').classList.add('hidden');
-    }
-  {% endif %}
+ 
 </script>
 {% schema %}
 {
