@@ -154,6 +154,9 @@
     .cust-about-menu .megamenu-mobile-slider .megamenu-image-with-text-inner{
     	padding:0;
     }
+    .megamenu-mobile-slider .megamenu-image-with-text-inner{
+      padding:0;
+    }
   }
   @media only screen and (max-width: 640px) {
     .product-360-category-main .product-360-image {
