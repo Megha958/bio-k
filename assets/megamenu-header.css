@@ -64,9 +64,9 @@
   .dropdown_menu-inner,
   .megamenu-about-content-main {
     width: 100%;
-    max-width: 1360px;
+    max-width: 100%;
     margin: auto;
-    padding: 40px 0px;
+    padding: 40px 5rem;
   }
   
   .dropdown_menu-inner,
