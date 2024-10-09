@@ -135,7 +135,7 @@
 
             {% elsif block.type == 'about' %}
               {% assign images_block_with_product = true %}
-              <div class="{% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %}">
+              <div class="{% if menu_item.links.size > 0 %}nav-toggle-menu{% endif %} about-menus">
                 {% if menu_item.links != blank and images_block_with_product == true %}
   
                   <div class="toggle-close custom-menu-cmn common_h3 d-flex">
@@ -165,7 +165,7 @@
                           </ul>
                         </div>
 
-                        <div class="megamenu-mobile-slider">
+                        <div class="megamenu-mobile-slider ">
                          <div class="megamenu-image-with-text-inner">
                             <div class="image-width-text-header">
                               <div class="product-360-category-main">
