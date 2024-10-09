@@ -198,6 +198,49 @@
                                 </div>
                                </div>
                             </div>
+
+                  <div class="megamenu-second">
+                  <div class="header-list-megamenu-inner">
+                    <span class="header-header-text">{{ section.settings.menu_heading_2 }}</span>
+                    <div class="case-studies-section">
+                    <div class="case-studies">
+                      <!-- First Case Study -->
+                      <a href="{{ section.settings.case_study_link_1 }}" class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ section.settings.case_study_image_1 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_1 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ section.settings.case_study_title_1 }}</h3>
+                          <p class="case-study-date">{{ section.settings.case_study_date_1 }}</p>
+                        </div>
+                      </a>
+
+                      <!-- Second Case Study -->
+                      <a href="{{ section.settings.case_study_link_2 }}" class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ section.settings.case_study_image_2 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_2 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ section.settings.case_study_title_2 }}</h3>
+                          <p class="case-study-date">{{ section.settings.case_study_date_2 }}</p>
+                        </div>
+                      </a>
+
+                      <!-- Third Case Study -->
+                      <a href="{{ section.settings.case_study_link_3 }}" class="case-study-item">
+                        <div class="case-study-image">
+                          <img src="{{ section.settings.case_study_image_3 | img_url: 'large' }}" alt="{{ section.settings.case_study_title_3 }}">
+                        </div>
+                        <div class="case-study-content">
+                          <h3>{{ section.settings.case_study_title_3 }}</h3>
+                          <p class="case-study-date">{{ section.settings.case_study_date_3 }}</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  </div>
+                </div>                      
                     </div>
                   </div>
                 {% else %}  
