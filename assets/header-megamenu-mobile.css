@@ -76,18 +76,28 @@
     }
     
     .megamenu-mobile-slider .megamenu-image-with-text-inner {
-      display: flex;
-      padding: 40px 20px;
       gap: 20px;
       flex-direction: column;
     }
-    .product-360-image {
+   .product-360-image {
       height: 290px;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
       position: relative;
       object-fit: cover;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-   
+    .product-360-text-area{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      bottom: unset;
+      left: unset;
+      right: 20px;
+      width: 60%;
+    }
   }
 
