@@ -115,6 +115,12 @@ span.icon-location {
   padding:0;
 }
 
+@media only screen and (max-width: 1024px) {
+  body .header {
+    margin: 0 20px;
+  }
+}
+
 @media only screen and (max-width: 990px) {
     .header__search.desktop-view-only{
       display:none;
