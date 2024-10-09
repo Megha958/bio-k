@@ -95,7 +95,7 @@ span.icon-location {
   right: 0;
   transform: unset;
 }
-.search-localization #HeaderLanguageLabel .localization-form__select{
+.search-localization #HeaderLanguageForm .localization-form__select{
   min-width: 30px !important;
   width:auto !important;
 }
