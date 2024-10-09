@@ -74,6 +74,9 @@ span.icon-location {
 .mobile-view-only .field__input:focus~.field__label{
   display:none;
 }
+.mobile-view-only .field__input:focus, .field__input:not(:placeholder-shown){
+  padding-top:15px;
+}
 
 @media only screen and (max-width: 990px) {
     .header__search.desktop-view-only{
