@@ -68,7 +68,9 @@ span.icon-location {
   padding-right: 1.5rem;
   padding-left: 3.75rem;
 }
-
+.mobile-view-only .field__label{
+  left:calc(var(--inputs-border-width) + 3.75rem);
+}
 
 @media only screen and (max-width: 990px) {
     .header__search.desktop-view-only{
