@@ -94,6 +94,10 @@
     .navbar.navabar-desktop{
         display:none;
     }
+    {
+    .hero-text h1 {
+        font-size: 35px;
+    }
   }
 
   /* Responsive */
