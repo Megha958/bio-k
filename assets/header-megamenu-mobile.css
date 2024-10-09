@@ -53,20 +53,7 @@
   .language_selecter {
     padding: 0px 20px 40px 10px;
   }
-  .card-items-main-concern .card_items .image {
-    margin-bottom: 20px;
-  }
-  .card-items-main-concern .card_items .image {
-    margin-bottom: 20px !important;
-  }
   
- 
-  
-  @media only screen and (max-width: 1250px) {
-    .navbar .navbar-nav {
-      gap: 20px;
-    }
-  }
   @media only screen and (max-width: 1199px) {
     .navbar {
       display: none;
@@ -80,90 +67,8 @@
     .nav-toggle-menu.active .temporary_display-none {
       display: block;
     }
-    .megamenu_menu_list {
-      gap: 20px;
-      padding: 0px 20px;
-    }
-    .megamenu_menu_list li a {
-      font-size: 16px;
-      line-height: 24px;
-      display: inline;
-    }
-    .megamenu_common {
-      padding: 0px;
-    }
-    .megamenu_menu_list li {
-      padding: 0px;
-    }
-    .slider_product-mobile {
-      padding: 40px 20px;
-      overflow-y: auto;
-      flex-wrap: nowrap;
-    }
-    .slider_product-mobile .card-items-main {
-      min-width: 60%;
-      max-width: 60%;
-    }
-    .megamenu_menu_list li a {
-      font-family: lato;
-    }
-  
-  
-  
-  
-    .toggle-open .megamenu_first_inner {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .megamenu_first_inner .card_items p.desc {
-      padding-bottom: 10px;
-    }
-    .megamenu_first_inner .card_items .card_content {
-      width: 65%;
-    }
-    .megamenu_first_inner .card_items .image img {
-      height: 220px;
-      border-radius: 10px;
-    }
-    .megamenu_first_inner .card_items {
-      display: flex;
-      gap: 15px;
-    }
-    .card_items p.desc {
-      padding-right: 0;
-    }
-    .text-container-navbar .common_h3 h3 {
-      font-size: 32px;
-    }
     .language_selecter {
       padding: 40px 20px 0;
     }
-    .text-container-navbar .nav-toggle-menu.active .toggle-close {
-      padding: 25px 20px 50px;
-    }
-    .custom-menu-mobiles{
-      overflow-y: scroll;
-    }
-    .cmn-menu-products{
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-    }
-    .cmn-menu-product {
-      min-width: 220px;
-    }
-    .megameu-product{
-      display:block;
-    }
-    .mega-image{
-      width:100%;
-    }
-    .mega-descc {
-      width: 70%;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-  .header-shop-right{
-    padding: 22px 22px 0;
-  }
+   
   }
