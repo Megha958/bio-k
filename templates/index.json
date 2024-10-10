@@ -219,6 +219,7 @@
         "imagebg": "shopify://shop_images/power.png",
         "heading": "The Power of Three: Bio-K+'s Revolutionary Probiotic Blend",
         "description": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "color_scheme": "scheme-3",
         "button_link": "",
         "button_text": "Discover Our Formula",
         "button_color": "#28724f"
