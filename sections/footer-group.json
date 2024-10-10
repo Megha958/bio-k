@@ -24,8 +24,8 @@
         "menu_block_VNEn9w": {
           "type": "menu_block",
           "settings": {
-            "menu_heading": "Bio-K+ Products",
-            "navigation_menu": ""
+            "menu_heading": "More Bio-K+",
+            "navigation_menu": "more-bio-k"
           }
         }
       },
