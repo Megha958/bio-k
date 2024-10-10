@@ -130,7 +130,9 @@
       ],
       "settings": {
         "heading": "Precision-Engineered Probiotics",
+        "text_color": "#000000",
         "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific aspects of your gut health and overall wellness.",
+        "subtext_color": "#000",
         "desktop_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
@@ -166,6 +168,7 @@
         "faq_VbAyYh": {
           "type": "faq",
           "settings": {
+            "faqicon": "shopify://shop_images/shield-plus.svg",
             "question": "Clinically Proven to Fortify Your Gut's Natural Defenses",
             "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
           }
@@ -173,6 +176,7 @@
         "faq_MabKyz": {
           "type": "faq",
           "settings": {
+            "faqicon": "shopify://shop_images/science.svg",
             "question": "Supercharges Nutrient Absorption",
             "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
           }
@@ -180,6 +184,7 @@
         "faq_A96Rnp": {
           "type": "faq",
           "settings": {
+            "faqicon": "shopify://shop_images/certificate.svg",
             "question": "Strengthens Your Immune System",
             "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
           }
@@ -200,7 +205,9 @@
         "color_scheme": "scheme-3",
         "button_link": "",
         "button_text": "Discover Our Formula",
-        "button_color": "#28724f"
+        "button_color": "#28724f",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "index_feature_tiles_MHxXw3": {
