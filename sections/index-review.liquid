@@ -92,69 +92,6 @@
   </div>
 </div>
 
-
-{% comment %}
-<section class="reviews-sec section-{{ section.id }}-padding">
-  <div class="section-{{ section.id }} review-{{ section.id }}">
-    <div class="review-main">
-      <div class="review">
-        <h2 class="review-head">
-          {{ section.settings.review_heading }}
-        </h2>
-        <p>{{ section.settings.review_description }}</p>
-      </div>
-      <div class="review-slider swiper mySwiper-{{ section.id }}">
-        <div class="page-width swiper-wrapper swiper-inner" style="overflow:visible;">
-          {% for block in section.blocks %}
-            <div class="swiper-slide review-bg">
-              <div class="review-card-inner">
-                <div class="stars">
-                  <div class="star-rating">
-                    {% for i in (1..5) %}
-                      <svg class="star filled-{{ block.settings.star_count }}" data-value="{{ i }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"></polygon>
-                      </svg>
-                    {% endfor %}
-                  </div>
-                </div>
-                <h4 class="review-card-head">{{ block.settings.review_text }}</h4>
-              </div>
-              <div class="product">
-                <div class="product-img">
-                  <img src="{{ block.settings.product_image | img_url: 'medium' }}" alt="{{ block.settings.author_name }}" />
-                </div>
-                <div class="product-right">
-                  <p class="author">{{ block.settings.author_name }}</p>
-                  <p class="des">About <a href="{{ block.settings.product_link }}" class="des-link">{{ block.settings.product_name }}</a></p>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="slider-navigation slide-nav">
-          <div class="swiper-button-prev nav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-              <path d="M10.375 1.25L1.625 10L10.375 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-        <div class="swiper-button-next nav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-              <path d="M1.625 1.25L10.375 10L1.625 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <a href="{{ section.settings.button_link }}" class="bio-btn">
-        <span>{{ section.settings.button_text }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-{% endcomment %}
-
 <style>
   .star {
     width: 24px;
