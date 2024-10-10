@@ -33,11 +33,12 @@ text-align: left;
 }
 
 .main_copyrigt_sec {
-  padding: 20px 80px;
-  max-width: 1360px;
+  padding: 20px 0px;
   margin:auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, 0.20));
+  border-bottom: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, 0.20));
 }
 
 .footer {
@@ -46,8 +47,9 @@ text-align: left;
 }
 
 .copyrigt_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  width:45%;
 }
 
 .copyrigt_grid_cokware {
@@ -66,7 +68,7 @@ text-align: left;
 }
 
 .social-icons {
-  padding-top:10px;
+  padding-top:20px;
   display: flex;
 }
 .custom-footer{
@@ -96,44 +98,40 @@ text-align: left;
 .shop h3,
 .main_grid_div h3,.custom-footer h3{
   margin:0;
-  color:#FCFBF7;
-font-size: 20px;
-font-weight: 600;
-line-height: 24px;
-text-align: left;
-  color:#FCFBF7;
-  padding-bottom:5px;
+  padding-bottom: 5px;
+  color: var(--White, #FFF);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
 }
 .shop a,
 .main_grid_div a,.custom-footer a{
-color:#FCFBF7;
-font-size: 14px;
-font-weight: 400;
-line-height: 21px;
-text-align: left;
-display: block;
-padding-top:15px;
-
+  color: var(--White, #FFF);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  display:block;
+  margin-top:25px;
+  text-decoration: unset;
 }
 .subscribe h3{
-  margin:0;
-  color:#FCFBF7;
-font-size: 32px;
-font-weight: 600;
-line-height: 38.4px;
-letter-spacing: -0.02em;
-text-align: left;
-
-
+  color: #FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.64px;
 }
 .footer-bottom_icon h3{
-    margin:0;
-  color:#FCFBF7;
-font-size: 20px;
-font-weight: 600;
-line-height: 24px;
-text-align: left;
-
+  text-align: left;
+  color: var(--White, #FFF);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
 }
 
 .subscribe input[type="email"] {
@@ -155,10 +153,6 @@ input[type="email"]:focus-visible {
   height: 20px;
 }
 
-.footer-bottom_icon {
-  margin-top: 60px;
-}
-
 .footer-bottom_icon a {
   color: white;
   text-decoration: none;
@@ -175,14 +169,17 @@ input[type="email"]:focus-visible {
   margin-top:10px;
   margin-bottom:40px;
 }
-
-.subscribe_form_div {
-  position: relative;
-  border: 1px solid #fcfbf7;
-  border-radius: 100px;
-  padding:14px 20px;
+.custom-subscribes{
+  display: flex;
+  gap:15px;
+  margin:40px 0;
 }
-
+.klaviyo_field_group.kgrid{
+  width: 80%;
+}
+.klaviyo_form_actions.btn-actions{
+  width:20%;
+}
 .sub_btn {
   font-size: 16px;
   font-weight: 600;
@@ -211,13 +208,12 @@ img.check_icon {
 }
 
 .privacy_policy_sec a {
-  color: var(--White, #FCFBF7);
-  font-family: "Proxima Nova";
-  font-size: 12px;
+  text-decoration: none;
+  color: var(--White, #FFF);
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
-  text-decoration: none;
+  line-height: 160%;
 }
 .cokware_p {
   font-size: 12px;
@@ -283,7 +279,7 @@ img.check_icon {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
+  color:#009845;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -292,7 +288,13 @@ img.check_icon {
   opacity: 1;
   border-radius: 100px;
 }
-
+.subscribe input[type=email]{
+  color: #fcfbf7;
+  border-radius: 100px;
+  background: var(--Primary-Shades-Green-60, #66C18F);
+  padding: 10px 15px 10px 20px;
+  height: 50px;
+}
 
 
 
