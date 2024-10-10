@@ -112,7 +112,8 @@
         "slide_Lc6E3R": {
           "type": "slide",
           "settings": {
-            "title": "Pro-Grade Capacity",
+            "image": "shopify://shop_images/Everyday_CA.png",
+            "title": "Everyday Wellness",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
@@ -128,8 +129,8 @@
         "slide_Lc6E3R"
       ],
       "settings": {
-        "heading": "One Tool, Lots of Benefits.",
-        "subheading": "Trusted in over 60,000 kitchens",
+        "heading": "Precision-Engineered Probiotics",
+        "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific aspects of your gut health and overall wellness.",
         "desktop_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
