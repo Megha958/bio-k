@@ -33,7 +33,7 @@
 {{ 'custom-section-slider.css' | asset_url | stylesheet_tag }}
 <div class="slider-main-view index-reviews-sec section-{{ section.id }}-padding">
   <div class="page-width">
-    <div class="section-title">
+    <div class="section-title {{ section.settings.desktop_content_alignment }} ">
       <h2>{{ section.settings.review_heading }}</h2>
       <p>{{ section.settings.review_description }}</p>
     </div>
@@ -210,6 +210,26 @@ document.addEventListener("DOMContentLoaded", function () {
       "id": "review_description",
       "label": "Review Description",
       "default": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "Heading Position"
     },
     {
       "type": "url",

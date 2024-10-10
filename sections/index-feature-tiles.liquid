@@ -74,10 +74,12 @@
 {%- endstyle -%}
 <div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
     <section class="highlight-cards-section section-{{ section.id }}-padding">
-      <div class="section-title">
+      {% if section.settings.section_title != blank %}
+      <div class="section-title {{ section.settings.desktop_content_alignment }}">
         <h2>{{ section.settings.section_title }}</h2>
         <p>{{ section.settings.section_subtitle }}</p>
       </div>
+      {% endif %}
       <div class="highlight-cards">
         {% for block in section.blocks %}
           <div class="highlight-card" data-analytics-id="card-{{ block.id }}">
@@ -133,6 +135,26 @@
       "type": "url",
       "id": "url",
       "label": "button Link"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "Heading Position"
     },
     {
         "type": "header",
