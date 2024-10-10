@@ -6,6 +6,8 @@
     {{ 'index-hero-section-layout-two.css' | asset_url | stylesheet_tag }}
   {% elsif section.settings.layout == "layout_3" %}
     {{ 'index-hero-section-layout-three.css' | asset_url | stylesheet_tag }}
+  {% elsif section.settings.layout == "layout_4" %}
+    {{ 'index-hero-section-layout-four.css' | asset_url | stylesheet_tag }}
   {% endif %}
   
   <!-- Layout 1 -->
@@ -60,12 +62,45 @@
             </a>
           </div>
         </div>
+        <div class="hero-product-texts">
+        {% if section.settings.product_image_desktop %}
+            <div class="hero-product-img">
+                <img src="{{ section.settings.product_image_desktop | img_url: 'master' }}" alt="image">
+            </div>
+        {% endif %}
+       
+        <div class="hero-slides">
+            <div class="swiper hero-slide-inner">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="swiper-slide">
+                            <div class="slide-flex-inners">
+                                {% if block.settings.slide_text != blank %}
+                                    <div class="slide-txt-data">
+                                        <p>{{ block.settings.slide_text }}</p>
+                                    </div>
+                                {% endif %}
+        
+                                {% if block.settings.slide_image %}
+                                    <div class="slide-img-data">
+                                        <img src="{{ block.settings.slide_image | img_url: 'master' }}" alt="{{ block.settings.image_alt }}">
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        </div>
+        
       </div>
     </div>
 
     <!-- Mobile View -->
-    <div class="hero-mobile" style="background-image: url('{{ section.settings.mobile_bg_image | img_url: 'master' }}');">
-      <div class="container">
+    <div class="hero-mobile" style="background-image: url('{{ section.settings.mobile_bg_image_2 | img_url: 'master' }}');">
+      <div class="">
         <div class="hero-text text-{{ section.settings.text_alignment_2 }}">
           <h1>{{ section.settings.hero_title_2 }}</h1>
           <p>{{ section.settings.hero_description_2 }}</p>
@@ -75,6 +110,37 @@
             </a>
           </div>
         </div>
+        <div class="hero-product-texts">
+        {% if section.settings.product_image_mobile %}
+            <div class="hero-product-img">
+                <img src="{{ section.settings.product_image_mobile | img_url: 'master' }}" alt="image">
+            </div>
+        {% endif %}
+	<div class="hero-slides">
+            <div class="swiper hero-slide-inner">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="swiper-slide">
+                            <div class="slide-flex-inners">
+                                {% if block.settings.slide_text != blank %}
+                                    <div class="slide-txt-data">
+                                        <p>{{ block.settings.slide_text }}</p>
+                                    </div>
+                                {% endif %}
+        
+                                {% if block.settings.slide_image %}
+                                    <div class="slide-img-data">
+                                        <img src="{{ block.settings.slide_image | img_url: 'master' }}" alt="{{ block.settings.image_alt }}">
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -82,60 +148,92 @@
 
   
   <!-- Layout 3 -->
-  <div id="splited-image-hero-section" style="display: {% if section.settings.layout == 'layout_4' %}block{% else %}none{% endif %}">
-    <div class="splited-image-hero-section-container">
-      <div class="splited-image-hero-section-container-grid">
-       <div class="splited-image-hero-section-container-grid-item-1" 
-       style="background-image: url('{{ section.settings.layout_4_image_desktop_1 | image_url }}');">
-          <div class="splited-image-hero-section-container-grid-item-bg-overlay"></div>
-          <div class="splited-image-hero-section-container-grid-item-container">
-            <div class="full-blend-hero-section-container-box">
-              <div class="full-blend-hero-section-container-box-content-container">
-                {% if section.settings.heading != blank %}
-                <div class="full-blend-hero-section-container-box-heading-container">
-                  <h1>{{ section.settings.heading }}</h1>
+  <div id="splited-image-hero-layout-3" style="display: {% if section.settings.layout == 'layout_3' %}block{% else %}none{% endif %}">
+    <div class="custom-benner-sec">
+       <div class="hero-content">
+
+        <div class="hero-desktop" style="background-image: url('{{ section.settings.desktop_bg_image_3 | img_url: 'master' }}');">
+            <div class="hero-right-img">
+                <div class="img-right">
+                    <img src="{{ section.settings.desktop_right_img3 | img_url: 'master' }}" alt="img">
                 </div>
-                 {% endif %}
-                  {% if section.settings.subtext != blank %}
-                  <div class="full-blend-hero-section-container-box-text-container">
-                    <p>{{ section.settings.subtext }}</p>
-                  </div>
-                 {% endif %}
-              </div>
-              {% if section.settings.button_text != blank %}
-              <div class="full-blend-hero-section-container-box-btn-container-container">
-                <a href="{{ section.settings.button_link }}" class="button cta_button">{{ section.settings.button_text }}</a>
-              </div>
-             {% endif %}
             </div>
+            <div class="page-width">
+              <div class="hero-text">
+                <h1>{{ section.settings.hero_title_3 }}</h1>
+                <p>{{ section.settings.hero_description_3 }}</p>
+                <div class="hero-btns">
+                  <a href="{{ section.settings.button_url_3 }}" class="btn">{{ section.settings.button_text_3 }}
+                      {% render 'green-arrow' %}
+                  </a>
+                </div>
+              </div>
+             
+            </div>
+        </div>
+
+        <div class="hero-mobile" style="background-image: url('{{ section.settings.mobile_bg_image_3 | img_url: 'master' }}');">
+            <div class="hero-right-img_mobile">
+            <div class="img-right">
+                <img src="{{ section.settings.desktop_img3_mobile | img_url: 'master' }}" alt="img">
+            </div>
+            </div>
+            <div class="">
+                <div class="hero-text">
+                <h1>{{ section.settings.hero_title_3 }}</h1>
+                <p>{{ section.settings.hero_description_3 }}</p>
+                <div class="hero-btns">
+                    <a href="{{ section.settings.button_url_3 }}" class="btn">{{ section.settings.button_text_3 }}
+                        {% render 'green-arrow' %}
+                    </a>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+       </div>             
+    
+    </div>
+  </div>
+
+   <!-- Layout 4 -->
+   <div id="full-blend-hero-section" class="layout1hero" style="display: {% if section.settings.layout == 'layout_4' %}block{% else %}none{% endif %}">
+    <div class="hero-content">
+    <!-- Desktop View -->
+    <div class="hero-desktop" style="background-image: url('{{ section.settings.desktop_bg_image_4 | img_url: 'master' }}');">
+      <div class="container">
+        <div class="hero-text">
+          <h1>{{ section.settings.hero_title_4 }}</h1>
+          <p>{{ section.settings.hero_description_4 }}</p>
+          <div class="hero-btns">
+            <a href="{{ section.settings.button_url_4 }}" class="btn">{{ section.settings.button_text_4 }}
+                {% render 'green-arrow' %}
+            </a>
           </div>
         </div>
-        <div class="splited-image-hero-section-container-grid-item-2" style="background-image: url({{ section.settings.layout_4_image_desktop_2 | image_url }});">
-          <div class="splited-image-hero-section-container-grid-item-bg-overlay"></div>
-          <div class="splited-image-hero-section-container-grid-item-container">
-            <div class="full-blend-hero-section-container-box">
-              <div class="full-blend-hero-section-container-box-content-container">
-                 {% if section.settings.layout_4_heading != blank %}
-                  <div class="full-blend-hero-section-container-box-heading-container">
-                    <h1>{{ section.settings.layout_4_heading }}</h1>
-                  </div>
-                  {% endif %}
-                {% if section.settings.layout_4_subtext != blank %}
-                <div class="full-blend-hero-section-container-box-text-container">
-                  <p>{{ section.settings.layout_4_subtext }}</p>
-                </div>
-               {% endif %}
-              </div>
-             {% if section.settings.layout_4_button_text != blank %}
-              <div class="full-blend-hero-section-container-box-btn-container-container">
-                <a href="{{ section.settings.layout_4_button_link }}" class="button cta_button">{{ section.settings.layout_4_button_text }}</a>
-              </div>
-             {% endif %}
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
+
+    <!-- Mobile View -->
+    <div class="hero-mobile" style="background-image: url('{{ section.settings.mobile_bg_image_4 | img_url: 'master' }}');">
+      <div class="container">
+        <div class="hero-text">
+          <h1>{{ section.settings.hero_title_4 }}</h1>
+          <p>{{ section.settings.hero_description_4 }}</p>
+          <div class="hero-btns">
+            <a href="{{ section.settings.button_url_4 }}" class="btn">{{ section.settings.button_text_4 }}
+                {% render 'green-arrow' %}
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
   </div>
   
 
@@ -150,7 +248,8 @@
         "options": [
           { "value": "layout_1", "label": "Layout 1" },
           { "value": "layout_2", "label": "Layout 2" },
-          { "value": "layout_4", "label": "Layout 3" }
+          { "value": "layout_3", "label": "Layout 3" },
+          { "value": "layout_4", "label": "Layout 4" }
         ],
         "default": "layout_1"
       },
@@ -187,6 +286,10 @@
       "type": "image_picker",
       "id": "mobile_bg_image",
       "label": "Mobile Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Layout 2"
     },
     {
       "type": "select",
@@ -238,10 +341,129 @@
     },
     {
       "type": "image_picker",
+      "id": "product_image_desktop",
+      "label": "product_image_desktop"
+    },
+    {
+      "type": "image_picker",
       "id": "mobile_bg_image_2",
-      "label": "Mobile Background Image"
+      "label": "Mobile Background Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image_mobile",
+      "label": "product_image_mobile"
+    },
+    {
+      "type": "header",
+      "content": "Layout 3"
+    },
+    {
+      "type": "html",
+      "id": "hero_title_3",
+      "label": "Hero Title 3",
+      "default": "Feel your best every day with science-backed gut wellness."
+    },
+    {
+      "type": "textarea",
+      "id": "hero_description_3",
+      "label": "Hero Description 3",
+      "default": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity."
+    },
+    {
+      "type": "url",
+      "id": "button_url_3",
+      "label": "Button URL 3",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "button_text_3",
+      "label": "Button Text 3",
+      "default": "Explore New Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg_image_3",
+      "label": "Desktop Background Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_right_img3",
+      "label": "desktop_right_img3"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg_image_3",
+      "label": "Mobile Background Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_img3_mobile",
+      "label": "desktop_img3_mobile"
+    },
+    {
+      "type": "header",
+      "content": "Layout 4"
+    },
+    {
+      "type": "html",
+      "id": "hero_title_4",
+      "label": "Hero Title 4",
+      "default": "Feel your best every day with science-backed gut wellness."
+    },
+    {
+      "type": "textarea",
+      "id": "hero_description_4",
+      "label": "Hero Description_4",
+      "default": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity."
+    },
+    {
+      "type": "url",
+      "id": "button_url_4",
+      "label": "Button URL 4",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "button_text_4",
+      "label": "Button Text 4",
+      "default": "Explore New Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg_image_4",
+      "label": "Desktop Background Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg_image_4",
+      "label": "Mobile Background Image 4"
     }
     ],
+    "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "slide_text",
+          "label": "Slide Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image Alt Text"
+        }
+      ]
+    }
+  ],
     "presets": [
       { "name": "Index Hero Section" }
     ]
