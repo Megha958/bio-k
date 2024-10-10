@@ -132,7 +132,7 @@
         "heading": "Precision-Engineered Probiotics",
         "text_color": "#000000",
         "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific aspects of your gut health and overall wellness.",
-        "subtext_color": "#000",
+        "subtext_color": "#000000",
         "desktop_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 0
@@ -200,6 +200,7 @@
       ],
       "settings": {
         "imagebg": "shopify://shop_images/power.png",
+        "mobileimagebg": "shopify://shop_images/dwarf-block-bg-mob-2.jpg",
         "heading": "The Power of Three: Bio-K+'s Revolutionary Probiotic Blend",
         "description": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
         "color_scheme": "scheme-3",
