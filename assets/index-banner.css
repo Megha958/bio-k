@@ -167,7 +167,40 @@ a:hover {
     padding: 30px 0;
     z-index: 99;
   }
+  .index-power-banner .power-right p.power-para{
+    font-size: 16px;
+  }
+  .index-power-banner .power-right .faq-data h6 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+  }
+  .index-power-banner .faq-answer p{
+    margin:10px 0;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 22px;
+  }
 }
+
+/* section 4th  */
+@media(max-width:991px){
+  .index-feature-tiles .section-title h2{
+    font-size: 32px;
+    letter-spacing: -0.2px;
+  }
+  .index-feature-tiles .section-title p{
+    font-size: 16px;
+    color: #000;
+    line-height: 25px;
+    font-weight: 600;
+  }
+}
+
+
 
 
 
@@ -689,12 +722,7 @@ span.power-span {
     position: absolute;
     right: 0;
   }
-  .power-right .faq-data h6 {
-    margin: 10px 0;
-    color: #fff;
-    font-size: 16px;
-    line-height: 20px;
-  }
+ 
   .main-category h3 {
     margin-bottom: 5px;
     font-size: 28px;
