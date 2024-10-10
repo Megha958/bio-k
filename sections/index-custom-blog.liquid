@@ -10,109 +10,66 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
+  .index-article .latest-article-cards .card-content h5{
+    margin:0;
+  }
+  .index-article .latest-article-cards .card-content-wrap{
+    padding: 20px;
+  }
+  .index-article .latest-article-cards .card-content-wrap{
+    min-height: 130px;
+  }
+  .index-article .latest-article-cards  img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+  }
+  
 {%- endstyle -%}
+
 {{ 'custom-section-latest-article.css' | asset_url | stylesheet_tag }}
 
-<div class="blog-latest-article section-padding">
+<div class="index-article blog-latest-article section-padding">
   <div class="page-width">
-    <h4 class="h4 heading">Latest Articles:</h4>
+    <h2 class="h2">{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.heading  }}</p>
 
     <div class="latest-article-cards swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide article-cards">
-          <a href="#"></a>
-          <div class="image-card">
-            <figure><img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/latest-article1.png?v=1728385831" height="auto" width="auto"></figure>
-          </div>
-          <div class="card-content-wrap">
-            <div class="card-content">
-              <span class="article-date">May, 12. 2024</span>
-              <div class="title">Gut microbiome, Probiotics and, Premenstrual Disorders</div>
-              <p class="sort-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            </div>
-            <div class="tags-wrap">
-              <div class="tag-list">
-                <div class="label label_1">Wellness</div>
-                <div class="label label_2">Gut Health</div>
+          {% for block in section.blocks %}
+          <div class="swiper-slide article-cards">
+            <a href="{{ block.settings.article.url }}"></a>
+            {% if block.settings.image != blank %}
+              <div class="image-card">
+                <div><img src="{{ block.settings.image | img_url:'' }}" height="auto" width="auto"></div>
               </div>
-              <a href="/" class="btn btn-article">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <g clip-path="url(#clip0_564_2125)">
-                    <path d="M1.5 6H10.5M10.5 6L6 1.5M10.5 6L6 10.5" stroke="#009845" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_564_2125">
-                      <rect width="12" height="12" fill="white"/></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide article-cards">
-          <a href="#"></a>
-          <div class="image-card">
-            <figure><img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/latest-article2.png?v=1728385831" height="auto" width="auto"></figure>
-          </div>
-          <div class="card-content-wrap">
-            <div class="card-content">
-              <span class="article-date">May, 12. 2024</span>
-              <div class="title">What Do Probiotic Bacteria Actually Do in the Body?</div>
-              <p class="sort-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            </div>
-            <div class="tags-wrap">
-              <div class="tag-list">
-                <div class="label label_1">Wellness</div>
-                <div class="label label_2">Gut Health</div>
+              {% else %}
+              <div class="image-card">
+                <div><img src="{{ block.settings.article | img_url:'' }}" height="auto" width="auto"></div>
               </div>
-              <a href="/" class="btn btn-article">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <g clip-path="url(#clip0_564_2125)">
-                    <path d="M1.5 6H10.5M10.5 6L6 1.5M10.5 6L6 10.5" stroke="#009845" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_564_2125">
-                      <rect width="12" height="12" fill="white"/></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide article-cards">
-          <a href="#"></a>
-          <div class="image-card">
-            <figure><img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/latest-article3.png?v=1728385832" height="auto" width="auto"></figure>
-          </div>
-          <div class="card-content-wrap">
-            <div class="card-content">
-              <span class="article-date">May, 12. 2024</span>
-              <div class="title">Probiotic supplements and gut health: my retired father takes charge of his health</div>
-              <p class="sort-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            </div>
-            <div class="tags-wrap">
-              <div class="tag-list">
-                <div class="label label_1">Wellness</div>
-                <div class="label label_2">Gut Health</div>
+           {% endif %}
+            <div class="card-content-wrap">
+              <div class="card-content">
+                {% comment %} <span class="article-date">May, 12. 2024</span> {% endcomment %}
+                <h5 class="h5">{{ block.settings.article.title }}</h5>
               </div>
-              <a href="/" class="btn btn-article">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <g clip-path="url(#clip0_564_2125)">
-                    <path d="M1.5 6H10.5M10.5 6L6 1.5M10.5 6L6 10.5" stroke="#009845" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_564_2125">
-                      <rect width="12" height="12" fill="white"/></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
+              <div class="tags-wrap">
+                <div class="tag-list">
+                  {% assign tagnew = block.settings.tag1 | split: '' %}
+                  {% assign extendblogtag = tagnew %}
+                  {% for tag in block.settings.article.tags %}
+                    {% if extendblogtag != tag %}
+                      <div class="label label_1">{{ tag }}</div>
+                    {% endif %}
+                  {% endfor %}
+                  {% comment %} <div class="label label_1">Wellness</div> {% endcomment %}
+                  {% comment %} <div class="label label_2">Gut Health</div> {% endcomment %}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        {% endfor %}
       </div>
       <div class="swiper-button-next next-button btn-navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -124,7 +81,6 @@
           <path d="M13.75 17.5L6.25 10L13.75 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-
       <div class="swiper-scrollbar"></div>
     </div>
   </div>
@@ -144,11 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: {
         767: {
           slidesPerView: 2,
-          spaceBetween: 10,
+          spaceBetween: 0,
         },
         1040: {
           slidesPerView: 4,
-          spaceBetween: 30,
+          spaceBetween: 0,
         }
       }
   });
@@ -203,6 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "name": "Slide",
       "settings": [
         {
+          "type": "article",
+          "id": "article",
+          "label": "article"
+        },
+        {
             "type": "color",
             "id": "bgcolor",
             "label": "background color"
@@ -212,12 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "id": "image",
           "label": "Image"
         },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Pro-Grade Capacity"
-        },
+       
         {
             "type": "text",
             "id": "tag1",
