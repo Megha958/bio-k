@@ -32,7 +32,7 @@
 
 <div class="index-article blog-latest-article section-padding">
   <div class="page-width">
-    <div class="section-title">
+    <div class="section-title {{ section.settings.desktop_content_alignment }}">
       <h2 class="h2">{{ section.settings.heading }}</h2>
       <p>{{ section.settings.heading  }}</p>
     </div>
@@ -129,6 +129,26 @@ document.addEventListener("DOMContentLoaded", function () {
       "id": "subheading",
       "label": "Subheading",
       "default": "Trusted in over 60,000 kitchens"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "Heading Position"
     },
      {
         "type": "header",
