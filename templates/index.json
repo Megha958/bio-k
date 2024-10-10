@@ -92,7 +92,8 @@
         "slide_qUrjXh": {
           "type": "slide",
           "settings": {
-            "title": "Pro-Grade Capacity",
+            "image": "shopify://shop_images/Travel_CA.png",
+            "title": "Traveling Support",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
@@ -101,7 +102,8 @@
         "slide_6YFDbz": {
           "type": "slide",
           "settings": {
-            "title": "Pro-Grade Capacity",
+            "image": "shopify://shop_images/image_5.png",
+            "title": "Living with IBS",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
