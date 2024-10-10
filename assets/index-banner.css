@@ -10,6 +10,9 @@
 }
 
 /* 2nd slider section */
+a{
+  text-decoration: none !important;
+}
 .index-main-category .section-title {
   max-width: 850px;
   margin: 40px auto !important;
@@ -26,7 +29,7 @@
   line-height: 25px;
   font-weight: 400;
 }
-.index-main-category .benefits-content a.linkonly{
+.index-main-category a.linkonly{
   font-weight: 700;
   letter-spacing: 0;
   line-height: 25px;
@@ -86,7 +89,7 @@
   .index-main-category .benefits-content p{
     line-height: 22px;
   }
-  .index-main-category .benefits-content a.linkonly{
+  .index-main-category a.linkonly{
     font-size:14px;
     line-height: 22px;
   }
