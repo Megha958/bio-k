@@ -7,6 +7,9 @@
     justify-content:center;
     flex-wrap:wrap;
   }
+  .only-mobile-arrow{
+    display:none;
+  }
   .announcement_sliers{
     position:relative;
   }
@@ -113,6 +116,12 @@
   .desktop-only-ann{
     display:none;
   }
+  .announcement-button{
+    display:none;
+  }
+  .only-mobile-arrow{
+    display:inline-block;
+  }
 }
 </style>
 
@@ -129,7 +138,11 @@
               {% if block.settings.announcement_message != blank %}
                 <div class="announcement slides swiper-slide">
                   <div class="announcement-msg">
-                    <span>{{ block.settings.announcement_message }}</span>
+                    <span>{{ block.settings.announcement_message }}
+                      <span class="only-mobile-arrow">
+                        {% render 'arrow-svg' %}
+                      </span>
+                    </span>
                   </div>
                   <div class="announcement-button">
                     <a href="{{ block.settings.cta_link }}" style="color: {{ block.settings.cta_color }};">
@@ -142,7 +155,12 @@
               {% if block.settings.announcement_message_2 != blank %}
                 <div class="announcement slides swiper-slide">
                   <div class="announcement-msg">
-                    <span>{{ block.settings.announcement_message_2 }}</span>
+                    <span>
+                      {{ block.settings.announcement_message_2 }}
+                      <span class="only-mobile-arrow">
+                        {% render 'arrow-svg' %}
+                      </span>
+                    </span>
                   </div>
                   <div class="announcement-button">
                     <a href="{{ block.settings.cta_link_2 }}" style="color: {{ block.settings.cta_color }};">
@@ -155,7 +173,12 @@
               {% if block.settings.announcement_message_3 != blank %}
                 <div class="announcement slides swiper-slide">
                   <div class="announcement-msg">
-                    <span>{{ block.settings.announcement_message_3 }}</span>
+                    <span>
+                      {{ block.settings.announcement_message_3 }}
+                        <span class="only-mobile-arrow">
+                          {% render 'arrow-svg' %}
+                        </span>
+                      </span>
                   </div>
                   <div class="announcement-button">
                     <a href="{{ block.settings.cta_link_3 }}" style="color: {{ block.settings.cta_color }};">

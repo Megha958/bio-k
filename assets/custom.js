@@ -52,3 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
    
   // end announcement
+
+  // index hero-layout2-slide inner
+    var swiper = new Swiper(".hero-slide-inner", {
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
