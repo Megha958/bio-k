@@ -552,6 +552,15 @@ p.power-card-para {
 .swiper-wrapper {
   gap: 30px !important;
 }
+.section-title{
+  margin:40px 0;
+}
+.section-title h2{
+  margin:0;
+}
+.section-title p{
+  margin-top: 10px;
+}
 @media(max-width:991px){
   .swiper-wrapper {
     gap: 15px !important;
