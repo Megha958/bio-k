@@ -82,7 +82,8 @@
         "slide_ebCBA4": {
           "type": "slide",
           "settings": {
-            "title": "Pro-Grade Capacity",
+            "image": "shopify://shop_images/Cognitive_CA.png",
+            "title": "Cognitive Function",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
