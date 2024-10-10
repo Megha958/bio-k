@@ -56,83 +56,59 @@
         "padding_bottom": 40
       }
     },
-    "index_slider_swiper_6eEyrp": {
-      "type": "index-slider-swiper",
+    "index_category_swiper_qzJXpT": {
+      "type": "index-category-swiper",
       "blocks": {
-        "slide_eXqG8Y": {
+        "slide_ewEMbp": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Everyday_CA.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Everyday Wellness",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_HQiNx6": {
+        "slide_kamyMT": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Immune_CA.png",
+            "title": "Immune Function",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_ebCBA4": {
+          "type": "slide",
+          "settings": {
             "title": "Pro-Grade Capacity",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_3hjCcG": {
+        "slide_qUrjXh": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Cognitive_CA.png",
             "title": "Pro-Grade Capacity",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_YCXpC8": {
+        "slide_6YFDbz": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Travel_CA.png",
             "title": "Pro-Grade Capacity",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_FWjcLA": {
+        "slide_Lc6E3R": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/image_5.png",
-            "title": "Pro-Grade Capacity",
-            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
-            "button_text": "",
-            "link": ""
-          }
-        },
-        "slide_MMXp6w": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Everyday_CA.png",
-            "title": "Pro-Grade Capacity",
-            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
-            "button_text": "",
-            "link": ""
-          }
-        },
-        "slide_C4iDQY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Immune_CA.png",
-            "title": "Pro-Grade Capacity",
-            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
-            "button_text": "",
-            "link": ""
-          }
-        },
-        "slide_ygWyrw": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Cognitive_CA.png",
             "title": "Pro-Grade Capacity",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
@@ -141,21 +117,19 @@
         }
       },
       "block_order": [
-        "slide_eXqG8Y",
-        "slide_HQiNx6",
-        "slide_3hjCcG",
-        "slide_YCXpC8",
-        "slide_FWjcLA",
-        "slide_MMXp6w",
-        "slide_C4iDQY",
-        "slide_ygWyrw"
+        "slide_ewEMbp",
+        "slide_kamyMT",
+        "slide_ebCBA4",
+        "slide_qUrjXh",
+        "slide_6YFDbz",
+        "slide_Lc6E3R"
       ],
       "settings": {
-        "heading": "Precision-Engineered Probiotics",
-        "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific<br> aspects of your gut health and overall wellness.",
+        "heading": "One Tool, Lots of Benefits.",
+        "subheading": "Trusted in over 60,000 kitchens",
         "desktop_content_alignment": "center",
-        "padding_top": 0,
-        "padding_bottom": 80
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "index_banner_EWLrpf": {
@@ -431,9 +405,6 @@
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_8.png",
             "tag1": "Probiotics",
-            "tag1color": "#334fb4",
-            "tag2": "Science",
-            "tag2color": "#009845",
             "link": ""
           }
         },
@@ -444,9 +415,6 @@
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_10.png",
             "tag1": "Science",
-            "tag1color": "#009845",
-            "tag2": "Gut Health",
-            "tag2color": "#081f2c",
             "link": ""
           }
         },
@@ -457,9 +425,6 @@
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_11.png",
             "tag1": "Gut Health",
-            "tag1color": "#121212",
-            "tag2": "Science",
-            "tag2color": "#28724f",
             "link": ""
           }
         },
@@ -470,9 +435,6 @@
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_9.png",
             "tag1": "Science",
-            "tag1color": "#28724f",
-            "tag2": "Educational",
-            "tag2color": "#121212",
             "link": ""
           }
         },
@@ -483,9 +445,6 @@
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_12.png",
             "tag1": "Probiotics",
-            "tag1color": "#009845",
-            "tag2": "Probiotic",
-            "tag2color": "#121212",
             "link": ""
           }
         }
@@ -537,7 +496,7 @@
   "order": [
     "index_hero_section_main_ExBPAe",
     "index_text_6r9HAF",
-    "index_slider_swiper_6eEyrp",
+    "index_category_swiper_qzJXpT",
     "index_banner_EWLrpf",
     "index_feature_tiles_MHxXw3",
     "index_faq_XfU8xk",
