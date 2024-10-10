@@ -32,7 +32,7 @@
             </div>
             
             <div class="klaviyo_form_actions btn-actions">
-              <button type="submit" id="Subscribe" class="newsletter-form__button klaviyo_submit_button field__button sub_btn">Subscribe {% render 'green-arrow' %} </button>
+              <button type="submit" id="Subscribe" class="newsletter-form__button klaviyo_submit_button field__button sub_btn">Join Now {% render 'green-arrow' %} </button>
             </div>
             </div>
           </form> 
@@ -115,21 +115,19 @@
 
     </div>
   </div>
- 
+ </div>
+
   <div class="footer_bottom_links main_mobile_div">
     <div class="links">
       <a href="{{ section.settings.terms_conditions_link_url }}">{{ section.settings.terms_conditions_link_text }}</a>
       <a href="{{ section.settings.privacy_policy_link_url  }}">{{ section.settings.privacy_policy_link_text }}</a>
     </div>
   </div>
-  <div class="divider main_mobile_div"></div>
-  <div class="luc_p_div main_mobile_div">
-    <p class="luc_p">&copy; 2024, Luc Vincent.</p>
-  </div>
 
   <div class="divider main_desktom_div"></div>
   <div class="main_copyrigt_sec main_desktom_div">
-    <div class="copyrigt_grid">
+    <div class="footer_main_sec">
+      <div class="copyrigt_grid">
       <div class="desktop-none"></div>
       <div class="main_privacy">
         <p class="privacy_policy_sec"><a href="#">{{ section.settings.privacy_policy_link_text }}</a></p>
@@ -138,10 +136,27 @@
       <div class="main_copyright">
         <p class="privacy_policy_sec"><a href="#">{{ section.settings.terms_conditions_link_text }}</a></p>
       </div>
+      </div>
+      
     </div>
     
   </div>
+  <div class="footer_main_sec cust-bottom-padd">
+  <div class="footer-bottom">
+    <div class="">
+      <h4>{{section.settings.company_name}}</h4>
+    </div>
+   <div class="footer-data-flex">
+      <div class="footer-data-left">
+        <p>{{section.settings.reserve_text}}</p>
       </div>
+      <div class="footer-data-right">
+        {% comment %} localization {% endcomment %}
+      </div>
+   </div>
+  </div>
+  </div>
+
 </footer>
 
 
@@ -160,7 +175,7 @@
           "type": "text",
           "id": "menu_heading",
           "label": "Menu Heading",
-          "default": "Help Center"
+          "default": "Bio-K+ Products"
         },
         {
           "type": "link_list",
@@ -260,16 +275,10 @@
       "label": "t:sections.footer.settings.show_policy.label"
     },
     {
-      "type": "text",
+      "type": "html",
       "id": "heading_text",
       "label": "Heading",
-      "default": "Get 10% Off"
-    },
-    {
-      "type": "textarea",
-      "id": "paragraph_text",
-      "label": "Paragraph Text",
-      "default": "Subscribe to our Newsletter and be the first to know about the best deals, new collections, and limited-time offers!"
+      "default": "Make Bio-K+ part of your daily wellbeing routine!"
     },
     {
       "type": "text",
@@ -298,10 +307,19 @@
       "type": "url",
       "id": "terms_conditions_link_url",
       "label": "Terms & Conditions Link URL"
-    }    
+    },
+    {
+      "type": "text",
+      "id": "company_name",
+      "label": "company_name",
+      "default": "© 2024 Bio-K+, a Kerry company."
+    },
+    {
+      "type": "text",
+      "id": "reserve_text",
+      "label": "reserve_text",
+      "default": "All Rights Reserved. Bio-K Plus is a registered Trade Mark of Kerry Group"
+    }   
   ],
-  "default": {
-   
-  }
 }
 {% endschema %}

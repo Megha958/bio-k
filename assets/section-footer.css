@@ -35,7 +35,6 @@ text-align: left;
 .main_copyrigt_sec {
   padding: 20px 0px;
   margin:auto;
-  display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, 0.20));
   border-bottom: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, 0.20));
@@ -48,15 +47,42 @@ text-align: left;
 
 .copyrigt_grid {
   display: flex;
-  justify-content: space-between;
-  width:45%;
+  justify-content: flex-start;
+  padding:0;
 }
-
+.main_copyrigt_sec .footer_main_sec,.cust-bottom-padd.footer_main_sec{
+  padding:0;
+}
+.footer-data-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 0 20px 0;
+}
 .copyrigt_grid_cokware {
   display: grid;
   grid-template-columns: 1fr;
 }
-
+.footer-bottom h4{
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  margin:20px 0 20px 0;
+}
+.footer-data-left p{
+  color: var(--White, #FFF);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+.main_privacy {
+  margin-right: 30px;
+}
 .main_grid_div_sub {
   display: grid;
   grid-template-columns: 1fr;
@@ -89,10 +115,10 @@ text-align: left;
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding:0 10px 0 0;
+  padding:0 0px 0 0;
 }
 .custom-subscribe{
-  width: 35%;
+  width: 40%;
 }
 
 .shop h3,
@@ -175,10 +201,10 @@ input[type="email"]:focus-visible {
   margin:40px 0;
 }
 .klaviyo_field_group.kgrid{
-  width: 80%;
+  width: 65%;
 }
 .klaviyo_form_actions.btn-actions{
-  width:20%;
+  width:35%;
 }
 .sub_btn {
   font-size: 16px;
@@ -324,6 +350,7 @@ img.check_icon {
   }
   .custom-subscribe {
     width: 100%;
+    margin-bottom: 40px;
   }
 }
 
@@ -340,13 +367,23 @@ img.check_icon {
   .custom-menu {
     width: 100%;
     order: 3;
-    margin-top: 50px;
+    margin-top: 0;
     flex-wrap: wrap;
   }
   .footer-menu-block {
     flex: unset;
     width: 100%;
     margin-bottom: 20px;
+    border-top: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, 0.20));
+    padding:10px 0 0;
+  }
+  .footer-menu-block:last-child{
+    border-bottom: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, .2));
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  .footer_main_sec.cust-bottom-padd{
+    border-top: 1px solid var(--gray-tones-white-20, rgba(255, 255, 255, .2));
   }
   .custom-footer .logo{
     display:none;
@@ -354,7 +391,50 @@ img.check_icon {
   .custom-subscribe{
     padding-top:30px;
   }
+  .footer_main_sec {
+    margin-inline: 0;
+  } 
+  .subscribe{
+    padding:0 20px;
+  }
+  .klaviyo_form_actions.btn-actions {
+    width: auto;
+  } 
+  .shop h3, .main_grid_div h3, .custom-footer h3{
+    padding:0;
+  }
+  .inline-menu-flex{
+    padding:0 20px;
+  }
+  .footer{
+    margin-bottom: 0;
+  }
+  .copyrigt_grid,.footer-bottom,.ab-footer-linklist{
+    margin: 0 20px;
+  }
+  .footer_bottom_links {
+    padding: 0 20px 15px 20px;
+  }
+  .subscribe > h3{
+    font-size: 28px;
+  }
+  .custom-subscribes{
+    flex-direction: column;
+  }
+  .klaviyo_field_group.kgrid,.klaviyo_form_actions.btn-actions {
+    width: 100%;
+  } 
+  .klaviyo_form_actions .newsletter-form__button{
+    width:100% !important;
+  }
+  .custom-footer .inline-menu-flex h3{
+    font-size: 20px;
+  }
+  .footer-bottom_icon h3.footer-header-regular{
+    font-size:12px;
+  }
 }
+
 
 @media only screen and (max-width: 575px) {
   .footer {
@@ -386,12 +466,9 @@ img.check_icon {
     grid-template-columns: 1fr;
   }
 .footer_main_sec {
-  margin:0;
-  padding: 20px;
+    margin:0;
+    padding: 0px;
   }
-
-  
-
   .footer-bottom_icon a {
     margin: 0 ;
   }
@@ -406,21 +483,10 @@ img.check_icon {
     display: block;
     color: #FCFBF7;
     margin: 10px 0;
-
-font-size: 14px;
-font-weight: 400;
-line-height: 21px;
-text-align: left;
-
-  }
-
-  .footer-bottom {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-size: 0.8em;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
   }
 
   .footer-bottom a {
@@ -438,7 +504,7 @@ text-align: left;
   }
 
   .links a {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     color: #fcfbf7;
@@ -446,19 +512,6 @@ text-align: left;
     margin-right: 20px;
   }
 
-  .luc_p {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.52px;
-  }
-
-  .footer_bottom_links {
-    padding: 15px 20px;
-  }
-  .luc_p_div {
-    padding: 5px 20px;
-  }
   .social-icons{
     padding-top:20px;
   }

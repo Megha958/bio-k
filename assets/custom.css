@@ -120,6 +120,11 @@ span.icon-location {
 .search-localization #HeaderCountryForm .localization-selector.link img {
 height: revert-layer;
 }
+.menu-drawer-container .header__icon span{
+  justify-content: flex-start;
+}
+
+
 @media only screen and (max-width: 1024px) {
   body .header {
     margin: 0 20px;
@@ -140,7 +145,7 @@ height: revert-layer;
       display:none;
     }
     body .header {
-     margin: 0px 15px;
+     margin: 0px 20px;
      padding: 10px 0 !important;
     }
   
@@ -151,5 +156,8 @@ height: revert-layer;
     min-width: 155px;
     font-size: 14px;
     padding:5px 12px;
+  }
+  .header__icons{
+    padding-right: 0;
   }
 }
