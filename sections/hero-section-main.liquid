@@ -44,41 +44,40 @@
   </div>
   
   <!-- Layout 2 -->
-  <div id="splited-image-hero-layout-2" style="display: {% if section.settings.layout == 'layout_2' %}block{% else %}none{% endif %}">
-     <div class="hero-content">
+ <div id="splited-image-hero-layout-2" style="display: {% if section.settings.layout == 'layout_2' %}block{% else %}none{% endif %}">
+  <div class="hero-content">
     <!-- Desktop View -->
     <div class="hero-desktop" style="background-image: url('{{ section.settings.desktop_bg_image_2 | img_url: 'master' }}');">
       <div class="container">
-        <div class="hero-text">
+        <div class="hero-text text-{{ section.settings.text_alignment_2 }}">
           <h1>{{ section.settings.hero_title_2 }}</h1>
           <p>{{ section.settings.hero_description_2 }}</p>
           <div class="hero-btns">
             <a href="{{ section.settings.button_url_2 }}" class="btn">{{ section.settings.button_text_2 }}
-                {% render 'green-arrow' %}
+              {% render 'green-arrow' %}
             </a>
           </div>
         </div>
-       
       </div>
     </div>
 
     <!-- Mobile View -->
     <div class="hero-mobile" style="background-image: url('{{ section.settings.mobile_bg_image | img_url: 'master' }}');">
       <div class="container">
-        <div class="hero-text">
+        <div class="hero-text text-{{ section.settings.text_alignment_2 }}">
           <h1>{{ section.settings.hero_title_2 }}</h1>
           <p>{{ section.settings.hero_description_2 }}</p>
           <div class="hero-btns">
             <a href="{{ section.settings.button_url_2 }}" class="btn">{{ section.settings.button_text_2 }}
-                {% render 'green-arrow' %}
+              {% render 'green-arrow' %}
             </a>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
-  </div>
+</div>
+
   
   <!-- Layout 3 -->
   <div id="splited-image-hero-section" style="display: {% if section.settings.layout == 'layout_4' %}block{% else %}none{% endif %}">
@@ -187,8 +186,25 @@
       "id": "mobile_bg_image",
       "label": "Mobile Background Image"
     },
-
-
+    {
+      "type": "select",
+      "id": "text_alignment_2",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
     {
       "type": "html",
       "id": "hero_title_2",
