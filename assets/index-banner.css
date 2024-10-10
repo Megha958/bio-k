@@ -50,7 +50,9 @@ a:hover {
 .index-main-category .slider-navigation .nav-btn {
   top: calc(50% - 8.7rem);
 }
-
+.slider-main-view.index-main-category .btn-navigation {
+  top: calc(35% - 23px);
+}
 .index-main-category .swiper-button-next,.index-main-category .swiper-button-prev  {
   position: absolute;
   top: var(--swiper-navigation-top-offset, 50%);
