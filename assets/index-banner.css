@@ -148,8 +148,26 @@ a:hover {
   margin-right: 15px;
 }
 
-
-
+.index-power-banner .power-grid p.power-card-para {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+.index-power-banner span.power-span {
+  color: #d4e3dc;
+  font-size: 40px;
+  letter-spacing: -0.2px;
+}
+@media(max-width:991px){
+  .index-power-banner .power-grid {
+    grid-template-columns: 1fr;
+  }
+  .index-power-banner .power-inner{
+    padding: 30px 0;
+    z-index: 99;
+  }
+}
 
 
 
@@ -610,18 +628,9 @@ span.power-span {
   margin-top: 55px
 }
 
-span.power-span {
-  color: var(--Primary-Shades-Dark-Green-20, #d4e3dc);
-  font-size: 40px;
-  letter-spacing: -.8px
-}
 
-p.power-card-para {
-  color: var(--White, #fff);
-  font-size: 16px;
-  letter-spacing: -.32px;
-  margin: 0;
-}
+
+
 
 .power-card.power-card-second {
   margin-left: 65px
@@ -675,10 +684,7 @@ p.power-card-para {
     font-size: 14px;
     margin: 0;
   } 
-  .power-inner {
-    padding: 30px 0;
-    z-index: 99;
-  } 
+ 
   .power-card-second{
     position: absolute;
     right: 0;
