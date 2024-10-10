@@ -40,10 +40,12 @@
                 <div class="faq-item second">
                     <div class="faq-question second">
                         <div class="faq-data">
-                          <span>
-                            <img src="{{ block.settings.faqicon | img_url:'20x' }}">
-                          </span>
-                        <h6>{{ block.settings.question }}</h6>
+                          <h6>
+                            {% if block.settings.faqicon != blank %}
+                              <img src="{{ block.settings.faqicon | img_url:'20x' }}">
+                            {% endif %}
+                            {{ block.settings.question }}
+                          </h6>
                             <span class="toggle-icon">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
