@@ -153,6 +153,7 @@
       "settings": {
         "heading": "Precision-Engineered Probiotics",
         "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific<br> aspects of your gut health and overall wellness.",
+        "desktop_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 80
       }
@@ -268,6 +269,7 @@
         "section_subtitle": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
         "button_text": "Learn From Bio-K+ Science",
         "url": "shopify://collections/probiotics-for-kids",
+        "desktop_content_alignment": "center",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -332,6 +334,7 @@
         "title": "Your Bio-K+ Questions, Answered",
         "subtitle": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
         "description": "",
+        "desktop_content_alignment": "center",
         "background_image": "shopify://shop_images/Frame_5416.png",
         "bottomsubtitle": "Backed by science, proven by results",
         "bottomdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -398,6 +401,7 @@
       "settings": {
         "review_heading": "7000+ Verified 5-Star Reviews",
         "review_description": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "desktop_content_alignment": "center",
         "button_link": "",
         "button_text": "Find Your Bio-K+",
         "padding_top": 36,
@@ -411,6 +415,7 @@
         "imagebg": "shopify://shop_images/Rectangle_2.png",
         "title": "Join our Bio-K+® Gut Kommunity to keep your gut in check and stay healthy all year round!",
         "details": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "desktop_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -494,6 +499,7 @@
       "settings": {
         "heading": "One Tool, Lots of Benefits.",
         "subheading": "Trusted in over 60,000 kitchens",
+        "desktop_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
