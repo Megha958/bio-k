@@ -130,8 +130,10 @@
 
 <div class="slider-main-view main-category section-{{ section.id }}-padding">
   <div class="page-width">
-    <h2 class="h2">{{ section.settings.heading }}</h2>
-    <p>{{ section.settings.heading  }}</p>
+    <div class="section-title">
+      <h2 class="h2">{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.heading  }}</p>
+    </div>
     <div class="benefits-slider latest-category-cards swiper overflow">
       <div class="swiper-wrapper">
           {% for block in section.blocks %}

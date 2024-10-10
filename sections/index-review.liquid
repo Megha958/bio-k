@@ -33,10 +33,8 @@
 {{ 'custom-section-slider.css' | asset_url | stylesheet_tag }}
 <div class="slider-main-view index-reviews-sec section-{{ section.id }}-padding">
   <div class="page-width">
-    <div class="review">
-      <h2 class="review-head">
-        {{ section.settings.review_heading }}
-      </h2>
+    <div class="section-title">
+      <h2>{{ section.settings.review_heading }}</h2>
       <p>{{ section.settings.review_description }}</p>
     </div>
 
