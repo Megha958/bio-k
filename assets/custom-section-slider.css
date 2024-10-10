@@ -1,11 +1,9 @@
 
 .slider-main-view {
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 }
-.slider-main-view {
-    overflow: visible;
-}
+
 .slider-main-view .image-card figure {
     margin: 0;
     position: relative;
