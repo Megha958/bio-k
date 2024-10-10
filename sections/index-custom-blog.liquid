@@ -12,201 +12,149 @@
   }
 
 {%- endstyle -%}
-{% style %}
-.benefits-slider-section  .swiper-button-next:after , .swiper-button-prev:after{
-    display:none;
-  }
- .benefits-slider-section .swiper-button-next svg, .swiper-button-prev svg{
-    width:20px; height:20px;
-  }
-  .benefits-slider-section .swiper-button-prev svg{ transform:rotate(0deg);
-}
-.benefits-slider-section .main_heading { 
-  color: #000;
-  font-family: Cellofy;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: -0.8px; 
-}
-.has-nav-wrapper {
-    position: relative;
-}
-  /* Ensure the slider container has relative positioning */
-.benefits-slider-section .slider-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.benefits-slider-section .slider-container .benefits-slider .benefits-slider-swiper {
-  overflow: visible;
-}
-/* Position navigation arrows */
-.benefits-slider-section .slider-navigation {
-  position: absolute;
-  top: -14%;
-  right: 9%; /* Adjust the distance from the right edge as needed */
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+{{ 'custom-section-latest-article.css' | asset_url | stylesheet_tag }}
 
-.benefits-slider-section .swiper-button-prev {
-  margin-bottom: 10px; /* Space between the buttons */
-}
+<div class="blog-latest-article section-padding">
+  <div class="page-width">
+    <h4 class="h4 heading">Latest Articles:</h4>
 
-.benefits-slider-section .benefits-slider {
-  position: relative;
-}
-.benefits-slider-section .swiper-button-prev{ left:-60px;}
-.benefits-slider-section .swiper-button-next{ right:-60px;}
-
-
-.main-category h5{
-    margin: 20px 0 10px;
-}
-.main-category p{
-    color: #6B7981;
-    letter-spacing: 0;
-    margin: 10px 0;
-}
-.main-category h3{
-    margin-bottom: 5px;
-}
-.main-category .slider-navigation .nav-btn {
-    top: calc(50% - 8.7rem);
-}
-.main-category .swiper-button-next,.main-category .swiper-button-prev  {
-    position: absolute;
-    top: var(--swiper-navigation-top-offset, 50%);
-    width: calc(var(--swiper-navigation-size) / 44* 27);
-    height: var(--swiper-navigation-size);
-    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99999999999999;
-    background: #009845;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-}
-  @media screen and (max-width:767px){
-    .main-category h5{
-      font-size:16px;
-      letter-spacing: 0;
-    }
-    .swiper-wrapper{
-      gap: 10px;
-    }
-    .main-category .subtext  {
-        margin: 10px 0;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 0;
-        color: #000;
-    }
-    .main-category p {
-      margin: 10px 0;
-      font-size: 14px;
-      font-weight: 400;
-    }  
-  }
-  @media screen and (max-width:576px){
-    .benefits-slider-section .grid__item{
-      max-width:100%;
-    }
-  }
-
-{% endstyle %}
-
-<div class="main-category custom-blog-{{ section.id }}">
-<div class="isolate{% unless section.settings.full_width %} page-width1{% endunless %} section-{{ section.id }}">
-    <section class=" section-{{ section.id }}-padding">
-    <div class="has-nav-wrapper">
-        {% if section.settings.heading != blank %}
-            <div class="page-width">
-                <div class="custom-blog">
-                    <h3 class="title left">{{ section.settings.heading }}</h3>
-                    <p class="subtext left">{{ section.settings.subheading }}</p>
-                </div>
-            </div>
-        {% endif %}
-     
-    </div>
-    <div class="slider-container">
-      <div class="benefits-slider">
-        <div class="slider-swiper-blog swiper mySwiper-{{ section.id }}">
-          <div class="page-width swiper-wrapper swiper-inner" style="overflow:visible;">
-            {% for block in section.blocks %}
-                <div class="swiper-slide grid__item" style="background:{{ block.settings.bgcolor }};">
-                    <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
-                    <div class="benefits-content">
-                        <a href="{{ block.settings.link }}" class="linkonly custom-blog-details">
-                        <h5>{{ block.settings.title }}</h5>
-                        <div class="tag-view">
-                            <span style="background:{{  block.settings.tag1color }};">{{ block.settings.tag1 }}</span>
-                            <span style="background:{{  block.settings.tag2color }};">{{ block.settings.tag2 }}</span>
-                        </div>
-                        </a> 
-                    </div>
-                </div>
-            {%- endfor -%}
+    <div class="latest-article-cards swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide article-cards">
+          <a href="#"></a>
+          <div class="image-card">
+            <figure><img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/latest-article1.png?v=1728385831" height="auto" width="auto"></figure>
           </div>
-          <div class="slider-navigation slide-nav">
-            <div class="swiper-button-prev nav-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                <path d="M10.375 1.25L1.625 10L10.375 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
+          <div class="card-content-wrap">
+            <div class="card-content">
+              <span class="article-date">May, 12. 2024</span>
+              <div class="title">Gut microbiome, Probiotics and, Premenstrual Disorders</div>
+              <p class="sort-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
-          <div class="swiper-button-next nav-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                <path d="M1.625 1.25L10.375 10L1.625 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
+            <div class="tags-wrap">
+              <div class="tag-list">
+                <div class="label label_1">Wellness</div>
+                <div class="label label_2">Gut Health</div>
+              </div>
+              <a href="/" class="btn btn-article">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <g clip-path="url(#clip0_564_2125)">
+                    <path d="M1.5 6H10.5M10.5 6L6 1.5M10.5 6L6 10.5" stroke="#009845" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_564_2125">
+                      <rect width="12" height="12" fill="white"/></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide article-cards">
+          <a href="#"></a>
+          <div class="image-card">
+            <figure><img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/latest-article2.png?v=1728385831" height="auto" width="auto"></figure>
+          </div>
+          <div class="card-content-wrap">
+            <div class="card-content">
+              <span class="article-date">May, 12. 2024</span>
+              <div class="title">What Do Probiotic Bacteria Actually Do in the Body?</div>
+              <p class="sort-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+            <div class="tags-wrap">
+              <div class="tag-list">
+                <div class="label label_1">Wellness</div>
+                <div class="label label_2">Gut Health</div>
+              </div>
+              <a href="/" class="btn btn-article">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <g clip-path="url(#clip0_564_2125)">
+                    <path d="M1.5 6H10.5M10.5 6L6 1.5M10.5 6L6 10.5" stroke="#009845" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_564_2125">
+                      <rect width="12" height="12" fill="white"/></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide article-cards">
+          <a href="#"></a>
+          <div class="image-card">
+            <figure><img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/latest-article3.png?v=1728385832" height="auto" width="auto"></figure>
+          </div>
+          <div class="card-content-wrap">
+            <div class="card-content">
+              <span class="article-date">May, 12. 2024</span>
+              <div class="title">Probiotic supplements and gut health: my retired father takes charge of his health</div>
+              <p class="sort-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+            <div class="tags-wrap">
+              <div class="tag-list">
+                <div class="label label_1">Wellness</div>
+                <div class="label label_2">Gut Health</div>
+              </div>
+              <a href="/" class="btn btn-article">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <g clip-path="url(#clip0_564_2125)">
+                    <path d="M1.5 6H10.5M10.5 6L6 1.5M10.5 6L6 10.5" stroke="#009845" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_564_2125">
+                      <rect width="12" height="12" fill="white"/></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>  
-</div>  
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <div class="swiper-button-next next-button btn-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M6.25 17.5L13.75 10L6.25 2.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="swiper-button-prev prev-button btn-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M13.75 17.5L6.25 10L13.75 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
 
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+</div>
 <script>
-  var swiper = new Swiper(".slider-swiper-blog", {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".latest-article-cards", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      575: {
-        slidesPerView: 1,
+      scrollbar: {
+        el: ".swiper-scrollbar"
       },
-      750: {
-        slidesPerView: 3,
-      },
-      1000: {
-        slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-      },
-      1500: {
-        slidesPerView: 4, // Consistent with 1000px breakpoint
-      },
-    },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1040: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        }
+      }
   });
- 
+});
 </script>
+
 {% schema %}
 {
   "name": "custom blog  Slider",
