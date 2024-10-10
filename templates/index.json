@@ -18,7 +18,13 @@
         "button_url": "shopify://collections/all",
         "button_text": "Explore New Collection",
         "desktop_bg_image": "shopify://shop_images/Frame_5403.png",
-        "mobile_bg_image": "shopify://shop_images/Frame_6396.png"
+        "mobile_bg_image": "shopify://shop_images/Frame_6396.png",
+        "hero_title_2": "Gut Instinct, <br> Meet Science",
+        "hero_description_2": "Crafted with precision and powered by science, our exclusive strain trio nurtures your gut health, supports your immunity, and fosters a harmonious balance within.",
+        "button_url_2": "shopify://collections/all",
+        "button_text_2": "The BIO-K+ Difference",
+        "desktop_bg_image_2": "shopify://shop_images/Frame_5403_1.png",
+        "mobile_bg_image_2": "shopify://shop_images/Frame_6396_1.png"
       }
     },
     "index_text_6r9HAF": {
