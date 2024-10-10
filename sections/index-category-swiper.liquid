@@ -2,6 +2,7 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: 750px) {
@@ -59,7 +60,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".latest-category-cards", {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 0,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {% schema %}
 {
-  "name": "Category Slider old",
+  "name": "Category Slider view",
   "settings": [
     
     {
@@ -192,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ],
   "presets": [
     {
-      "name": "Category Slider old",
+      "name": "Category Slider view",
       "category": "Custom"
     }
   ]
