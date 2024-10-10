@@ -10,7 +10,6 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
 {%- endstyle -%}
 {% style %}
 .benefits-slider-section  .swiper-button-next:after , .swiper-button-prev:after{
@@ -21,6 +20,7 @@
   }
   .benefits-slider-section .swiper-button-prev svg{ transform:rotate(0deg);
 }
+
 .benefits-slider-section .main_heading { 
   color: #000;
   font-family: Cellofy;
@@ -190,83 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-{% comment %}
-<div class="main-category Pdp-benefitslider-{{ section.id }}">
-<div class="isolate{% unless section.settings.full_width %} page-width1{% endunless %} section-{{ section.id }}">
-    <section class=" section-{{ section.id }}-padding">
-    <div class="has-nav-wrapper">
-        {% if section.settings.heading != blank %}
-            <div class="page-width">
-            <h3 class="title center">{{ section.settings.heading }}</h3>
-            <p class="subtext center">{{ section.settings.subheading }}</p>
-            </div>
-        {% endif %}
-     
-    </div>
-    <div class="slider-container">
-      <!-- Swiper Container -->
-      <div class="benefits-slider">
-        <div class="slider-swiper swiper mySwiper-{{ section.id }}">
-          <div class="page-width swiper-wrapper swiper-inner" style="overflow:visible;">
-            {% for block in section.blocks %}
-                <div class="swiper-slide grid__item">
-                    <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
-                    <div class="benefits-content">
-                    <h5>{{ block.settings.title }}</h5>
-                    <p>{{ block.settings.description }}</p>
-                    <a href="{{ block.settings.link }}" class="linkonly see-products">{{section.settings.button_text}}See Products  {% render 'button-arrow' %}</a> 
-                    </div>
-                </div>
-            {%- endfor -%}
-          </div>
-          <div class="slider-navigation slide-nav">
-            <div class="swiper-button-prev nav-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                <path d="M10.375 1.25L1.625 10L10.375 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          <div class="swiper-button-next nav-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                <path d="M1.625 1.25L10.375 10L1.625 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>  
-</div>  
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-  var swiper = new Swiper(".slider-swiper", {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-next',
-      prevEl: '.Pdp-benefitslider-{{ section.id }} .swiper-button-prev',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      750: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-      },
-      1500: {
-        slidesPerView: 6, // Consistent with 1000px breakpoint
-      },
-    },
-  });
- 
-</script>
-{% endcomment %}
 {% schema %}
 {
   "name": "Category Slider",
