@@ -13,7 +13,7 @@
       "type": "index-hero-section-main",
       "settings": {
         "layout": "layout_1",
-        "hero_title": "Feel your best every day with science-backed gut wellness.",
+        "hero_title": "Feel your best <br>every day with <br> science-backed <br> gut wellness.",
         "hero_description": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
         "button_url": "shopify://collections/all",
         "button_text": "Explore New Collection",
@@ -25,7 +25,15 @@
         "button_url_2": "shopify://collections/all",
         "button_text_2": "The BIO-K+ Difference",
         "desktop_bg_image_2": "shopify://shop_images/Frame_5403_1.png",
-        "mobile_bg_image_2": "shopify://shop_images/Frame_6396_1.png"
+        "mobile_bg_image_2": "shopify://shop_images/Frame_6396_1.png",
+        "hero_title_3": "Feel your best every day with science-backed gut wellness.",
+        "hero_description_3": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
+        "button_url_3": "shopify://collections/all",
+        "button_text_3": "Explore New Collection",
+        "hero_title_4": "Feel your best every day with science-backed gut wellness.",
+        "hero_description_4": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
+        "button_url_4": "shopify://collections/all",
+        "button_text_4": "Explore New Collection"
       }
     },
     "index_text_6r9HAF": {
@@ -383,7 +391,9 @@
         "review_heading": "7000+ Verified 5-Star Reviews",
         "review_description": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
         "button_link": "",
-        "button_text": "Find Your Bio-K+"
+        "button_text": "Find Your Bio-K+",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "index_join_banner_JqDmx9": {
@@ -403,9 +413,9 @@
         "slide_YiJLwj": {
           "type": "slide",
           "settings": {
+            "article": "",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_8.png",
-            "title": "Gut microbiome, Probiotics and, Premenstrual Disorders",
             "tag1": "Probiotics",
             "tag1color": "#334fb4",
             "tag2": "Science",
@@ -416,9 +426,9 @@
         "slide_kDUf78": {
           "type": "slide",
           "settings": {
+            "article": "",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_10.png",
-            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
             "tag1": "Science",
             "tag1color": "#009845",
             "tag2": "Gut Health",
@@ -429,9 +439,9 @@
         "slide_7ypbNK": {
           "type": "slide",
           "settings": {
+            "article": "",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_11.png",
-            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
             "tag1": "Gut Health",
             "tag1color": "#121212",
             "tag2": "Science",
@@ -442,9 +452,9 @@
         "slide_erWK3h": {
           "type": "slide",
           "settings": {
+            "article": "",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_9.png",
-            "title": "Gut microbiome, Probiotics and, Premenstrual Disorders",
             "tag1": "Science",
             "tag1color": "#28724f",
             "tag2": "Educational",
@@ -455,9 +465,9 @@
         "slide_D7i9hJ": {
           "type": "slide",
           "settings": {
+            "article": "",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_12.png",
-            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
             "tag1": "Probiotics",
             "tag1color": "#009845",
             "tag2": "Probiotic",
