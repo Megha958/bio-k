@@ -114,7 +114,7 @@ a.bio-btn {
 .stars {
   align-items: center;
   gap: 5px;
-  margin-bottom: 15px
+  margin-bottom: 0;
 }
 
 .review-card-head {
