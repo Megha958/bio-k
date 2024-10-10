@@ -1,1 +1,181 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Welcome to our store","link":""}}},"block_order":["announcement-bar-0"],"settings":{"color_scheme":"scheme-1","show_line_separator":true,"show_social":false,"auto_rotate":false,"change_slides_speed":5,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","settings":{"logo_position":"middle-left","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-1","enable_country_selector":true,"enable_language_selector":true,"enable_customer_avatar":true,"mobile_logo_position":"center","margin_bottom":0,"padding_top":20,"padding_bottom":20}}},"order":["announcement-bar","header"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcementbar_layouts_hzMwAK": {
+      "type": "announcementbar-layouts",
+      "blocks": {
+        "simple_TbJJTE": {
+          "type": "simple",
+          "settings": {
+            "announcement_message": "Join Our Kommunity and get a $4.00 Discount!",
+            "cta_text": "Join Now",
+            "cta_link": "",
+            "cta_color": "#ffffff",
+            "announcement_message_2": "",
+            "cta_text_2": "",
+            "cta_link_2": "",
+            "announcement_message_3": "",
+            "cta_text_3": "",
+            "cta_link_3": ""
+          }
+        },
+        "countdown_rnwcab": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "announcement_message": "Welcome to our Store",
+            "countdown_end_date": "October 26, 2024 22:15:10",
+            "cta_text": "Shop now",
+            "cta_link": "",
+            "cta_color": "#ffffff"
+          }
+        },
+        "ann_grid_mH4YJc": {
+          "type": "ann_grid",
+          "disabled": true,
+          "settings": {
+            "announcement_message": "Welcome to our Store",
+            "cta_text": "Shop now",
+            "cta_link": "",
+            "cta_color": "#ffffff",
+            "announcement_message_2": "Welcome to our Store",
+            "cta_text_2": "Shop now",
+            "cta_link_2": "",
+            "announcement_message_3": "Welcome to our Store",
+            "cta_text_3": "Shop now",
+            "cta_link_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "simple_TbJJTE",
+        "countdown_rnwcab",
+        "ann_grid_mH4YJc"
+      ],
+      "settings": {
+        "background_color": "#009845",
+        "text_color": "#fcfbf7"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "promotion_images_rUFMN9": {
+          "type": "promotion-images",
+          "settings": {
+            "menu": "Bio-K+ Products",
+            "menu_heading": "Products by Format",
+            "inner_menu": "products-by-format",
+            "menu_heading_2": "Products by Benefit",
+            "inner_menu_2": "products-by-benefit",
+            "product1_bg": "shopify://shop_images/card_2.png",
+            "desktop_image_1": "shopify://shop_images/image_25.png",
+            "header_text_1": "Why Bio-K+?",
+            "paragraph_text_1": "Learn why you should start your probiotics journey with Bio-K+",
+            "cta_link_1": "",
+            "cta_text_1": "Explore Now",
+            "product2_bg": "shopify://shop_images/card_3.png",
+            "desktop_image_2": "shopify://shop_images/a8337a28983f0fa11ca33a4028a8edce_1.png",
+            "header_text_2": "Start Your Probiotics Journey with Bio-K+",
+            "paragraph_text_2": "Nunc vulputate lib ipsum et velit interdum, ac aliquet odio mattis.",
+            "cta_link_2": "",
+            "cta_text_2": "Start Niow"
+          }
+        },
+        "about_9WgMcc": {
+          "type": "about",
+          "settings": {
+            "menu": "Bio-K+ Science",
+            "menu_heading": "More Bio-K+",
+            "inner_menu": "more-bio-k",
+            "menu_heading_2": "Bio-K+ Case Studies",
+            "case_studies_title": "Bio-K+ Case Studies",
+            "case_study_image_1": "shopify://shop_images/image_22.png",
+            "case_study_title_1": "The Cholesterol Controversy – and How Probiotics Might Help",
+            "case_study_date_1": "May, 2024",
+            "case_study_link_1": "",
+            "case_study_image_2": "shopify://shop_images/image_23.png",
+            "case_study_title_2": "Understanding the Link between the Microbiome and Chronic Inflammation",
+            "case_study_date_2": "May, 2024",
+            "case_study_link_2": "",
+            "case_study_image_3": "shopify://shop_images/image_24.png",
+            "case_study_title_3": "Understanding the Link between the Microbiome and Chronic Inflammation",
+            "case_study_date_3": "June, 2024",
+            "case_study_link_3": "",
+            "product1_bg": "shopify://shop_images/card_2.png",
+            "desktop_image_1": "shopify://shop_images/image_25.png",
+            "header_text_1": "Why Bio-K+?",
+            "paragraph_text_1": "Learn why you should start your probiotics journey with Bio-K+",
+            "cta_link_1": "",
+            "cta_text_1": "Explore Now"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_images_rUFMN9",
+        "about_9WgMcc"
+      ],
+      "settings": {
+        "logo_position": "middle-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "always",
+        "enable_transparent_header": false,
+        "show_line_separator": true,
+        "button_text": "Find in Store",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "mobile_logo_position": "center",
+        "navigation_header_1": "Shop By Benefit",
+        "nav_menu_1": "products-by-benefit",
+        "navigation_header_2": "Shop By Format",
+        "nav_menu_2": "products-by-format",
+        "nav_menu_3": "more-bio-k",
+        "case_studies_title": "Bio-K+ Case Studies",
+        "case_study_image_1": "shopify://shop_images/image_22.png",
+        "case_study_title_1": "The Cholesterol Controversy – and How Probiotics Might Help",
+        "case_study_date_1": "May, 2024",
+        "case_study_link_1": "shopify://blogs/news/healthy-hummus",
+        "case_study_image_2": "shopify://shop_images/image_23.png",
+        "case_study_title_2": "Understanding the Link between the Microbiome and Chronic Inflammation",
+        "case_study_date_2": "May, 2024",
+        "case_study_link_2": "shopify://blogs/news/microbiota-and-skin-health",
+        "case_study_image_3": "shopify://shop_images/image_24.png",
+        "case_study_title_3": "Understanding the Link between the Microbiome and Chronic Inflammation",
+        "case_study_date_3": "May, 2024",
+        "case_study_link_3": "shopify://blogs/news/few-tips-for-an-optimal-gut-microbiome-during-summer",
+        "product1_bg": "shopify://shop_images/card_54220f20-18a9-49b5-a7e8-b85c8a24f993.png",
+        "pdp_image_1": "shopify://shop_images/a8337a28983f0fa11ca33a4028a8edce_1_74d91ccd-22a2-4ae9-9d9c-4648fe320eb5.png",
+        "header_text_1": "Start Your Probiotics Journey with Bio-K+",
+        "paragraph_text_1": "Rorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "cta_link_1": "",
+        "cta_text_1": "Start Now",
+        "product2_bg": "shopify://shop_images/card_d39811ec-e917-44e7-b192-ca4c04c18197.png",
+        "pdp_image_2": "shopify://shop_images/image.png",
+        "header_text_2": "Why Bio-K+?",
+        "paragraph_text_2": "Learn why you should start your probiotics journey with Bio-K+",
+        "cta_link_2": "",
+        "cta_text_2": "Explore Now",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcementbar_layouts_hzMwAK",
+    "header"
+  ]
+}

@@ -1,0 +1,153 @@
+{{ 'index-banner.css' | asset_url | stylesheet_tag }}
+
+<section class="bio-sec">
+    <div class="bio-inner">
+      <div class="container">
+        <div class="bio-main">
+          <div class="blog-left">
+            <h3 class="blog-head">
+             {{ section.settings.title }}
+            </h3>
+            <p class="blog-para">
+                {{ section.settings.details }}
+            </p>
+            <div class="blog-btns">
+              <input type="email" name="email" id="email" class="input-contrl" placeholder="Enter Your E-Mail">
+              <a href="#" class="join-btn">
+                <span>Join Now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="#009845" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="blog-right">
+            <div class="blog-left-cards small-hide">
+              <div class="blog-access">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M10.4777 10.4777C11.4346 9.5208 12.6537 8.86916 13.981 8.60515C15.3082 8.34115 16.6839 8.47665 17.9341 8.99451C19.1844 9.51237 20.253 10.3893 21.0048 11.5145C21.7566 12.6397 22.1579 13.9625 22.1579 15.3158H27.6316M10.4777 10.4777C9.5208 11.4346 8.86916 12.6537 8.60515 13.981C8.34115 15.3082 8.47665 16.6839 8.99451 17.9341C9.51237 19.1844 10.3893 20.253 11.5145 21.0048C12.6397 21.7566 13.9625 22.1579 15.3158 22.1579V27.6316M10.4777 10.4777L6.60716 6.60716M15.3158 8.47368V3M13.9474 3H16.6842M20.1545 10.4771L24.0244 6.60716M23.0569 5.63968L24.9919 7.57463M27.6316 13.9474V16.6842M16.6842 27.6316H13.9474M10.4784 20.1545L6.60716 24.0244M7.57463 24.9919L5.64105 23.0569M8.47368 15.3158H3M3 16.6842V13.9474M5.63968 7.57463L7.57463 5.64105M25.5789 25.5789L29 29M19.4211 22.8421C19.4211 23.7494 19.7815 24.6196 20.4231 25.2612C21.0646 25.9027 21.9348 26.2632 22.8421 26.2632C23.7494 26.2632 24.6196 25.9027 25.2612 25.2612C25.9027 24.6196 26.2632 23.7494 26.2632 22.8421C26.2632 21.9348 25.9027 21.0646 25.2612 20.4231C24.6196 19.7815 23.7494 19.4211 22.8421 19.4211C21.9348 19.4211 21.0646 19.7815 20.4231 20.4231C19.7815 21.0646 19.4211 21.9348 19.4211 22.8421Z"
+                    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="blog-access-para">Exclusive Access to Expert Advice and Insights</p>
+              </div>
+              <div class="blog-active">
+                <p class="blog-active-num">6000+</p>
+                <p class="blog-active-mem">Active Members</p>
+              </div>
+            </div>
+            <div class="blog-access medium-hide large-up-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path
+                  d="M10.4777 10.4777C11.4346 9.5208 12.6537 8.86916 13.981 8.60515C15.3082 8.34115 16.6839 8.47665 17.9341 8.99451C19.1844 9.51237 20.253 10.3893 21.0048 11.5145C21.7566 12.6397 22.1579 13.9625 22.1579 15.3158H27.6316M10.4777 10.4777C9.5208 11.4346 8.86916 12.6537 8.60515 13.981C8.34115 15.3082 8.47665 16.6839 8.99451 17.9341C9.51237 19.1844 10.3893 20.253 11.5145 21.0048C12.6397 21.7566 13.9625 22.1579 15.3158 22.1579V27.6316M10.4777 10.4777L6.60716 6.60716M15.3158 8.47368V3M13.9474 3H16.6842M20.1545 10.4771L24.0244 6.60716M23.0569 5.63968L24.9919 7.57463M27.6316 13.9474V16.6842M16.6842 27.6316H13.9474M10.4784 20.1545L6.60716 24.0244M7.57463 24.9919L5.64105 23.0569M8.47368 15.3158H3M3 16.6842V13.9474M5.63968 7.57463L7.57463 5.64105M25.5789 25.5789L29 29M19.4211 22.8421C19.4211 23.7494 19.7815 24.6196 20.4231 25.2612C21.0646 25.9027 21.9348 26.2632 22.8421 26.2632C23.7494 26.2632 24.6196 25.9027 25.2612 25.2612C25.9027 24.6196 26.2632 23.7494 26.2632 22.8421C26.2632 21.9348 25.9027 21.0646 25.2612 20.4231C24.6196 19.7815 23.7494 19.4211 22.8421 19.4211C21.9348 19.4211 21.0646 19.7815 20.4231 20.4231C19.7815 21.0646 19.4211 21.9348 19.4211 22.8421Z"
+                  stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="blog-access-para">Exclusive Access to Expert Advice and Insights</p>
+            </div>
+            <div class="blog-active medium-hide large-up-hide">
+              <p class="blog-active-num">6000+</p>
+              <p class="blog-active-mem">Active Members</p>
+            </div>
+            {% if section.settings.imagebg != blank %}
+            <img class="blog-img" src="{{section.settings.imagebg | img_url:''}}" alt="">
+            {% endif %}
+
+            <div class="blog-first medium-hide large-up-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path
+                  d="M25.3335 6.66634L6.66683 25.333M12.0002 8.66634C12.0002 10.5073 10.5078 11.9997 8.66683 11.9997C6.82588 11.9997 5.3335 10.5073 5.3335 8.66634C5.3335 6.82539 6.82588 5.33301 8.66683 5.33301C10.5078 5.33301 12.0002 6.82539 12.0002 8.66634ZM26.6668 23.333C26.6668 25.174 25.1744 26.6663 23.3335 26.6663C21.4925 26.6663 20.0002 25.174 20.0002 23.333C20.0002 21.4921 21.4925 19.9997 23.3335 19.9997C25.1744 19.9997 26.6668 21.4921 26.6668 23.333Z"
+                  stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="blog-access-para">Be the First to Know About Best Deals</p>
+            </div>
+            <div class="blog-smile medium-hide large-up-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path
+                  d="M28 16.0005C27.9999 13.5709 27.2623 11.1985 25.8848 9.1972C24.5072 7.19587 22.5547 5.65983 20.2853 4.79221C18.0159 3.92459 15.5366 3.76627 13.1753 4.33819C10.8139 4.91011 8.68183 6.18532 7.06093 7.99518C5.44003 9.80504 4.40668 12.0643 4.09754 14.4741C3.78841 16.884 4.21805 19.3309 5.32965 21.4913C6.44125 23.6517 8.18244 25.4237 10.3229 26.5732C12.4634 27.7226 14.9024 28.1952 17.3173 27.9285M12 13.3338H12.0133M20 13.3338H20.0133M12.6667 20.0005C13.1548 20.4695 13.7368 20.8297 14.3744 21.0572C15.012 21.2848 15.6906 21.3745 16.3653 21.3205M25.3253 28.6671L28.6827 25.2271C29.0993 24.7956 29.3326 24.2194 29.3336 23.6195C29.3346 23.0197 29.1032 22.4427 28.688 22.0098C28.486 21.7988 28.2435 21.6307 27.975 21.5157C27.7065 21.4007 27.4175 21.341 27.1254 21.3404C26.8333 21.3398 26.5441 21.3982 26.2751 21.5121C26.0061 21.6259 25.7629 21.793 25.56 22.0031L25.336 22.2325L25.112 22.0031C24.9099 21.7922 24.6674 21.6242 24.3988 21.5093C24.1303 21.3944 23.8413 21.3349 23.5491 21.3344C23.257 21.3339 22.9678 21.3924 22.6989 21.5064C22.4299 21.6204 22.1868 21.7875 21.984 21.9978C21.5677 22.4293 21.3347 23.0052 21.3337 23.6047C21.3327 24.2043 21.5638 24.7809 21.9787 25.2138L25.3253 28.6671Z"
+                  stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="blog-access-para">Kommunity That Keeps You Motivated</p>
+            </div>
+
+            <div class="blog-right-cards small-hide">
+              <div class="blog-first">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M25.3335 6.66634L6.66683 25.333M12.0002 8.66634C12.0002 10.5073 10.5078 11.9997 8.66683 11.9997C6.82588 11.9997 5.3335 10.5073 5.3335 8.66634C5.3335 6.82539 6.82588 5.33301 8.66683 5.33301C10.5078 5.33301 12.0002 6.82539 12.0002 8.66634ZM26.6668 23.333C26.6668 25.174 25.1744 26.6663 23.3335 26.6663C21.4925 26.6663 20.0002 25.174 20.0002 23.333C20.0002 21.4921 21.4925 19.9997 23.3335 19.9997C25.1744 19.9997 26.6668 21.4921 26.6668 23.333Z"
+                    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="blog-access-para">Be the First to Know About Best Deals</p>
+              </div>
+              <div class="blog-smile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M28 16.0005C27.9999 13.5709 27.2623 11.1985 25.8848 9.1972C24.5072 7.19587 22.5547 5.65983 20.2853 4.79221C18.0159 3.92459 15.5366 3.76627 13.1753 4.33819C10.8139 4.91011 8.68183 6.18532 7.06093 7.99518C5.44003 9.80504 4.40668 12.0643 4.09754 14.4741C3.78841 16.884 4.21805 19.3309 5.32965 21.4913C6.44125 23.6517 8.18244 25.4237 10.3229 26.5732C12.4634 27.7226 14.9024 28.1952 17.3173 27.9285M12 13.3338H12.0133M20 13.3338H20.0133M12.6667 20.0005C13.1548 20.4695 13.7368 20.8297 14.3744 21.0572C15.012 21.2848 15.6906 21.3745 16.3653 21.3205M25.3253 28.6671L28.6827 25.2271C29.0993 24.7956 29.3326 24.2194 29.3336 23.6195C29.3346 23.0197 29.1032 22.4427 28.688 22.0098C28.486 21.7988 28.2435 21.6307 27.975 21.5157C27.7065 21.4007 27.4175 21.341 27.1254 21.3404C26.8333 21.3398 26.5441 21.3982 26.2751 21.5121C26.0061 21.6259 25.7629 21.793 25.56 22.0031L25.336 22.2325L25.112 22.0031C24.9099 21.7922 24.6674 21.6242 24.3988 21.5093C24.1303 21.3944 23.8413 21.3349 23.5491 21.3344C23.257 21.3339 22.9678 21.3924 22.6989 21.5064C22.4299 21.6204 22.1868 21.7875 21.984 21.9978C21.5677 22.4293 21.3347 23.0052 21.3337 23.6047C21.3327 24.2043 21.5638 24.7809 21.9787 25.2138L25.3253 28.6671Z"
+                    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="blog-access-para">Kommunity That Keeps You Motivated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Join banner Section",
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "full_width",
+        "default": true,
+        "label": "t:sections.rich-text.settings.full_width.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagebg",
+        "label": "Image Background"
+      },
+        {
+            "type": "textarea",
+            "id": "title",
+            "label": "Title Text"
+        },
+        {
+            "type": "textarea",
+            "id": "details",
+            "label": "Details"
+        },
+   
+     {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }
+  ],
+  "presets": [
+    {
+      "name": "Join banner Section"
+    }
+  ]
+}
+{% endschema %}

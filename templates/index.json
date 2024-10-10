@@ -1,75 +1,524 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero_section_main_mBxWcA": {
+      "type": "hero-section-main",
+      "settings": {
+        "layout": "layout_2",
+        "hero_title": "Feel your best <br>every day with <br> science-backed <br> gut wellness.",
+        "hero_description": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
+        "button_url": "shopify://collections/all",
+        "button_text": "Explore New Collection",
+        "desktop_bg_image": "shopify://shop_images/Frame_5403.png",
+        "mobile_bg_image": "shopify://shop_images/Frame_6396.png",
+        "text_alignment_2": "left",
+        "hero_title_2": "Gut Instinct, <br> Meet Science",
+        "hero_description_2": "Crafted with precision and powered by science, our exclusive strain trio nurtures your gut health, supports your immunity, and fosters a harmonious balance within.",
+        "button_url_2": "shopify://collections/all",
+        "button_text_2": "The BIO-K+ Difference",
+        "desktop_bg_image_2": "shopify://shop_images/Frame_5403_1.png",
+        "mobile_bg_image_2": "shopify://shop_images/Frame_6396_1.png"
+      }
+    },
+    "index_text_6r9HAF": {
+      "type": "index-text",
+      "settings": {
+        "full_width": false,
+        "rich_text": "<p>We're on a mission to <strong>empower your wellness</strong> journey with <strong>probiotics that work</strong>. Our exclusive, scientifically-proven formulas deliver the gut health <strong>results you can feel</strong> and trust.<br/></p>",
+        "text_color": "#000000",
+        "highlight_color": "#009845",
+        "content_alignment": "center",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "index_slider_swiper_6eEyrp": {
+      "type": "index-slider-swiper",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_eXqG8Y": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "image": "shopify://shop_images/Everyday_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
           }
         },
-        "button": {
-          "type": "buttons",
+        "slide_HQiNx6": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/Immune_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_3hjCcG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Cognitive_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_YCXpC8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Travel_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_FWjcLA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/image_5.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_MMXp6w": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Everyday_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_C4iDQY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Immune_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_ygWyrw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Cognitive_CA.png",
+            "title": "Pro-Grade Capacity",
+            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
+            "button_text": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_eXqG8Y",
+        "slide_HQiNx6",
+        "slide_3hjCcG",
+        "slide_YCXpC8",
+        "slide_FWjcLA",
+        "slide_MMXp6w",
+        "slide_C4iDQY",
+        "slide_ygWyrw"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "heading": "Precision-Engineered Probiotics",
+        "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific<br> aspects of your gut health and overall wellness.",
+        "padding_top": 0,
+        "padding_bottom": 80
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "index_banner_EWLrpf": {
+      "type": "index-banner",
+      "blocks": {
+        "card_87TjyV": {
+          "type": "card",
+          "settings": {
+            "card_number": "01",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "first"
+          }
+        },
+        "card_imfVjf": {
+          "type": "card",
+          "settings": {
+            "card_number": "02",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "second"
+          }
+        },
+        "card_3rnUii": {
+          "type": "card",
+          "settings": {
+            "card_number": "03",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "third"
+          }
+        },
+        "faq_VbAyYh": {
+          "type": "faq",
+          "settings": {
+            "question": "Clinically Proven to Fortify Your Gut's Natural Defenses",
+            "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          }
+        },
+        "faq_MabKyz": {
+          "type": "faq",
+          "settings": {
+            "question": "Supercharges Nutrient Absorption",
+            "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          }
+        },
+        "faq_A96Rnp": {
+          "type": "faq",
+          "settings": {
+            "question": "Strengthens Your Immune System",
+            "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          }
+        }
+      },
+      "block_order": [
+        "card_87TjyV",
+        "card_imfVjf",
+        "card_3rnUii",
+        "faq_VbAyYh",
+        "faq_MabKyz",
+        "faq_A96Rnp"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "imagebg": "shopify://shop_images/power.png",
+        "heading": "The Power of Three: Bio-K+'s Revolutionary Probiotic Blend",
+        "description": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "button_link": "",
+        "button_text": "Discover Our Formula",
+        "button_color": "#28724f"
+      }
+    },
+    "index_feature_tiles_MHxXw3": {
+      "type": "index-feature-tiles",
+      "blocks": {
+        "card_tadng4": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_5482.png",
+            "mobilebackground_image": "shopify://shop_images/Frame_5482.png",
+            "title": "20+",
+            "subtitle": "",
+            "description": "Pioneering Probiotic Science for Over Two Decades"
+          }
+        },
+        "card_4XHRLU": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_5483.png",
+            "mobilebackground_image": "shopify://shop_images/Frame_5483.png",
+            "title": "50+",
+            "subtitle": "",
+            "description": "Pioneering Probiotic Science for Over Two Decades"
+          }
+        },
+        "card_pzgyAi": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_5481_2.png",
+            "mobilebackground_image": "shopify://shop_images/Frame_5481_2.png",
+            "title": "#1",
+            "subtitle": "",
+            "description": "Pioneering Probiotic Science for Over Two Decades"
+          }
+        }
+      },
+      "block_order": [
+        "card_tadng4",
+        "card_4XHRLU",
+        "card_pzgyAi"
+      ],
+      "settings": {
         "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
+        "section_title": "25 Years of Probiotic Excellence",
+        "section_subtitle": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "button_text": "Learn From Bio-K+ Science",
+        "url": "shopify://collections/probiotics-for-kids",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "index_faq_XfU8xk": {
+      "type": "index-faq",
+      "blocks": {
+        "faq_Ncramp": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I find Bio-K+ products?",
+            "answer": "Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          }
+        },
+        "faq_Tgi3ew": {
+          "type": "faq",
+          "settings": {
+            "question": "Are your products free from allergens?",
+            "answer": "Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          }
+        },
+        "faq_pVBqTx": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I find Bio-K+ products?",
+            "answer": "Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          }
+        },
+        "faq_PtbRjE": {
+          "type": "faq",
+          "settings": {
+            "question": "When should I take Bio-K+ products?",
+            "answer": "Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          }
+        },
+        "faq_8bYFHV": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I find Bio-K+ products?",
+            "answer": "Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          }
+        },
+        "faq_QD8xQY": {
+          "type": "faq",
+          "settings": {
+            "question": "When should I take Bio-K+ products?",
+            "answer": "Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          }
+        }
+      },
+      "block_order": [
+        "faq_Ncramp",
+        "faq_Tgi3ew",
+        "faq_pVBqTx",
+        "faq_PtbRjE",
+        "faq_8bYFHV",
+        "faq_QD8xQY"
+      ],
+      "settings": {
+        "full_width": true,
+        "color_scheme": "scheme-d2532eda-85a8-4dd9-8588-8c62e5edf5e8",
+        "title": "Your Bio-K+ Questions, Answered",
+        "subtitle": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "description": "",
+        "background_image": "shopify://shop_images/Frame_5416.png",
+        "bottomsubtitle": "Backed by science, proven by results",
+        "bottomdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "button_text": "Explore Bio-K+ FAQ",
+        "url": "shopify://pages/faq",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "index_review_VyU7NT": {
+      "type": "index-review",
+      "blocks": {
+        "review_UgydfA": {
+          "type": "review",
+          "settings": {
+            "star_count": "5",
+            "review_text": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            "product_image": "shopify://shop_images/john.png",
+            "author_name": "John P.",
+            "product_name": "Dairy Active Shot",
+            "product_link": ""
+          }
+        },
+        "review_Gr4EJi": {
+          "type": "review",
+          "settings": {
+            "star_count": "5",
+            "review_text": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            "product_image": "shopify://shop_images/john.png",
+            "author_name": "John P.",
+            "product_name": "Dairy Active Shot",
+            "product_link": ""
+          }
+        },
+        "review_PeikjN": {
+          "type": "review",
+          "settings": {
+            "star_count": "5",
+            "review_text": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            "product_image": "shopify://shop_images/john.png",
+            "author_name": "John P.",
+            "product_name": "Dairy Active Shot",
+            "product_link": ""
+          }
+        },
+        "review_V9bhLA": {
+          "type": "review",
+          "settings": {
+            "star_count": "5",
+            "review_text": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            "product_image": "shopify://shop_images/john.png",
+            "author_name": "John P.",
+            "product_name": "Dairy Active Shot",
+            "product_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_UgydfA",
+        "review_Gr4EJi",
+        "review_PeikjN",
+        "review_V9bhLA"
+      ],
+      "settings": {
+        "review_heading": "7000+ Verified 5-Star Reviews",
+        "review_description": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "button_link": "",
+        "button_text": "Find Your Bio-K+"
+      }
+    },
+    "index_join_banner_JqDmx9": {
+      "type": "index-join-banner",
+      "settings": {
+        "full_width": true,
+        "imagebg": "shopify://shop_images/Rectangle_2.png",
+        "title": "Join our Bio-K+® Gut Kommunity to keep your gut in check and stay healthy all year round!",
+        "details": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "index_custom_blog_7MwwPF": {
+      "type": "index-custom-blog",
+      "blocks": {
+        "slide_YiJLwj": {
+          "type": "slide",
+          "settings": {
+            "bgcolor": "#f2faf6",
+            "image": "shopify://shop_images/image_8.png",
+            "title": "Gut microbiome, Probiotics and, Premenstrual Disorders",
+            "tag1": "Probiotics",
+            "tag1color": "#334fb4",
+            "tag2": "Science",
+            "tag2color": "#009845",
+            "link": ""
+          }
+        },
+        "slide_kDUf78": {
+          "type": "slide",
+          "settings": {
+            "bgcolor": "#f2faf6",
+            "image": "shopify://shop_images/image_10.png",
+            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
+            "tag1": "Science",
+            "tag1color": "#009845",
+            "tag2": "Gut Health",
+            "tag2color": "#081f2c",
+            "link": ""
+          }
+        },
+        "slide_7ypbNK": {
+          "type": "slide",
+          "settings": {
+            "bgcolor": "#f2faf6",
+            "image": "shopify://shop_images/image_11.png",
+            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
+            "tag1": "Gut Health",
+            "tag1color": "#121212",
+            "tag2": "Science",
+            "tag2color": "#28724f",
+            "link": ""
+          }
+        },
+        "slide_erWK3h": {
+          "type": "slide",
+          "settings": {
+            "bgcolor": "#f2faf6",
+            "image": "shopify://shop_images/image_9.png",
+            "title": "Gut microbiome, Probiotics and, Premenstrual Disorders",
+            "tag1": "Science",
+            "tag1color": "#28724f",
+            "tag2": "Educational",
+            "tag2color": "#121212",
+            "link": ""
+          }
+        },
+        "slide_D7i9hJ": {
+          "type": "slide",
+          "settings": {
+            "bgcolor": "#f2faf6",
+            "image": "shopify://shop_images/image_12.png",
+            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
+            "tag1": "Probiotics",
+            "tag1color": "#009845",
+            "tag2": "Probiotic",
+            "tag2color": "#121212",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_YiJLwj",
+        "slide_kDUf78",
+        "slide_7ypbNK",
+        "slide_erWK3h",
+        "slide_D7i9hJ"
+      ],
+      "settings": {
+        "heading": "One Tool, Lots of Benefits.",
+        "subheading": "Trusted in over 60,000 kitchens",
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1728395834aa4757d3": {
+      "type": "apps",
+      "blocks": {
+        "covet_instagram_feed_reviews_app_block_standard_6iNnFf": {
+          "type": "shopify://apps/covet-instagram-feed-reviews/blocks/app-block-standard/577480e8-b5be-4890-968c-06ccfb458c74",
+          "settings": {
+            "gallery_embed_id": 0,
+            "show_text": false,
+            "title_text": "Covet.pics gallery",
+            "title_color": "#000000",
+            "title_size": 22,
+            "subtitle_text": "",
+            "subtitle_color": "#000000",
+            "subtitle_size": 14,
+            "text_alignment": "center",
+            "margin": 20,
+            "custom_html_above": "",
+            "custom_html_below": ""
+          }
+        }
+      },
+      "block_order": [
+        "covet_instagram_feed_reviews_app_block_standard_6iNnFf"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero_section_main_mBxWcA",
+    "index_text_6r9HAF",
+    "index_slider_swiper_6eEyrp",
+    "index_banner_EWLrpf",
+    "index_feature_tiles_MHxXw3",
+    "index_faq_XfU8xk",
+    "index_review_VyU7NT",
+    "index_join_banner_JqDmx9",
+    "index_custom_blog_7MwwPF",
+    "1728395834aa4757d3"
   ]
 }
