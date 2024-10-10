@@ -13,6 +13,26 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "menu_block_ecxfig": {
+          "type": "menu_block",
+          "settings": {
+            "menu_heading": "Help Center",
+            "navigation_menu": "bio-k-products"
+          }
+        },
+        "menu_block_VNEn9w": {
+          "type": "menu_block",
+          "settings": {
+            "menu_heading": "Bio-K+ Products",
+            "navigation_menu": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu_block_ecxfig",
+        "menu_block_VNEn9w"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
