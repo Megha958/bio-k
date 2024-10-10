@@ -2,6 +2,7 @@
     <div class="isolate section-{{ section.id }}-padding">
       {%- unless section.settings.heading == blank -%}
         <div class="page-width">
+          <div class="section-title">
           <h2
             id="SectionHeading-{{ section.id }}"
             class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -11,7 +12,7 @@
           >
             {{ section.settings.heading }}
           </h2>
-  
+          </div>
           {%- if section.settings.blog != blank
             and section.settings.show_view_all
             and section.settings.post_limit < section.settings.blog.articles_count

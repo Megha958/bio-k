@@ -16,8 +16,10 @@
             {% endfor %}
           </div>
           <div class="power-right">
-            <h3 class="power-head">{{ section.settings.heading }}</h3>
-            <p class="power-para">{{ section.settings.description }}</p>
+            <div class="section-title">
+              <h2 class="power-head">{{ section.settings.heading }}</h2>
+              <p class="power-para">{{ section.settings.description }}</p>
+            </div>
             <div class="faq-section-banner">
             {% for block in section.blocks %}
                 {%- case block.type -%}
@@ -26,11 +28,11 @@
                 <div class="faq-item second">
                     <div class="faq-question second">
                         <div class="faq-data">
-                        <h6>{{ block.settings.question }}   </h6>
+                        <h6>{{ block.settings.question }}</h6>
                             <span class="toggle-icon">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17.5 2.5L2.5 17.5M2.5 2.5L17.5 17.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                             </span>
                         </div>
                     </div>

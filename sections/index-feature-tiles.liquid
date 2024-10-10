@@ -74,10 +74,10 @@
 {%- endstyle -%}
 <div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
     <section class="highlight-cards-section section-{{ section.id }}-padding">
-      <header class="center">
+      <div class="section-title">
         <h2>{{ section.settings.section_title }}</h2>
         <p>{{ section.settings.section_subtitle }}</p>
-      </header>
+      </div>
       <div class="highlight-cards">
         {% for block in section.blocks %}
           <div class="highlight-card" data-analytics-id="card-{{ block.id }}">
