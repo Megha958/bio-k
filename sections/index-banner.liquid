@@ -1,6 +1,6 @@
 {{ 'index-banner.css' | asset_url | stylesheet_tag }}
 
-<section class="power-sec index-banner">
+<section class="power-sec index-banner color-{{ section.settings.color_scheme }}">
     <div class="power-inner">
       <div class="page-width">
         <div class="power-grid">
@@ -134,6 +134,12 @@
       "id": "description",
       "label": "Description",
       "default": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "url",
