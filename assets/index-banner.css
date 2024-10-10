@@ -99,6 +99,54 @@ a:hover {
     line-height: 22px;
   }
 }
+/* section 3rd */
+
+.index-power-banner .faq-data h6{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 20px 0;
+  color: #fff;
+}
+.index-power-banner .power-inner {
+  padding: 150px 0;
+  position: relative;
+  z-index: 99;
+}
+.index-power-banner .power-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.index-power-banner .power-card {
+  background: rgba(40, 114, 79, .56);
+  box-shadow: 15px 15px 50px 0 rgba(255, 255, 255, .13) inset;
+  backdrop-filter: blur(5px);
+  display: inline-flex;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+  max-width: 225px;
+  width: 100%
+}
+.index-power-banner .power-left {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+}
+.index-power-banner .power-right p.power-para {
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 40px
+}
+.index-power-banner .faq-data {
+  margin-right: 15px;
+}
 
 
 
@@ -123,22 +171,8 @@ a:hover {
   text-align: center
 }
 
-a,
-a.bio-btn {
-  text-decoration: none
-}
-img {
-  /* margin: 0 auto;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto */
-}
 
 .review h2 {
-  /* font-size: 40px; */
-  /* font-weight: 700; */
-  /* line-height: 48px; */
   letter-spacing: -.02em;
   justify-content: center;
   margin: 0 0 10px
@@ -546,23 +580,6 @@ section.power-sec {
   z-index: 9
 }
 
-
-
-.power-inner {
-  padding: 150px 0;
-  position: relative;
-  z-index: 99
-}
-
-.power-grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr)
-}
-
 h3.power-head {
   font-size: 40px;
   font-weight: 700;
@@ -575,12 +592,7 @@ h3.power-head {
   max-width: 630px
 }
 
-p.power-para {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
-  margin-bottom: 40px
-}
+
 
 p.power-card-para,
 span.power-span {
@@ -590,26 +602,9 @@ span.power-span {
   line-height: 120%
 }
 
-.power-card {
-  background: rgba(40, 114, 79, .56);
-  box-shadow: 15px 15px 50px 0 rgba(255, 255, 255, .13) inset;
-  backdrop-filter: blur(5px);
-  display: inline-flex;
-  padding: 15px;
-  align-items: center;
-  gap: 10px;
-  align-items: center;
-  max-width: 225px;
-  width: 100%
-}
 
-.power-left {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  justify-content: center;
-  /* margin: auto; */
-}
+
+
 
 .power-card.power-card-third {
   margin-top: 55px
