@@ -58,15 +58,23 @@
               </div>
               <div class="tags-wrap">
                 <div class="tag-list">
-                  {% assign tagnew = block.settings.tag1 | split: '' %}
-                  {% assign extendblogtag = tagnew %}
-                  {% for tag in block.settings.article.tags %}
-                    {% if extendblogtag != tag %}
-                      <div class="label label_1">{{ tag }}</div>
-                    {% endif %}
-                  {% endfor %}
-                  {% comment %} <div class="label label_1">Wellness</div> {% endcomment %}
-                  {% comment %} <div class="label label_2">Gut Health</div> {% endcomment %}
+                  {% assign tagnew = block.settings.tag1 | split: ',' %}
+                      {% for tag in block.settings.article.tags %}
+                        {% assign tag_found = false %}
+                        {% assign extendblogtag = tag | downcase | strip %}
+                        
+                        {% for tag1 in tagnew %}
+                          {% assign tag1down = tag1 | downcase | strip %}
+                          {% if extendblogtag == tag1down %}
+                            {% assign tag_found = true %}
+                            {% break %}
+                          {% endif %}
+                        {% endfor %}
+                        
+                        {% unless tag_found %}
+                          <div class="label label_1">{{ tag }}</div>
+                        {% endunless %}
+                      {% endfor %}
                 </div>
               </div>
             </div>
