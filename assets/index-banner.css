@@ -9,6 +9,57 @@
   } 
 }
 
+/* 2nd slider section */
+.index-main-category .section-title {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.index-main-category .benefits-content h5{
+  margin: 20px 0 10px;
+}
+.index-main-category .benefits-content p{
+  color: #6B7981;
+  letter-spacing: 0;
+  margin: 10px 0;
+}
+.index-main-category h3{
+  margin-bottom: 5px;
+}
+.index-main-category .slider-navigation .nav-btn {
+  top: calc(50% - 8.7rem);
+}
+
+.index-main-category .swiper-button-next,.index-main-category .swiper-button-prev  {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44* 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999999999;
+  background: #009845;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+@media screen and (max-width:767px){
+  .index-main-category h5{
+    font-size:16px;
+    letter-spacing: 0;
+  }
+  .swiper-wrapper{
+    gap: 10px;
+  }
+  .index-main-category p {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+  }  
+}
 
 
 .review h2,

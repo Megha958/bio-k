@@ -10,129 +10,22 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .index-main-category.section-{{ section.id }}-padding h2{
+    color: {{ section.settings.text_color }};
+  }
+  .index-main-category.section-{{ section.id }}-padding p{
+    color: {{ section.settings.subtext_color }};
+  }
 {%- endstyle -%}
-{% style %}
-.benefits-slider-section  .swiper-button-next:after , .swiper-button-prev:after{
-    display:none;
-  }
- .benefits-slider-section .swiper-button-next svg, .swiper-button-prev svg{
-    width:20px; height:20px;
-  }
-  .benefits-slider-section .swiper-button-prev svg{ transform:rotate(0deg);
-}
 
-.benefits-slider-section .main_heading { 
-  color: #000;
-  font-family: Cellofy;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: -0.8px; 
-}
-.has-nav-wrapper {
-    position: relative;
-}
-  /* Ensure the slider container has relative positioning */
-.benefits-slider-section .slider-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.benefits-slider-section .slider-container .benefits-slider .benefits-slider-swiper {
-  overflow: visible;
-}
-/* Position navigation arrows */
-.benefits-slider-section .slider-navigation {
-  position: absolute;
-  top: -14%;
-  right: 9%; /* Adjust the distance from the right edge as needed */
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.benefits-slider-section .swiper-button-prev {
-  margin-bottom: 10px; /* Space between the buttons */
-}
-
-.benefits-slider-section .benefits-slider {
-  position: relative;
-}
-.benefits-slider-section .swiper-button-prev{ left:-60px;}
-.benefits-slider-section .swiper-button-next{ right:-60px;}
-
-
-.main-category h5{
-    margin: 20px 0 10px;
-}
-.main-category p{
-    color: #6B7981;
-    letter-spacing: 0;
-    margin: 10px 0;
-}
-.main-category h3{
-    margin-bottom: 5px;
-}
-.main-category .slider-navigation .nav-btn {
-    top: calc(50% - 8.7rem);
-}
-.main-category .swiper-button-next,.main-category .swiper-button-prev  {
-    position: absolute;
-    top: var(--swiper-navigation-top-offset, 50%);
-    width: calc(var(--swiper-navigation-size) / 44* 27);
-    height: var(--swiper-navigation-size);
-    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99999999999999;
-    background: #009845;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-}
-  @media screen and (max-width:767px){
-    .main-category h5{
-      font-size:16px;
-      letter-spacing: 0;
-    }
-    .swiper-wrapper{
-      gap: 10px;
-    }
-    .main-category .subtext  {
-        margin: 10px 0;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 0;
-        color: #000;
-    }
-    .main-category p {
-      margin: 10px 0;
-      font-size: 14px;
-      font-weight: 400;
-    }  
-  }
-  @media screen and (max-width:576px){
-    .benefits-slider-section .grid__item{
-      max-width:100%;
-    }
-  }
-{% endstyle %}
 
 {{ 'custom-section-slider.css' | asset_url | stylesheet_tag }}
 
-<div class="slider-main-view main-category section-{{ section.id }}-padding">
+<div class="slider-main-view index-main-category section-{{ section.id }}-padding">
   <div class="page-width">
     {% if section.settings.heading != blank %}
       <div class="section-title {{ section.settings.desktop_content_alignment }}">
-        <h2 class="h2">{{ section.settings.heading }}</h2>
+        <h3 class="h3">{{ section.settings.heading }}</h3>
         <p>{{ section.settings.subheading  }}</p>
       </div>
     {% endif %}
@@ -202,10 +95,22 @@ document.addEventListener("DOMContentLoaded", function () {
       "default": "One Tool, Lots of Benefits."
     },
     {
+      "type": "color",
+      "id": "text_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
       "type": "textarea",
       "id": "subheading",
       "label": "Subheading",
       "default": "Trusted in over 60,000 kitchens"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtitle Color",
+      "default": "#000"
     },
     {
       "type": "select",
