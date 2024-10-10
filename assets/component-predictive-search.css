@@ -1,3 +1,6 @@
+.predictive-search__item-heading {
+  font-size: 1rem !important;
+}
 .predictive-search {
   display: none;
   position: absolute;

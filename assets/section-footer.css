@@ -389,7 +389,7 @@ img.check_icon {
     display:none;
   }
   .custom-subscribe{
-    padding-top:30px;
+    padding-top:40px;
   }
   .footer_main_sec {
     margin-inline: 0;
@@ -517,5 +517,8 @@ img.check_icon {
   }
   .footer{
     margin-bottom:20px;
+  }
+  .subscribe>h3 br{
+    display: none;
   }
 }
