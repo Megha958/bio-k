@@ -126,6 +126,67 @@
   }
 {% endstyle %}
 
+{{ 'custom-section-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="slider-main-view main-category section-{{ section.id }}-padding">
+  <div class="page-width">
+    <h2 class="h2">{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.heading  }}</p>
+    <div class="benefits-slider latest-category-cards swiper overflow">
+      <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide grid__item">
+                <a href="{{ block.settings.article.url }}"></a>
+                <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
+                <div class="benefits-content">
+                <h5>{{ block.settings.title }}</h5>
+                <p>{{ block.settings.description }}</p>
+                <a href="{{ block.settings.link }}" class="linkonly see-products">{{section.settings.button_text}}See Products  {% render 'button-arrow' %}</a> 
+              </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-next next-button btn-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M6.25 17.5L13.75 10L6.25 2.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="swiper-button-prev prev-button btn-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M13.75 17.5L6.25 10L13.75 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".latest-category-cards", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar"
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1040: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        }
+      }
+  });
+});
+</script>
+
+{% comment %}
 <div class="main-category Pdp-benefitslider-{{ section.id }}">
 <div class="isolate{% unless section.settings.full_width %} page-width1{% endunless %} section-{{ section.id }}">
     <section class=" section-{{ section.id }}-padding">
@@ -201,6 +262,7 @@
   });
  
 </script>
+{% endcomment %}
 {% schema %}
 {
   "name": "Category Slider",
