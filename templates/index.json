@@ -12,7 +12,7 @@
     "index_hero_section_main_ExBPAe": {
       "type": "index-hero-section-main",
       "settings": {
-        "layout": "layout_1",
+        "layout": "layout_4",
         "hero_title": "Feel your best <br>every day with <br> science-backed <br> gut wellness.",
         "hero_description": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
         "button_url": "shopify://collections/all",
@@ -39,7 +39,9 @@
         "hero_title_4": "Feel your best every day with science-backed gut wellness.",
         "hero_description_4": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
         "button_url_4": "shopify://collections/all",
-        "button_text_4": "Explore New Collection"
+        "button_text_4": "Explore New Collection",
+        "desktop_bg_image_4": "shopify://shop_images/Frame_5403_4.png",
+        "mobile_bg_image_4": "shopify://shop_images/Frame_6396_3.png"
       }
     },
     "index_text_6r9HAF": {
