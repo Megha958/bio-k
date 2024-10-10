@@ -45,46 +45,39 @@
 
 <!-- Layout 2 -->
 <div id="splited-image-hero-layout-2" style="display: {% if section.settings.layout == 'layout_2' %}block{% else %}none{% endif %}">
-  <div class="splited-image-hero-layout-2-container">
-    <div class="splited-image-hero-layout-2-grid">
-      <div class="splited-image-hero-layout-2-grid-item-1">
-        <div class="splited-image-hero-layout-2-grid-item-1-container">
-          <div class="splited-image-hero-layout-2-grid-item-1-container-relative">
-            <div class="full-blend-hero-section-container-box">
-              <div class="full-blend-hero-section-container-box-content-container">
-                 {% if section.settings.heading != blank %}
-                  <div class="full-blend-hero-section-container-box-heading-container">
-                    <h1>{{ section.settings.heading }}</h1>
-                  </div>
-                  {% endif %}
-                 {% if section.settings.subtext != blank %}
-                  <div class="full-blend-hero-section-container-box-text-container">
-                    <p>{{ section.settings.subtext }}</p>
-                  </div>
-                 {% endif %}
-              </div>
-               {% if section.settings.button_text != blank %}
-              <div class="full-blend-hero-section-container-box-btn-container-container">
-                <a href="{{ section.settings.button_link }}" class="button cta_button">{{ section.settings.button_text }}</a>
-              </div>
-              {% endif %}
-            </div>
-          </div>
+<div class="hero-content">
+  <!-- Desktop View -->
+  <div class="hero-desktop" style="background-image: url('{{ section.settings.desktop_bg_image_2 | img_url: 'master' }}');">
+    <div class="page-width">
+      <div class="hero-text text-{{ section.settings.text_alignment_2 }}">
+        <h1>{{ section.settings.hero_title_2 }}</h1>
+        <p>{{ section.settings.hero_description_2 }}</p>
+        <div class="hero-btns">
+          <a href="{{ section.settings.button_url_2 }}" class="btn">{{ section.settings.button_text_2 }}
+            {% render 'green-arrow' %}
+          </a>
         </div>
       </div>
-      <div class="splited-image-hero-layout-2-grid-item-2">
-        <div class="splited-image-hero-layout-2-grid-item-2-img-div">
-           {% if section.settings.layout_2_image_desktop != blank %}
-          <img src="{{ section.settings.layout_2_image_desktop | img_url: 'master' }}" alt="" class="splited-image-hero-layout-2-grid-item-2-desktop-img">
-          {% endif %}
-            {% if section.settings.layout_2_image_mobile != blank %}
-          <img src="{{ section.settings.layout_2_image_mobile | img_url: 'master' }}" alt="" class="splited-image-hero-layout-2-grid-item-2-mobile-img">
-           {% endif %}
+    </div>
+  </div>
+
+  <!-- Mobile View -->
+  <div class="hero-mobile" style="background-image: url('{{ section.settings.mobile_bg_image | img_url: 'master' }}');">
+    <div class="container">
+      <div class="hero-text text-{{ section.settings.text_alignment_2 }}">
+        <h1>{{ section.settings.hero_title_2 }}</h1>
+        <p>{{ section.settings.hero_description_2 }}</p>
+        <div class="hero-btns">
+          <a href="{{ section.settings.button_url_2 }}" class="btn">{{ section.settings.button_text_2 }}
+            {% render 'green-arrow' %}
+          </a>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+
 
 <!-- Layout 3 -->
 <div id="splited-image-hero-section" style="display: {% if section.settings.layout == 'layout_4' %}block{% else %}none{% endif %}">
@@ -159,7 +152,7 @@
       ],
       "default": "layout_1"
     },
-    {
+  {
     "type": "html",
     "id": "hero_title",
     "label": "Hero Title",
@@ -191,6 +184,59 @@
   {
     "type": "image_picker",
     "id": "mobile_bg_image",
+    "label": "Mobile Background Image"
+  },
+  {
+    "type": "select",
+    "id": "text_alignment_2",
+    "label": "Text Alignment",
+    "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ]
+  },
+  {
+    "type": "html",
+    "id": "hero_title_2",
+    "label": "Hero Title 2",
+    "default": "Gut Instinct, Meet Science"
+  },
+  {
+    "type": "textarea",
+    "id": "hero_description_2",
+    "label": "Hero Description 2",
+    "default": "Crafted with precision and powered by science, our exclusive strain trio nurtures your gut health, supports your immunity, and fosters a harmonious balance within."
+  },
+  {
+    "type": "url",
+    "id": "button_url_2",
+    "label": "Button URL 2",
+    "default": "/collections/all"
+  },
+  {
+    "type": "text",
+    "id": "button_text_2",
+    "label": "Button Text 2",
+    "default": "The BIO-K+ Difference"
+  },
+  {
+    "type": "image_picker",
+    "id": "desktop_bg_image_2",
+    "label": "Desktop Background Image 2"
+  },
+  {
+    "type": "image_picker",
+    "id": "mobile_bg_image_2",
     "label": "Mobile Background Image"
   }
   ],
