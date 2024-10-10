@@ -9,18 +9,18 @@
 */
 {
   "sections": {
-    "hero_section_main_mBxWcA": {
-      "type": "hero-section-main",
+    "index_hero_section_main_ExBPAe": {
+      "type": "index-hero-section-main",
       "settings": {
-        "layout": "layout_2",
-        "hero_title": "Feel your best <br>every day with <br> science-backed <br> gut wellness.",
+        "layout": "layout_1",
+        "hero_title": "Feel your best every day with science-backed gut wellness.",
         "hero_description": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
         "button_url": "shopify://collections/all",
         "button_text": "Explore New Collection",
         "desktop_bg_image": "shopify://shop_images/Frame_5403.png",
         "mobile_bg_image": "shopify://shop_images/Frame_6396.png",
         "text_alignment_2": "left",
-        "hero_title_2": "Gut Instinct, <br> Meet Science",
+        "hero_title_2": "Gut Instinct, Meet Science",
         "hero_description_2": "Crafted with precision and powered by science, our exclusive strain trio nurtures your gut health, supports your immunity, and fosters a harmonious balance within.",
         "button_url_2": "shopify://collections/all",
         "button_text_2": "The BIO-K+ Difference",
@@ -510,7 +510,7 @@
     }
   },
   "order": [
-    "hero_section_main_mBxWcA",
+    "index_hero_section_main_ExBPAe",
     "index_text_6r9HAF",
     "index_slider_swiper_6eEyrp",
     "index_banner_EWLrpf",
