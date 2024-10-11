@@ -87,8 +87,8 @@
                 {% if block.settings.svg != blank %}
                   <img src=" {{ block.settings.svg | img_url:'' }}">
                 {% endif %}
-                {% if block.settings.details != blank %}
-                  <p class="blog-access-para">{{ block.settings.details }}</p>
+                {% if block.settings.details1 != blank %}
+                  <p class="blog-access-para">{{ block.settings.details1 }}</p>
                 {% endif %}
               </div>
             {% endcase %}
@@ -96,13 +96,13 @@
             
             {% for block in section.blocks %}
               {%- case block.type -%}
-              {%- when 'card' -%}
+              {%- when 'cardleft' -%}
             <div class="blog-smile medium-hide large-up-hide">
-                {% if block.settings.number != blank %}
+                {% if block.settings.details2 != blank %}
                   <img src=" {{ block.settings.svg2 | img_url:'' }}">
                 {% endif %}
-                {% if block.settings.numbertext != blank %}
-                <p class="blog-access-para">{{ block.settings.numbertext}}</p>
+                {% if block.settings.svg2 != blank %}
+                <p class="blog-access-para">{{ block.settings.details2}}</p>
                 {% endif %}
               </div>
             {% endcase %}
@@ -111,21 +111,21 @@
             <div class="blog-right-cards small-hide">
               {% for block in section.blocks %}
                 {%- case block.type -%}
-                {%- when 'card' -%}
+                {%- when 'cardleft' -%}
                 <div class="blog-first">
                   {% if block.settings.svg != blank %}
                     <img src=" {{ block.settings.svg | img_url:'' }}">
                   {% endif %}
-                  {% if block.settings.details != blank %}
-                    <p class="blog-access-para">{{ block.settings.details }}</p>
+                  {% if block.settings.details1 != blank %}
+                    <p class="blog-access-para">{{ block.settings.details1 }}</p>
                   {% endif %}
                 </div>
                 <div class="blog-smile">
-                  {% if block.settings.number != blank %}
+                  {% if block.settings.svg2 != blank %}
                     <img src=" {{ block.settings.svg2 | img_url:'' }}">
                   {% endif %}
-                  {% if block.settings.numbertext != blank %}
-                  <p class="blog-access-para">{{ block.settings.numbertext}}</p>
+                  {% if block.settings.details2 != blank %}
+                  <p class="blog-access-para">{{ block.settings.details2}}</p>
                   {% endif %}
                 </div>
               {% endcase %}
@@ -235,26 +235,28 @@
       ]
     },
     {
-      "type": "card2",
-      "name": "Card 2",
+      "type": "cardleft",
+      "name": "Card left",
       "settings": [
         {
-          "type": "text",
-          "id": "card_number",
-          "label": "Card Number",
-          "default": "01"
+          "type": "image_picker",
+          "id": "svg",
+          "label": "icon",
         },
         {
           "type": "text",
-          "id": "card_text",
-          "label": "Card Text",
-          "default": "Lacticaseibacillus Casei LBC80R®"
+          "id": "details1",
+          "label": "Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "svg2",
+          "label": "icon 2",
         },
         {
           "type": "text",
-          "id": "card_class",
-          "label": "Card Class",
-          "default": "first"
+          "id": "details2",
+          "label": "Text"
         }
       ]
     }
