@@ -3510,10 +3510,6 @@ details-disclosure > details {
   gap: 30px;
   display: flex;
 }
-.linkonly{
-  color: #000;
-  text-decoration: none;
-}
 
 /* Loading spinner */
 .loading__spinner {
