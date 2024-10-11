@@ -3,74 +3,21 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-  .index-feature-tiles .number{
-      font-size:60px;
-      line-height: 60px;
-      color: #fff;
-      font-weight: 700;
-    }
+
+  .index-feature-tiles.section-{{ section.id }}-padding h2{
+    color: {{ section.settings.text_color }};
+  }
+  .index-feature-tiles.section-{{ section.id }}-padding p{
+    color: {{ section.settings.subtext_color }};
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    .index-feature-tiles .number{
-      font-size:80px;
-      line-height: 80px;
-    }
+    
   }
-  .index-feature-tiles .highlight-cards-section {
-    text-align: left;
-    margin: 20px 0;
-  }
-  .index-feature-tiles .highlight-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-  .index-feature-tiles .highlight-card{
-    position: relative;
-  }
- .index-feature-tiles .details-position{
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: left;
-    padding: 30px;
- }
- .index-feature-tiles .details-position h5{
-    margin-top: 4px;
-    letter-spacing: -0.4px;
-    font-weight: 600;
-    color:#fff;
-    margin-bottom: 0;
- }
- .index-feature-tiles .details-position p{
-    margin-top: 10px;
-    letter-spacing: -0.4px;
-    font-weight: 600;
-    color:#fff;
-    margin-bottom: 0;
- }
-.index-feature-tiles img{
-  width: 100%;
-  height: 100%;
- }
- @media(max-width:767px){
-    .index-feature-tiles .highlight-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .index-feature-tiles .details-position h5{
-      font-size:20px;
-      letter-spacing: -0.2px;
-    }    
-    .index-feature-tiles .details-position p{
-      font-size:16px;
-      letter-spacing: -0.2px;
-    }  
- }
+
 {%- endstyle -%}
 <div class="index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
     <section class="highlight-cards-section section-{{ section.id }}-padding">
@@ -122,9 +69,21 @@
       "label": "Section Title"
     },
     {
+      "type": "color",
+      "id": "text_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
       "type": "textarea",
       "id": "section_subtitle",
       "label": "Section Subtitle"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtitle Color",
+      "default": "#000"
     },
     {
       "type": "text",

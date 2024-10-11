@@ -15,7 +15,7 @@
     }
 {%- endstyle -%}
 <div class="content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-  <div class=" index-feature-tiles isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+  <div class="index-faq-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
     <div class="faq-section">
       <div class="section-title {{ section.settings.desktop_content_alignment }}">
         {% if section.settings.title != blank %}
@@ -31,8 +31,8 @@
         <div class="faq">
         {% for block in section.blocks %}
             {% if block.settings.question != blank %}
-            <div class="faq-item">
-                <div class="faq-question {% if forloop.index0 == 0 %} active{% endif %}" data-index="{{ forloop.index0 }}">
+            <div class="faq-item {% if forloop.index0 == 0 %} active{% endif %}"  data-index="{{ forloop.index0 }}">
+                <div class="faq-question ">
                     <div class="faq-data">
                     <h5>{{ block.settings.question }}   </h5>
                         <span class="toggle-icon">
@@ -64,126 +64,44 @@
     </div>
 </div>
   <style>
-    .faq-bottom.custom-banner{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        color: #fff;
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 30px 20px;
-        margin-top: 50px;
-    }
-    .faq-section .custom-banner .content h5,.faq-bottom.custom-banner p{
-        margin:0 0;
-    }
-    .faq-bottom.custom-banner h5{
-        color: #fff;
-    }
-    .faq-data h5{
-        margin: 30px 0;
-    }
-    .faq-data p{
-        margin-top: 0px;
-    }
-    .faq-data{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .faq-section{
-        max-width: 850px;
-        margin: 0 auto;
-    }
-    .faq-section .subtext{
-        font-weight: 600;
-    color: #000;
-    font-size: 16px;
-    line-height: 25px;
-}
-    .faq-section .faq{
-        border-top: 1px solid #eee;
-    }
-    .faq-item{
-        cursor: pointer;
-        border-bottom: 1px solid #eee;
-        transition: all 0.3s ease-in-out;
-    }
-    .faq-answer {
-      display: none;
-      padding-bottom: 24px;
-      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-    }
-    .faq-question {
-      cursor: pointer;
-    }
-    .faq-question.active .toggle-icon svg{
-      transform: rotate(0deg);
-      display: inline-block;
-    }
-    .faq-question .toggle-icon svg{
-        transform: rotate(45deg);
-        width: 15px;
-    }
-    @media(max-width:767px){
-        .faq-data h5{
-            margin: 20px 0;
-            font-size: 16px;
-            letter-spacing: 0;
-        }
-        .faq-bottom.custom-banner {
-            display: block;
-        }
-        .faq-bottom.custom-banner .button{
-            width:100%; 
-        }
-        .faq-bottom.custom-banner h5 {
-            font-size: 20px;
-        }
-        .faq-bottom.custom-banner p{
-            font-size: 16px;
-            line-height: 25px;
-            margin-bottom: 20px;
-        }      
-        .faq-section h2{
-            font-size: 32px;
-            letter-spacing: 0;
-            margin-bottom: 5px;
-        } 
-    }
+
   </style>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const questions = document.querySelectorAll('.faq-question');
+      const faqItems = document.querySelectorAll('.faq-item');
     
       // Open the first FAQ by default
-      if (questions.length > 0) {
-        questions[0].classList.add('active');
-        const firstAnswer = questions[0].nextElementSibling;
-        if (firstAnswer && firstAnswer.classList.contains('faq-answer')) {
-          firstAnswer.style.display = 'block';
+      if (faqItems.length > 0) {
+        faqItems[0].classList.add('active');
+        const firstAnswer = faqItems[0].querySelector('.faq-answer');
+        if (firstAnswer) {
+          firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+          firstAnswer.style.opacity = '1';
         }
       }
     
-      questions.forEach(function(question) {
+      faqItems.forEach(function(item) {
+        const question = item.querySelector('.faq-question');
         question.addEventListener('click', function() {
           // Close all other answers
-          questions.forEach(function(q) {
-            if (q !== question) {
+          faqItems.forEach(function(q) {
+            if (q !== item) {
               q.classList.remove('active');
-              const answer = q.nextElementSibling;
-              if (answer && answer.classList.contains('faq-answer')) {
-                answer.style.display = 'none';
+              const answer = q.querySelector('.faq-answer');
+              if (answer) {
+                answer.style.maxHeight = '0';
+                answer.style.opacity = '0';
               }
             }
           });
     
           // Toggle the clicked question
-          const answer = question.nextElementSibling;
-          if (answer && answer.classList.contains('faq-answer')) {
-            const isOpen = question.classList.toggle('active');
-            answer.style.display = isOpen ? 'block' : 'none';
+          const answer = item.querySelector('.faq-answer');
+          if (answer) {
+            const isOpen = item.classList.toggle('active');
+            answer.style.maxHeight = isOpen ? answer.scrollHeight + 'px' : '0';
+            answer.style.opacity = isOpen ? '1' : '0';
           }
         });
       });
@@ -225,25 +143,25 @@
         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
-        "type": "select",
-        "id": "desktop_content_alignment",
-        "options": [
-          {
-            "value": "left",
-            "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
-          },
-          {
-            "value": "center",
-            "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
-          },
-          {
-            "value": "right",
-            "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
-          }
-        ],
-        "default": "center",
-        "label": "Heading Position"
-      },
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "Heading Position"
+    },
       {
         "type": "header",
         "content": "Bottom Details"
