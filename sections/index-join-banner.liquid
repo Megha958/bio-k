@@ -25,31 +25,58 @@
           </div>
           <div class="blog-right">
             <div class="blog-left-cards small-hide">
-              <div class="blog-access">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path
-                    d="M10.4777 10.4777C11.4346 9.5208 12.6537 8.86916 13.981 8.60515C15.3082 8.34115 16.6839 8.47665 17.9341 8.99451C19.1844 9.51237 20.253 10.3893 21.0048 11.5145C21.7566 12.6397 22.1579 13.9625 22.1579 15.3158H27.6316M10.4777 10.4777C9.5208 11.4346 8.86916 12.6537 8.60515 13.981C8.34115 15.3082 8.47665 16.6839 8.99451 17.9341C9.51237 19.1844 10.3893 20.253 11.5145 21.0048C12.6397 21.7566 13.9625 22.1579 15.3158 22.1579V27.6316M10.4777 10.4777L6.60716 6.60716M15.3158 8.47368V3M13.9474 3H16.6842M20.1545 10.4771L24.0244 6.60716M23.0569 5.63968L24.9919 7.57463M27.6316 13.9474V16.6842M16.6842 27.6316H13.9474M10.4784 20.1545L6.60716 24.0244M7.57463 24.9919L5.64105 23.0569M8.47368 15.3158H3M3 16.6842V13.9474M5.63968 7.57463L7.57463 5.64105M25.5789 25.5789L29 29M19.4211 22.8421C19.4211 23.7494 19.7815 24.6196 20.4231 25.2612C21.0646 25.9027 21.9348 26.2632 22.8421 26.2632C23.7494 26.2632 24.6196 25.9027 25.2612 25.2612C25.9027 24.6196 26.2632 23.7494 26.2632 22.8421C26.2632 21.9348 25.9027 21.0646 25.2612 20.4231C24.6196 19.7815 23.7494 19.4211 22.8421 19.4211C21.9348 19.4211 21.0646 19.7815 20.4231 20.4231C19.7815 21.0646 19.4211 21.9348 19.4211 22.8421Z"
-                    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <p class="blog-access-para">Exclusive Access to Expert Advice and Insights</p>
+              {% for block in section.blocks %}
+                {%- case block.type -%}
+                {%- when 'card' -%}
+                <div class="blog-access">
+                  {% if block.settings.svg != blank %}
+                    <img src=" {{ block.settings.svg | img_url:'' }}">
+                  {% endif %}
+                  {% if block.settings.details != blank %}
+                    <p class="blog-access-para">{{ block.settings.details }}</p>
+                  {% endif %}
+                </div>
+                <div class="blog-active">
+                  {% if block.settings.number != blank %}
+                  <p class="blog-active-num">{{ block.settings.number}} </p>
+                  {% endif %}
+                  {% if block.settings.numbertext != blank %}
+                  <p class="blog-active-mem">{{ block.settings.numbertext}}</p>
+                  {% endif %}
+                </div>
+              {% endcase %}
+            {% endfor %}
+            </div>
+
+
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+              {%- when 'card' -%}
+              <div class="blog-access medium-hide large-up-hide">
+                {% if block.settings.svg != blank %}
+                  <img src=" {{ block.settings.svg | img_url:'' }}">
+                {% endif %}
+                {% if block.settings.details != blank %}
+                  <p class="blog-access-para">{{ block.settings.details }}</p>
+                {% endif %}
               </div>
-              <div class="blog-active">
-                <p class="blog-active-num">6000+</p>
-                <p class="blog-active-mem">Active Members</p>
+            {% endcase %}
+          {% endfor %}
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when 'card' -%}
+              <div class="blog-active medium-hide large-up-hide">
+                {% if block.settings.number != blank %}
+                <p class="blog-active-num">{{ block.settings.number}} </p>
+                {% endif %}
+                {% if block.settings.numbertext != blank %}
+                <p class="blog-active-mem">{{ block.settings.numbertext}}</p>
+                {% endif %}
               </div>
-            </div>
-            <div class="blog-access medium-hide large-up-hide">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path
-                  d="M10.4777 10.4777C11.4346 9.5208 12.6537 8.86916 13.981 8.60515C15.3082 8.34115 16.6839 8.47665 17.9341 8.99451C19.1844 9.51237 20.253 10.3893 21.0048 11.5145C21.7566 12.6397 22.1579 13.9625 22.1579 15.3158H27.6316M10.4777 10.4777C9.5208 11.4346 8.86916 12.6537 8.60515 13.981C8.34115 15.3082 8.47665 16.6839 8.99451 17.9341C9.51237 19.1844 10.3893 20.253 11.5145 21.0048C12.6397 21.7566 13.9625 22.1579 15.3158 22.1579V27.6316M10.4777 10.4777L6.60716 6.60716M15.3158 8.47368V3M13.9474 3H16.6842M20.1545 10.4771L24.0244 6.60716M23.0569 5.63968L24.9919 7.57463M27.6316 13.9474V16.6842M16.6842 27.6316H13.9474M10.4784 20.1545L6.60716 24.0244M7.57463 24.9919L5.64105 23.0569M8.47368 15.3158H3M3 16.6842V13.9474M5.63968 7.57463L7.57463 5.64105M25.5789 25.5789L29 29M19.4211 22.8421C19.4211 23.7494 19.7815 24.6196 20.4231 25.2612C21.0646 25.9027 21.9348 26.2632 22.8421 26.2632C23.7494 26.2632 24.6196 25.9027 25.2612 25.2612C25.9027 24.6196 26.2632 23.7494 26.2632 22.8421C26.2632 21.9348 25.9027 21.0646 25.2612 20.4231C24.6196 19.7815 23.7494 19.4211 22.8421 19.4211C21.9348 19.4211 21.0646 19.7815 20.4231 20.4231C19.7815 21.0646 19.4211 21.9348 19.4211 22.8421Z"
-                  stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              <p class="blog-access-para">Exclusive Access to Expert Advice and Insights</p>
-            </div>
-            <div class="blog-active medium-hide large-up-hide">
-              <p class="blog-active-num">6000+</p>
-              <p class="blog-active-mem">Active Members</p>
-            </div>
+            {% endcase %}
+          {% endfor %}
+              
+           
             {% if section.settings.imagebg != blank %}
             <img class="blog-img" src="{{section.settings.imagebg | img_url:''}}" alt="">
             {% endif %}
@@ -163,6 +190,60 @@
         "label": "t:sections.all.padding.padding_bottom",
         "default": 52
       }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card1 right",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "svg",
+          "label": "icon",
+        },
+        {
+          "type": "text",
+          "id": "details",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number block"
+        },
+        {
+          "type": "text",
+          "id": "numbertext",
+          "label": "Text Number"
+        }
+      
+      ]
+    },
+    {
+      "type": "card2",
+      "name": "Card 2",
+      "settings": [
+        {
+          "type": "text",
+          "id": "card_number",
+          "label": "Card Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "card_text",
+          "label": "Card Text",
+          "default": "Lacticaseibacillus Casei LBC80R®"
+        },
+        {
+          "type": "text",
+          "id": "card_class",
+          "label": "Card Class",
+          "default": "first"
+        }
+      ]
+    }
+   
   ],
   "presets": [
     {
