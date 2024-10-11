@@ -11,6 +11,37 @@
   "sections": {
     "index_hero_section_main_ExBPAe": {
       "type": "index-hero-section-main",
+      "blocks": {
+        "slide_Uk7jJf": {
+          "type": "slide",
+          "settings": {
+            "slide_text": "As Seen In",
+            "slide_image": "shopify://shop_images/Vector_bd361d33-4d1b-4fc8-8b80-80c54f823805.png",
+            "image_alt": ""
+          }
+        },
+        "slide_CtVAJN": {
+          "type": "slide",
+          "settings": {
+            "slide_text": "As Seen In 2",
+            "slide_image": "shopify://shop_images/Vector_bd361d33-4d1b-4fc8-8b80-80c54f823805.png",
+            "image_alt": ""
+          }
+        },
+        "slide_EwLE9H": {
+          "type": "slide",
+          "settings": {
+            "slide_text": "As Seen In 3",
+            "slide_image": "shopify://shop_images/Vector_bd361d33-4d1b-4fc8-8b80-80c54f823805.png",
+            "image_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_Uk7jJf",
+        "slide_CtVAJN",
+        "slide_EwLE9H"
+      ],
       "settings": {
         "layout": "layout_4",
         "hero_title": "Feel your best <br>every day with <br> science-backed <br> gut wellness.",
