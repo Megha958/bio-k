@@ -3526,9 +3526,11 @@ details-disclosure > details {
   text-decoration: none;
   font-weight: 700;
 }
-.button-green::hover{
 
+a.button-green:hover{
+  background: #A4D65E;
 }
+
 .custom-slider .slick-track{
   gap: 30px;
   display: flex;
