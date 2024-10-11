@@ -440,10 +440,19 @@
             "number": "6000+",
             "numbertext": "Active Members"
           }
+        },
+        "card2_QDgQpz": {
+          "type": "card2",
+          "settings": {
+            "card_number": "01",
+            "card_text": "Lacticaseibacillus Casei LBC80R®",
+            "card_class": "first"
+          }
         }
       },
       "block_order": [
-        "card_PWhy7G"
+        "card_PWhy7G",
+        "card2_QDgQpz"
       ],
       "settings": {
         "full_width": true,
