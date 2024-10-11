@@ -699,9 +699,11 @@ span.power-span {
 }
 .section-title h2{
   margin:0;
+  letter-spacing: -0.2px;
 }
 .section-title p{
   margin-top: 10px;
+  letter-spacing: -0.2px;
 }
 @media(max-width:991px){
   .swiper-wrapper {
