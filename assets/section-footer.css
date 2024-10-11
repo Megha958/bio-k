@@ -143,6 +143,9 @@ text-align: left;
   margin-top:25px;
   text-decoration: unset;
 }
+.custom-footer a{
+  color: #A4D65E;
+}
 .subscribe h3{
   color: #FFF;
   font-size: 32px;
