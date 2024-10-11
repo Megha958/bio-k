@@ -45,6 +45,9 @@ body .header{
     margin-left: 20px;
     min-width: 185px;
 }
+.find-in-store-btn:hover{
+  background-color: #A4D65E;
+}
 span.icon-location {
     margin-top: 10px;
     margin-right: 5px;
