@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "index_hero_section_main_ExBPAe": {
@@ -457,7 +457,7 @@
             "article": "news/mango-and-goji-berry-smoothie-parfait-with-chia-seeds-and-coconut",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_10.png",
-            "tag1": "_author_Geneviève-Plante ,Recipes",
+            "tag1": "_author_Geneviève-Plante",
             "link": ""
           }
         },
@@ -467,7 +467,7 @@
             "article": "news/healthy-hummus",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_11.png",
-            "tag1": "_author_Geneviève-Plante ,Recipes",
+            "tag1": "_author_Geneviève-Plante",
             "link": ""
           }
         },
@@ -477,7 +477,7 @@
             "article": "news/gut-microbiome-probiotics-and-premenstrual-disorders",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_9.png",
-            "tag1": "_author_Geneviève-Plante ,Recipes",
+            "tag1": "_author_Geneviève-Plante",
             "link": ""
           }
         },
@@ -487,7 +487,7 @@
             "article": "news/4-reasons-why-birth-control-pill-might-affect-intestinal-microbiome",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_12.png",
-            "tag1": "_author_Geneviève-Plante ,Recipes",
+            "tag1": "_author_Geneviève-Plante",
             "link": ""
           }
         }
