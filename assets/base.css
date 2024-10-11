@@ -3509,27 +3509,7 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-/* mk - button */
-.button-green{
-  margin: 0 auto;
-  width: max-content;
-  background: #009845;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  padding: 12px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: 700;
-}
 
-a.button-green:hover{
-  background: #A4D65E;
-}
 
 .custom-slider .slick-track{
   gap: 30px;
