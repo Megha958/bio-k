@@ -287,7 +287,7 @@
         "section_title": "25 Years of Probiotic Excellence",
         "text_color": "#000000",
         "section_subtitle": "Bio-K+ is been at the forefront of probiotic innovation, delivering clinically proven solutions for optimal gut health. For 25 years, we've been perfecting probiotics to help you feel your best every day.",
-        "subtext_color": "#000",
+        "subtext_color": "#000000",
         "button_text": "Learn From Bio-K+ Science",
         "url": "shopify://collections/probiotics-for-kids",
         "desktop_content_alignment": "center",
@@ -431,6 +431,20 @@
     },
     "index_join_banner_JqDmx9": {
       "type": "index-join-banner",
+      "blocks": {
+        "card_PWhy7G": {
+          "type": "card",
+          "settings": {
+            "svg": "shopify://shop_images/research.svg",
+            "details": "Exclusive Access to Expert Advice and Insights",
+            "number": "6000+",
+            "numbertext": "Active Members"
+          }
+        }
+      },
+      "block_order": [
+        "card_PWhy7G"
+      ],
       "settings": {
         "full_width": true,
         "imagebg": "shopify://shop_images/Rectangle_2.png",
