@@ -508,16 +508,34 @@
         "padding_bottom": 36
       }
     },
-    "index_text_bgRgaw": {
-      "type": "index-text",
+    "rich_text_LCHWnn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_m4rxCL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow us on Instagram",
+            "heading_size": "h1"
+          }
+        },
+        "text_Jqx3iD": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Follow <strong>@biokplus</strong> and tag us to be mentioned</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_m4rxCL",
+        "text_Jqx3iD"
+      ],
       "settings": {
-        "full_width": false,
-        "rich_text": "<h2>Follow us on Instagram</h2><h6>Follow <strong>@biokplus</strong> and tag us to be mentioned</h6>",
-        "text_color": "#000000",
-        "highlight_color": "#009845",
+        "desktop_content_position": "center",
         "content_alignment": "center",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "1728395834aa4757d3": {
@@ -559,7 +577,7 @@
     "index_review_VyU7NT",
     "index_join_banner_JqDmx9",
     "index_custom_blog_7MwwPF",
-    "index_text_bgRgaw",
+    "rich_text_LCHWnn",
     "1728395834aa4757d3"
   ]
 }
