@@ -229,6 +229,7 @@
         "faq_MabKyz",
         "faq_A96Rnp"
       ],
+      "disabled": true,
       "settings": {
         "imagebg": "shopify://shop_images/power.png",
         "mobileimagebg": "shopify://shop_images/dwarf-block-bg-mob-2.jpg",
