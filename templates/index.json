@@ -441,18 +441,19 @@
             "numbertext": "Active Members"
           }
         },
-        "card2_QDgQpz": {
-          "type": "card2",
+        "cardleft_FQrEBG": {
+          "type": "cardleft",
           "settings": {
-            "card_number": "01",
-            "card_text": "Lacticaseibacillus Casei LBC80R®",
-            "card_class": "first"
+            "svg": "shopify://shop_images/Vector_14.svg",
+            "details1": "Be the First to Know About Best Deals",
+            "svg2": "shopify://shop_images/Vector_15.svg",
+            "details2": "Kommunity That Keeps You Motivated"
           }
         }
       },
       "block_order": [
         "card_PWhy7G",
-        "card2_QDgQpz"
+        "cardleft_FQrEBG"
       ],
       "settings": {
         "full_width": true,
