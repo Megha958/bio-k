@@ -397,6 +397,8 @@ display: inline-block;
 
 
 
+
+
 .review h2,
 .review h2 span {
   align-items: center;
@@ -450,7 +452,7 @@ section.bio-sec {
   padding: 150px 0
 }
 
-a.bio-btn,
+
 a.join-btn {
   text-align: center;
   padding: 0 25px;
@@ -485,8 +487,7 @@ a.join-btn {
 }
 
 .product,
-.stars,
-a.bio-btn {
+.stars{
   display: flex
 }
 
@@ -527,7 +528,6 @@ p.author {
   /* line-height: 160% */
 }
 
-a.bio-btn,
 a.des-link,
 p.des {
   font-weight: 600;
@@ -547,26 +547,12 @@ a.des-link {
   text-decoration-line: underline
 }
 
-a.bio-btn,
+
 h3.blog-head,
 p.blog-para {
   color: var(--White, #fff)
 }
 
-a.bio-btn {
-  border-radius: 100px;
-  background: var(--Green, #009845);
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: fit-content;
-  justify-content: center;
-  margin: auto;
-  font-size: 16px;
-  max-height: 50px;
-  height: 50px;
-  min-height: 50px;
-}
 
 a:hover {
   text-decoration: underline
