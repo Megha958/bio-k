@@ -106,12 +106,16 @@
               </div>
               </div>
               <div class="ab-footer-linklist">
-              {% for link in linklists[block.settings.navigation_menu].links %}
-                <div>
-                <a href="{{ link.url }}">{{ link.title }}</a>
-                </div>
-              {% endfor %}
-            </div>
+                {% for link in linklists[block.settings.navigation_menu].links %}
+                  <div class="footer-link-item {% if link.title == 'Wellness Shots' %}new-item{% endif %}">
+                    <a href="{{ link.url }}">{{ link.title }}
+                      {% if link.title == 'Wellness Shots' %}
+                        <span class="new-badge">New</span>
+                      {% endif %}
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
             </div>
           {% endfor %}
         </div>
