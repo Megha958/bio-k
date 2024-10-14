@@ -337,6 +337,16 @@ img.check_icon {
 .privacy_policy_sec a:hover{
   color:#a4d65e;
 }
+.footer_main_sec .disclosure .localization-form__select {
+  background: transparent;
+  color: #fff;
+}
+.footer-data-flex{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 @media only screen and (max-width: 1440px) {
   .footer_main_sec {
     margin-inline:40px;
@@ -533,5 +543,11 @@ img.check_icon {
   }
   .subscribe>h3 br{
     display: none;
+  }
+  .footer_main_sec .disclosure__link span.mobile-loc{
+		color: #081f2c;		
+  }
+  .footer-bottom .disclosure__list-wrapper a{
+    margin:0 !important;
   }
 }

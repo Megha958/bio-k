@@ -41,8 +41,6 @@ body .header{
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    margin-left: 20px;
-    margin-left: 20px;
     min-width: 185px;
 }
 .find-in-store-btn:hover{
@@ -128,6 +126,9 @@ height: revert-layer;
 }
 .mobile-loc{
   display: none;
+}
+.header .header__icons{
+  gap: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
