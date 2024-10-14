@@ -126,7 +126,9 @@ height: revert-layer;
 .menu-drawer-container .header__icon span{
   justify-content: flex-start;
 }
-
+.mobile-loc{
+  display: none;
+}
 
 @media only screen and (max-width: 1024px) {
   body .header {
@@ -151,7 +153,15 @@ height: revert-layer;
      margin: 0px 20px;
      padding: 10px 0 !important;
     }
-  
+    .desktop-loc{
+      display: none;
+    }
+    .mobile-loc{
+      display: block;
+    }
+    .cust-flag-flex.disclosure__link{
+      display: flex;
+    }
 }
 
 @media only screen and (max-width: 768px) {

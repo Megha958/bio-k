@@ -4,7 +4,7 @@
   Accepts:
     - localPosition: pass in the position in which the form is coming up to create specific IDs
 {%- endcomment -%}
-
+<div class="desktop-localization-select">
 <div class="disclosure">
   <button
     type="button"
@@ -13,17 +13,23 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span class="language-text-static">EN</span>
+  <span class="">
+      <img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/image_2_2.png?v=1728894454" alt="CA">
+  </span>
+    <span class="language-text-static desktop-loc"> Canada, {{ shop.locale | upcase }} </span>
+    <span class="language-text-static mobile-loc"> {{ shop.locale | upcase }} </span>
     <!-- <span>{{ localization.language.endonym_name | capitalize }}</span> -->
     <!-- {% render 'icon-caret' %}  -->
  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13 3L7 9L1 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+  </button> 
 
-  </button>
   <div class="disclosure__list-wrapper" hidden>
+
     <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
       {%- for language in localization.available_languages -%}
+      
         <li class="disclosure__item" tabindex="-1">
           <a
             class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset"
@@ -35,11 +41,40 @@
             {% endif %}
             data-value="{{ language.iso_code }}"
           >
-            {{ language.endonym_name | capitalize }}
-          </a>
+          <span class="flag_icon_country">
+            <img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/image_2_2.png?v=1728894454" alt="CA">
+          </span>
+          <span class="desktop-loc">
+            Canada, {{ language.iso_code | capitalize }} {% comment  %}  {{ language.endonym_name | capitalize }}{% endcomment %}
+          </span>
+          <span class="mobile-loc">
+           {{ language.iso_code | capitalize }} {% comment  %}  {{ language.endonym_name | capitalize }}{% endcomment %}
+          </span>
+           </a>
         </li>
       {%- endfor -%}
     </ul>
+    <div class="">
+      <a
+      href="https://biokplus.com"
+      class=""
+   >
+      <div class="cust-flag-flex disclosure__link caption-large focus-inset">
+         <img src="https://cdn.shopify.com/s/files/1/0455/1183/5798/files/image_26.png?v=1728894146" alt="USA Flag">
+         <span class="ly-inner-text country-name desktop-loc">
+          USA
+          </span>
+          <span class="ly-inner-text country-name mobile-loc">
+          EN
+          </span>
+      </div>
+   </a>
+   
+    </div>
   </div>
 </div>
 <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+</div>
+
+
+

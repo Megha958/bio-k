@@ -324,9 +324,19 @@ img.check_icon {
   padding: 10px 15px 10px 20px;
   height: 50px;
 }
-
-
-
+.newsletter-form__button:hover{
+  background-color: #a4d65e !important;
+  color:#fff;
+}
+.newsletter-form__button:hover svg path{
+  stroke:#fff;
+}
+.social-icons a:hover svg path{
+  stroke:#a4d65e;
+}
+.privacy_policy_sec a:hover{
+  color:#a4d65e;
+}
 @media only screen and (max-width: 1440px) {
   .footer_main_sec {
     margin-inline:40px;

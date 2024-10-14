@@ -61,6 +61,16 @@
     transform: translate(0, -50%);
   }
 
+  .product-360-category-inner:hover .common-h5 h5, .product-360-category-inner:hover .product-360-para p, .product-360-category-inner:hover .product-360-link{
+    color:#a4d65e
+  }
+
+  .product-360-category-inner:hover .product-360-link path {
+    stroke: #a4d65e; 
+  }
+  .case-study-item:hover .case-study-content h3{
+    color:#009845;
+  }
   
   @media only screen and (max-width: 990px) {
     .navbar {
@@ -137,7 +147,7 @@
       text-align: left;
       margin-top:10px;
     }
-    button.cust-menu-btns.tablinks.active,button.cust-menu-btns.tablinks.active:hover {
+    span.cust-menu-btns.tablinks.active,span.cust-menu-btns.tablinks.active:hover {
       border-bottom: 3px solid var(--Green, #009845);
     }
     .cust_nav_header{

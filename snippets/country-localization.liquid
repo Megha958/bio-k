@@ -45,18 +45,19 @@
 <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
 {% endcomment %}
 
+{% comment %}
 <div class="disclosure">
   <button
     type="button"
     class="disclosure__button localization-form__select localization-selector link link--text caption-large"
     aria-expanded="false"
     aria-controls="{{ localPosition }}List"
-    aria-describedby="{{ localPosition }}Label"
+    aria-describedby="{{ localPosition }}Label"{
   >
     <span>{{ localization.country | image_url: width: 16 | image_tag }} 
-     {% comment %} {{ localization.country.name -}}   {% endcomment %}
+     
       {{ localization.country.currency.iso_code }} 
-      <!-- ({{- localization.country.currency.symbol }}) -->
+     
     </span>
     {% render 'icon-caret' %}
   </button>
@@ -84,3 +85,4 @@
   </div>
 </div>
 <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+{% endcomment %}
