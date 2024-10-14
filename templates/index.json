@@ -439,7 +439,7 @@
           "type": "review",
           "settings": {
             "star_count": "5",
-            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.",
+            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. tempus urna at turpis condimentum lobortis.",
             "product_image": "shopify://shop_images/john.png",
             "author_name": "Anne M.",
             "product_name": "Dairy Active Shot",
@@ -450,7 +450,7 @@
           "type": "review",
           "settings": {
             "star_count": "5",
-            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.",
+            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. tempus urna at turpis condimentum lobortis.",
             "product_image": "shopify://shop_images/john.png",
             "author_name": "David B.",
             "product_name": "Dairy Active Shot",
