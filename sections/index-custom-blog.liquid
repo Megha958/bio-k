@@ -72,7 +72,7 @@
                         {% endfor %}
                         
                         {% unless tag_found %}
-                          <div class="label label_1">{{ tag }}</div>
+                          <div class="label label_{{ forloop.index }}">{{ tag }}</div>
                         {% endunless %}
                       {% endfor %}
                 </div>
