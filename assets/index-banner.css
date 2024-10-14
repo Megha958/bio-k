@@ -1075,8 +1075,8 @@ span.power-span {
 /* slider */
 
 .slider-main-view {
-  overflow-y: hidden !important;
-  overflow-x: hidden !important;
+  /* overflow-y: hidden !important; */
+  /* overflow-x: hidden !important; */
   position: relative;
 }
 
