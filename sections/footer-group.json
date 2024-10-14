@@ -1,1 +1,60 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","settings":{"color_scheme":"scheme-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"margin_top":0,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu_block_ecxfig": {
+          "type": "menu_block",
+          "settings": {
+            "menu_heading": "Help Center",
+            "navigation_menu": "bio-k-products"
+          }
+        },
+        "menu_block_VNEn9w": {
+          "type": "menu_block",
+          "settings": {
+            "menu_heading": "More Bio-K+",
+            "navigation_menu": "more-bio-k"
+          }
+        }
+      },
+      "block_order": [
+        "menu_block_ecxfig",
+        "menu_block_VNEn9w"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "heading_text": "Make Bio-K+ part of your <br> daily wellbeing routine!",
+        "follow_us_heading": "Follow Us",
+        "privacy_policy_link_text": "Privacy Policy",
+        "privacy_policy_link_url": "",
+        "terms_conditions_link_text": "Terms & Conditions",
+        "terms_conditions_link_url": "",
+        "company_name": "© 2024 Bio-K+, a Kerry company.",
+        "reserve_text": "All Rights Reserved. Bio-K Plus is a registered Trade Mark of Kerry Group"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

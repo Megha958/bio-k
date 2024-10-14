@@ -25,6 +25,7 @@
     height: 100%;
     max-width: 100%;
     object-fit: cover;
+    width: 100%;
 }
 .latest-article-cards .card-content-wrap {
     background: #f2faf6;

@@ -1,29 +1,61 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .index-reviews-sec a.bio-btn{
+    margin-top: 50px;
+  }
+  .index-reviews-sec .latest-article-cards .card-content h5{
+    margin:0;
+  }
+  .index-reviews-sec  .latest-article-cards .card-content-wrap{
+    padding: 20px;
+  }
+  .index-reviews-sec .latest-review-cards{
+    margin-top:30px;
+  }
+  .index-reviews-sec .latest-article-cards  img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+  }
 
-<section class="reviews-sec section-{{ section.id }}-padding">
-  <div class="section-{{ section.id }} review-{{ section.id }}">
-    <div class="review-main">
-      <div class="review">
-        <h2 class="review-head">
-          {{ section.settings.review_heading }}
-        </h2>
-        <p>{{ section.settings.review_description }}</p>
-      </div>
-      <div class="review-slider swiper mySwiper-{{ section.id }}">
-        <div class="page-width swiper-wrapper swiper-inner" style="overflow:visible;">
+{%- endstyle -%}
+{{ 'custom-section-slider.css' | asset_url | stylesheet_tag }}
+<div class="slider-main-view index-reviews-sec section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="section-title {{ section.settings.desktop_content_alignment }} ">
+      <h2>{{ section.settings.review_heading }}</h2>
+      <p>{{ section.settings.review_description }}</p>
+    </div>
+    <div class="latest-review-cards swiper overflow">
+      <div class="swiper-wrapper">
           {% for block in section.blocks %}
-            <div class="swiper-slide review-bg">
-              <div class="review-card-inner">
-                <div class="stars">
-                  <div class="star-rating">
-                    {% for i in (1..5) %}
-                      <svg class="star filled-{{ block.settings.star_count }}" data-value="{{ i }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"></polygon>
-                      </svg>
-                    {% endfor %}
+          <div class="swiper-slide article-cards">
+            <a href="{{ block.settings.url }}"></a>
+            <div class="card-content-wrap">
+              <div class="card-content">
+                <div class="review-card-inner">
+                  <div class="stars">
+                    <div class="star-rating">
+                      {% for i in (1..5) %}
+                        <svg class="star filled-{{ block.settings.star_count }}" data-value="{{ i }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"></polygon>
+                        </svg>
+                      {% endfor %}
+                    </div>
                   </div>
+                  <h4 class="review-card-head">{{ block.settings.review_text }}</h4>
                 </div>
-                <h4 class="review-card-head">{{ block.settings.review_text }}</h4>
               </div>
               <div class="product">
                 <div class="product-img">
@@ -35,30 +67,31 @@
                 </div>
               </div>
             </div>
-          {% endfor %}
-        </div>
-        <div class="slider-navigation slide-nav">
-          <div class="swiper-button-prev nav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-              <path d="M10.375 1.25L1.625 10L10.375 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
           </div>
-        <div class="swiper-button-next nav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-              <path d="M1.625 1.25L10.375 10L1.625 18.75" stroke="#FCFBF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-        </div>
+        {% endfor %}
       </div>
-      <a href="{{ section.settings.button_link }}" class="bio-btn">
-        <span>{{ section.settings.button_text }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <div class="swiper-button-next next-button btn-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M6.25 17.5L13.75 10L6.25 2.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </a>
+      </div>
+      <div class="swiper-button-prev prev-button btn-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M13.75 17.5L6.25 10L13.75 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="swiper-scrollbar"></div>
     </div>
+
+    <a href="{{ section.settings.button_link }}" class="bio-btn">
+      <span>{{ section.settings.button_text }}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
   </div>
-</section>
+</div>
+
 <style>
   .star {
     width: 24px;
@@ -74,32 +107,31 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-
-  var swiper = new Swiper(".review-slider", {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.review-{{ section.id }} .swiper-button-next',
-      prevEl: '.review-{{ section.id }} .swiper-button-prev',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".latest-review-cards", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      575: {
-        slidesPerView: 1,
+      scrollbar: {
+        el: ".swiper-scrollbar"
       },
-      750: {
-        slidesPerView: 3,
-      },
-      1000: {
-        slidesPerView: 4, // Adjust to show 3.5 columns on larger screens
-      },
-      1500: {
-        slidesPerView: 4, // Consistent with 1000px breakpoint
-      },
-    },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1040: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        }
+      }
   });
+});
 </script>
+
 {% schema %}
 {
   "name": "Reviews Slider",
@@ -117,6 +149,26 @@
       "default": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
     },
     {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "Heading Position"
+    },
+    {
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
@@ -126,6 +178,30 @@
       "id": "button_text",
       "label": "Button Text",
       "default": "Find Your Bio-K+"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [

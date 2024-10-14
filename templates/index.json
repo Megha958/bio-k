@@ -9,10 +9,10 @@
 */
 {
   "sections": {
-    "hero_section_main_mBxWcA": {
-      "type": "hero-section-main",
+    "index_hero_section_main_ExBPAe": {
+      "type": "index-hero-section-main",
       "settings": {
-        "layout": "layout_2",
+        "layout": "layout_4",
         "hero_title": "Feel your best <br>every day with <br> science-backed <br> gut wellness.",
         "hero_description": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
         "button_url": "shopify://collections/all",
@@ -20,12 +20,28 @@
         "desktop_bg_image": "shopify://shop_images/Frame_5403.png",
         "mobile_bg_image": "shopify://shop_images/Frame_6396.png",
         "text_alignment_2": "left",
-        "hero_title_2": "Gut Instinct, <br> Meet Science",
+        "hero_title_2": "Gut Instinct,<br>Meet Science",
         "hero_description_2": "Crafted with precision and powered by science, our exclusive strain trio nurtures your gut health, supports your immunity, and fosters a harmonious balance within.",
         "button_url_2": "shopify://collections/all",
         "button_text_2": "The BIO-K+ Difference",
-        "desktop_bg_image_2": "shopify://shop_images/Frame_5403_1.png",
-        "mobile_bg_image_2": "shopify://shop_images/Frame_6396_1.png"
+        "desktop_bg_image_2": "shopify://shop_images/Frame_5403_2_8298bd36-4dd5-4d33-bea3-a5722a23cf43.png",
+        "product_image_desktop": "shopify://shop_images/image_4.png",
+        "mobile_bg_image_2": "shopify://shop_images/Frame_6396_2.png",
+        "product_image_mobile": "shopify://shop_images/image_4_2.png",
+        "hero_title_3": "Join the Journey <br> to Better <br> Gut Health",
+        "hero_description_3": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
+        "button_url_3": "shopify://collections/all",
+        "button_text_3": "Explore Wellness Shots",
+        "desktop_bg_image_3": "shopify://shop_images/Frame_5403_3.png",
+        "desktop_right_img3": "shopify://shop_images/Vector_1_d93d8f50-dc91-464f-b5ca-5af90b61ba1b.png",
+        "mobile_bg_image_3": "shopify://shop_images/text.png",
+        "desktop_img3_mobile": "shopify://shop_images/Frame_6421.png",
+        "hero_title_4": "Feel your best every day with science-backed gut wellness.",
+        "hero_description_4": "Experience the difference of our science-backed and probiotic blend, specifically crafted to optimize your gut health and boost your immunity.",
+        "button_url_4": "shopify://collections/all",
+        "button_text_4": "Explore New Collection",
+        "desktop_bg_image_4": "shopify://shop_images/Frame_5403_4.png",
+        "mobile_bg_image_4": "shopify://shop_images/Frame_6396_3.png"
       }
     },
     "index_text_6r9HAF": {
@@ -40,84 +56,64 @@
         "padding_bottom": 40
       }
     },
-    "index_slider_swiper_6eEyrp": {
-      "type": "index-slider-swiper",
+    "index_category_swiper_qzJXpT": {
+      "type": "index-category-swiper",
       "blocks": {
-        "slide_eXqG8Y": {
+        "slide_ewEMbp": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Everyday_CA.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Everyday Wellness",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_HQiNx6": {
+        "slide_kamyMT": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Immune_CA.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Immune Function",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_3hjCcG": {
+        "slide_ebCBA4": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Cognitive_CA.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Cognitive Function",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_YCXpC8": {
+        "slide_qUrjXh": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Travel_CA.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Traveling Support",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_FWjcLA": {
+        "slide_6YFDbz": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/image_5.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Living with IBS",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_MMXp6w": {
+        "slide_Lc6E3R": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Everyday_CA.png",
-            "title": "Pro-Grade Capacity",
-            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
-            "button_text": "",
-            "link": ""
-          }
-        },
-        "slide_C4iDQY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Immune_CA.png",
-            "title": "Pro-Grade Capacity",
-            "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
-            "button_text": "",
-            "link": ""
-          }
-        },
-        "slide_ygWyrw": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Cognitive_CA.png",
-            "title": "Pro-Grade Capacity",
+            "title": "Everyday Wellness",
             "description": "Unleash your culinary creativity with this spacious 2-quart powerhouse!",
             "button_text": "",
             "link": ""
@@ -125,20 +121,21 @@
         }
       },
       "block_order": [
-        "slide_eXqG8Y",
-        "slide_HQiNx6",
-        "slide_3hjCcG",
-        "slide_YCXpC8",
-        "slide_FWjcLA",
-        "slide_MMXp6w",
-        "slide_C4iDQY",
-        "slide_ygWyrw"
+        "slide_ewEMbp",
+        "slide_kamyMT",
+        "slide_ebCBA4",
+        "slide_qUrjXh",
+        "slide_6YFDbz",
+        "slide_Lc6E3R"
       ],
       "settings": {
         "heading": "Precision-Engineered Probiotics",
-        "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific<br> aspects of your gut health and overall wellness.",
-        "padding_top": 0,
-        "padding_bottom": 80
+        "text_color": "#000000",
+        "subheading": "Discover our range of scientifically-formulated probiotic solutions, each designed to address specific aspects of your gut health and overall wellness.",
+        "subtext_color": "#000000",
+        "desktop_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 0
       }
     },
     "index_banner_EWLrpf": {
@@ -171,6 +168,7 @@
         "faq_VbAyYh": {
           "type": "faq",
           "settings": {
+            "faqicon": "shopify://shop_images/shield-plus.svg",
             "question": "Clinically Proven to Fortify Your Gut's Natural Defenses",
             "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
           }
@@ -178,6 +176,7 @@
         "faq_MabKyz": {
           "type": "faq",
           "settings": {
+            "faqicon": "shopify://shop_images/science.svg",
             "question": "Supercharges Nutrient Absorption",
             "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
           }
@@ -185,6 +184,7 @@
         "faq_A96Rnp": {
           "type": "faq",
           "settings": {
+            "faqicon": "shopify://shop_images/certificate.svg",
             "question": "Strengthens Your Immune System",
             "answer": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
           }
@@ -200,11 +200,15 @@
       ],
       "settings": {
         "imagebg": "shopify://shop_images/power.png",
+        "mobileimagebg": "shopify://shop_images/dwarf-block-bg-mob-2.jpg",
         "heading": "The Power of Three: Bio-K+'s Revolutionary Probiotic Blend",
         "description": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "color_scheme": "scheme-3",
         "button_link": "",
         "button_text": "Discover Our Formula",
-        "button_color": "#28724f"
+        "button_color": "#28724f",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "index_feature_tiles_MHxXw3": {
@@ -252,6 +256,7 @@
         "section_subtitle": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
         "button_text": "Learn From Bio-K+ Science",
         "url": "shopify://collections/probiotics-for-kids",
+        "desktop_content_alignment": "center",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -316,6 +321,7 @@
         "title": "Your Bio-K+ Questions, Answered",
         "subtitle": "Backed by science, proven by results Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
         "description": "",
+        "desktop_content_alignment": "center",
         "background_image": "shopify://shop_images/Frame_5416.png",
         "bottomsubtitle": "Backed by science, proven by results",
         "bottomdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -382,8 +388,11 @@
       "settings": {
         "review_heading": "7000+ Verified 5-Star Reviews",
         "review_description": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "desktop_content_alignment": "center",
         "button_link": "",
-        "button_text": "Find Your Bio-K+"
+        "button_text": "Find Your Bio-K+",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "index_join_banner_JqDmx9": {
@@ -393,6 +402,7 @@
         "imagebg": "shopify://shop_images/Rectangle_2.png",
         "title": "Join our Bio-K+® Gut Kommunity to keep your gut in check and stay healthy all year round!",
         "details": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "desktop_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -403,65 +413,50 @@
         "slide_YiJLwj": {
           "type": "slide",
           "settings": {
+            "article": "news/5-creative-lunchbox-ideas-to-spark-joy-in-your-midday-meal",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_8.png",
-            "title": "Gut microbiome, Probiotics and, Premenstrual Disorders",
-            "tag1": "Probiotics",
-            "tag1color": "#334fb4",
-            "tag2": "Science",
-            "tag2color": "#009845",
+            "tag1": "_author_Geneviève-Plante ,Recipes",
             "link": ""
           }
         },
         "slide_kDUf78": {
           "type": "slide",
           "settings": {
+            "article": "news/mango-and-goji-berry-smoothie-parfait-with-chia-seeds-and-coconut",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_10.png",
-            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
-            "tag1": "Science",
-            "tag1color": "#009845",
-            "tag2": "Gut Health",
-            "tag2color": "#081f2c",
+            "tag1": "_author_Geneviève-Plante ,Recipes",
             "link": ""
           }
         },
         "slide_7ypbNK": {
           "type": "slide",
           "settings": {
+            "article": "news/healthy-hummus",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_11.png",
-            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
-            "tag1": "Gut Health",
-            "tag1color": "#121212",
-            "tag2": "Science",
-            "tag2color": "#28724f",
+            "tag1": "_author_Geneviève-Plante ,Recipes",
             "link": ""
           }
         },
         "slide_erWK3h": {
           "type": "slide",
           "settings": {
+            "article": "news/gut-microbiome-probiotics-and-premenstrual-disorders",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_9.png",
-            "title": "Gut microbiome, Probiotics and, Premenstrual Disorders",
-            "tag1": "Science",
-            "tag1color": "#28724f",
-            "tag2": "Educational",
-            "tag2color": "#121212",
+            "tag1": "_author_Geneviève-Plante ,Recipes",
             "link": ""
           }
         },
         "slide_D7i9hJ": {
           "type": "slide",
           "settings": {
+            "article": "news/4-reasons-why-birth-control-pill-might-affect-intestinal-microbiome",
             "bgcolor": "#f2faf6",
             "image": "shopify://shop_images/image_12.png",
-            "title": "What Do Probiotic Bacteria Actually Do in the Body?",
-            "tag1": "Probiotics",
-            "tag1color": "#009845",
-            "tag2": "Probiotic",
-            "tag2color": "#121212",
+            "tag1": "_author_Geneviève-Plante ,Recipes",
             "link": ""
           }
         }
@@ -476,6 +471,7 @@
       "settings": {
         "heading": "One Tool, Lots of Benefits.",
         "subheading": "Trusted in over 60,000 kitchens",
+        "desktop_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -510,9 +506,9 @@
     }
   },
   "order": [
-    "hero_section_main_mBxWcA",
+    "index_hero_section_main_ExBPAe",
     "index_text_6r9HAF",
-    "index_slider_swiper_6eEyrp",
+    "index_category_swiper_qzJXpT",
     "index_banner_EWLrpf",
     "index_feature_tiles_MHxXw3",
     "index_faq_XfU8xk",

@@ -2,6 +2,7 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: 750px) {
@@ -10,75 +11,36 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-  .index-article .latest-article-cards .card-content h5{
-    margin:0;
+  .index-main-category.section-{{ section.id }}-padding h2{
+    color: {{ section.settings.text_color }};
   }
-  .index-article .latest-article-cards .card-content-wrap{
-    padding: 20px;
+  .index-main-category.section-{{ section.id }}-padding p{
+    color: {{ section.settings.subtext_color }};
   }
-  .index-article .latest-article-cards .card-content-wrap{
-    min-height: 130px;
-  }
-  .index-article .latest-article-cards  img{
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-  }
-  
 {%- endstyle -%}
 
-{{ 'custom-section-latest-article.css' | asset_url | stylesheet_tag }}
 
-<div class="index-article blog-latest-article section-padding">
+<div class="slider-main-view index-main-category section-{{ section.id }}-padding">
   <div class="page-width">
-    <div class="section-title {{ section.settings.desktop_content_alignment }}">
-      <h2 class="h2">{{ section.settings.heading }}</h2>
-      <p>{{ section.settings.heading  }}</p>
-    </div>
-
-    <div class="latest-article-cards swiper">
+    {% if section.settings.heading != blank %}
+      <div class="section-title {{ section.settings.desktop_content_alignment }}">
+        <h3 class="h3">{{ section.settings.heading }}</h3>
+        <p>{{ section.settings.subheading  }}</p>
+      </div>
+    {% endif %}
+    <div class="benefits-slider latest-category-cards swiper overflow">
       <div class="swiper-wrapper">
           {% for block in section.blocks %}
-          <div class="swiper-slide article-cards">
-            <a href="{{ block.settings.article.url }}"></a>
-            {% if block.settings.image != blank %}
-              <div class="image-card">
-                <div><img src="{{ block.settings.image | img_url:'' }}" height="auto" width="auto"></div>
-              </div>
-              {% else %}
-              <div class="image-card">
-                <div><img src="{{ block.settings.article | img_url:'' }}" height="auto" width="auto"></div>
-              </div>
-           {% endif %}
-            <div class="card-content-wrap">
-              <div class="card-content">
-                {% comment %} <span class="article-date">May, 12. 2024</span> {% endcomment %}
-                <h5 class="h5">{{ block.settings.article.title }}</h5>
-              </div>
-              <div class="tags-wrap">
-                <div class="tag-list">
-                  {% assign tagnew = block.settings.tag1 | split: ',' %}
-                      {% for tag in block.settings.article.tags %}
-                        {% assign tag_found = false %}
-                        {% assign extendblogtag = tag | downcase | strip %}
-                        
-                        {% for tag1 in tagnew %}
-                          {% assign tag1down = tag1 | downcase | strip %}
-                          {% if extendblogtag == tag1down %}
-                            {% assign tag_found = true %}
-                            {% break %}
-                          {% endif %}
-                        {% endfor %}
-                        
-                        {% unless tag_found %}
-                          <div class="label label_1">{{ tag }}</div>
-                        {% endunless %}
-                      {% endfor %}
-                </div>
-              </div>
+            <div class="swiper-slide grid__item">
+                <a href="{{ block.settings.link  }}">
+                  <img src="{{ block.settings.image | img_url:'' }}"  loading="lazy" alt="" />
+                  <div class="benefits-content">
+                  <h5>{{ block.settings.title }}</h5>
+                  <p>{{ block.settings.description }}</p>
+                  </div>
+                </a>
+                <a href="{{ block.settings.link }}" class="linkonly see-products">{{section.settings.button_text}}See Products  {% render 'button-arrow' %}</a> 
             </div>
-          </div>
         {% endfor %}
       </div>
       <div class="swiper-button-next next-button btn-navigation">
@@ -97,9 +59,9 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".latest-article-cards", {
+  var swiper = new Swiper(".latest-category-cards", {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 0,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -123,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {% schema %}
 {
-  "name": "custom blog  Slider",
+  "name": "Category Slider view",
   "settings": [
     
     {
@@ -133,10 +95,22 @@ document.addEventListener("DOMContentLoaded", function () {
       "default": "One Tool, Lots of Benefits."
     },
     {
+      "type": "color",
+      "id": "text_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
       "type": "textarea",
       "id": "subheading",
       "label": "Subheading",
       "default": "Trusted in over 60,000 kitchens"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtitle Color",
+      "default": "#000"
     },
     {
       "type": "select",
@@ -189,25 +163,27 @@ document.addEventListener("DOMContentLoaded", function () {
       "name": "Slide",
       "settings": [
         {
-          "type": "article",
-          "id": "article",
-          "label": "article"
-        },
-        {
-            "type": "color",
-            "id": "bgcolor",
-            "label": "background color"
-        },
-        {
           "type": "image_picker",
           "id": "image",
           "label": "Image"
         },
         {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Pro-Grade Capacity"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Unleash your culinary creativity with this spacious 2-quart powerhouse!"
+        },
+        {
             "type": "text",
-            "id": "tag1",
-            "label": "Tag Add exclude with ,"
-          },
+            "id": "button_text",
+            "label": "Button Title"
+        },
         {
             "type": "url",
             "id": "link",
@@ -218,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ],
   "presets": [
     {
-      "name": "custom blog Slider",
+      "name": "Category Slider view",
       "category": "Custom"
     }
   ]

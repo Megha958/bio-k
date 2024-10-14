@@ -10,21 +10,23 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-    .section-{{ section.id }} .rich-text-content strong {
-        color: {{ section.settings.highlight_color }};
-    }
+  .index-text.section-{{ section.id }} h2{
+    color: {{ section.settings.text_color }};
+  }
+  .index-text.section-{{ section.id }} .rich-text-content strong {
+    color: {{ section.settings.highlight_color }};
+  }
 {%- endstyle -%}
 
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
+<div class="index-text isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}">
     {% if section.settings.rich_text != blank %}
     <div class="rich-text-section section-{{ section.id }}-padding">
         <div class="rich-text-content">
-            <h2 class="{{ section.settings.content_alignment }}" style="color: {{ section.settings.text_color }};"> {{ section.settings.rich_text }}</h2>
+            <h2 class="{{ section.settings.content_alignment }}" > {{ section.settings.rich_text }}</h2>
         </div>
     </div>
     {% endif %}
 </div>
-   
 
 {% schema %}
 {
