@@ -5,6 +5,9 @@
         <div class="bio-main">
           <div class="blog-left">
             <div class="section-title {{ section.settings.desktop_content_alignment }}">
+              <p class="blog-para">
+                {{ section.settings.subdetails }}
+             </p>
               <h3 class="blog-head">
               {{ section.settings.title }}
               </h3>
@@ -153,6 +156,11 @@
             "id": "title",
             "label": "Title Text"
         },
+        {
+          "type": "textarea",
+          "id": "subdetails",
+          "label": "Sub Title"
+       },
         {
             "type": "textarea",
             "id": "details",
