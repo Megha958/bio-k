@@ -11,7 +11,6 @@
       
           <noscript class="small-hide medium-hide">
             {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
-              1233
               <div class="localization-form__select">
                 <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScript">{{ 'localization.country_label' | t }}</h2>
                 <select class="localization-selector link" name="country_code" aria-labelledby="HeaderCountryMobileLabelNoScript">
@@ -110,8 +109,12 @@
                     <div class="header-header-text-list">
                       <ul class="cust-inner-menu">
                         {% for link in linklists[section.settings.nav_menu_1].links %}
-                          <li>
-                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          <li class="{% if link.title == 'Wellness Shots' %}new-item{% endif %}">
+                            <a href="{{ link.url }}">{{ link.title }}
+                              {% if link.title == 'Wellness Shots' %}
+                                <span class="new-badge">New</span>
+                              {% endif %}
+                            </a>
                           </li>
                         {% endfor %}
                       </ul>
@@ -120,13 +123,18 @@
                   
                   <div id="tab2" class="custom-tabs tabcontent" style="display:none">
                    <div class="header-header-text-list">
-                      <ul class="cust-inner-menu">
-                        {% for link in linklists[section.settings.nav_menu_2].links %}
-                          <li>
-                            <a href="{{ link.url }}">{{ link.title }}</a>
-                          </li>
-                        {% endfor %}
-                      </ul>
+                    <ul class="cust-inner-menu">
+                      {% for link in linklists[section.settings.nav_menu_2].links %}
+                        <li class="{% if link.title == 'Wellness Shots' %}new-item{% endif %}">
+                          <a href="{{ link.url }}">{{ link.title }}
+                            {% if link.title == 'Wellness Shots' %}
+                              <span class="new-badge">New</span>
+                            {% endif %}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                    
                     </div>
                   </div>
 
