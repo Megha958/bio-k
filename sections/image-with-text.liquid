@@ -81,7 +81,18 @@
                     class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
                     {{ block.shopify_attributes }}
                   >
-                    {{ block.settings.caption | escape }}
+                   <b>
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_910_11935)">
+  <path d="M8.71989 0L15.1987 0.00608041L14.1048 6.83438H20.7171L19.7036 13.1823L13.0867 13.1778L11.9957 20L5.51992 19.9954L6.61085 13.1687L0 13.1641L1.01204 6.81918L7.63047 6.82374L8.71989 0Z" fill="#009845"/>
+  </g>
+  <defs>
+  <clipPath id="clip0_910_11935">
+  <rect width="20.7171" height="20" fill="white"/>
+  </clipPath>
+  </defs>
+  </svg>
+   {{ block.settings.caption | escape }}</b>
                   </p>
                 {%- when 'text' -%}
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -98,7 +109,7 @@
                       class="button-green{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
                     >
-                      {{ block.settings.button_label | escape }}
+                      {{ block.settings.button_label | escape }}{% render 'button-arrow' %}
                     </a>
                   {%- endif -%}
               {%- endcase -%}
