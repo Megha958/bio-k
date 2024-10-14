@@ -7,6 +7,9 @@
 {%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
   {{ 'component-localization-form.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
+  {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+  <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+
 
 <footer class="full_footer">
   <div class="footer_main_sec">
@@ -151,14 +154,28 @@
         <p>{{section.settings.reserve_text}}</p>
       </div>
       <div class="footer-data-right">
-        {% comment %} localization {% endcomment %}
+        {%- render 'language-localization'-%}
       </div>
    </div>
   </div>
   </div>
 
 </footer>
+<script>
+  document.querySelectorAll('.footer_main_sec .disclosure__button').forEach(button => {
+    button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !isExpanded);
 
+      const listWrapper = button.nextElementSibling;
+      if (!isExpanded) {
+        listWrapper.style.display = 'block';
+      } else {
+        listWrapper.style.display = 'none';
+      }
+    });
+  });
+</script>
 
 {% schema %}
 {

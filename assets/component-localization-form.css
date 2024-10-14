@@ -270,7 +270,6 @@ noscript .localization-selector.link {
     flex-wrap: nowrap;
     justify-content: flex-end;
     flex-direction: row-reverse;
-    padding-right: 10px;
 }
 
 .desktop-localization-wrapper
@@ -382,5 +381,12 @@ noscript .localization-selector.link {
 @media only screen and (max-width: 1199px) {
   .header__localization .disclosure .localization-form__select{
     display:none;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .desktop-localization-select .disclosure__list{
+    min-width: 9rem;
+    width: auto;
   }
 }
