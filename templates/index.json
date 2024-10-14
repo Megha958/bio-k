@@ -186,6 +186,14 @@
             "text_style": "body"
           }
         },
+        "caption_mJRnpJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "Clinically proven stronger results with Bio-K+",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
         "button_cnhyDk": {
           "type": "button",
           "settings": {
@@ -198,6 +206,7 @@
       "block_order": [
         "heading_KqGTVn",
         "text_UeAeyw",
+        "caption_mJRnpJ",
         "button_cnhyDk"
       ],
       "settings": {
