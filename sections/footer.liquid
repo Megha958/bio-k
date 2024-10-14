@@ -154,14 +154,22 @@
         <p>{{section.settings.reserve_text}}</p>
       </div>
       <div class="footer-data-right">
-        {%- render 'language-localization'-%}
+        <localization-form class="no-js-hidden">
+          {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+            <div>
+              <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+              {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+            </div>
+          {%- endform -%}
+          
+        </localization-form>
       </div>
    </div>
   </div>
   </div>
 
 </footer>
-<script>
+{% comment %} <script>
   document.querySelectorAll('.footer_main_sec .disclosure__button').forEach(button => {
     button.addEventListener('click', () => {
       const isExpanded = button.getAttribute('aria-expanded') === 'true';
@@ -175,7 +183,7 @@
       }
     });
   });
-</script>
+</script> {% endcomment %}
 
 {% schema %}
 {

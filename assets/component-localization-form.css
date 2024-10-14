@@ -389,4 +389,7 @@ noscript .localization-selector.link {
     min-width: 9rem;
     width: auto;
   }
+  .footer-bottom .localization-form:only-child .localization-form__select{
+    margin:0;
+  }
 }
