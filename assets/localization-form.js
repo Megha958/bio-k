@@ -13,7 +13,7 @@ if (!customElements.get('localization-form')) {
         this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
         this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
 
-        this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
+        this.querySelectorAll('a:not(.cust-language)').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
       }
 
       hidePanel() {
