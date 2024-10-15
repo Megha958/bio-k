@@ -5,6 +5,9 @@
         <div class="bio-main">
           <div class="blog-left">
             <div class="section-title {{ section.settings.desktop_content_alignment }}">
+              <h4 style="color:#fff;">
+                {{ section.settings.subdetails }}
+              </h4>
               <h3 class="blog-head">
               {{ section.settings.title }}
               </h3>
@@ -14,7 +17,7 @@
             </div>
             <div class="blog-btns">
               <input type="email" name="email" id="email" class="input-contrl" placeholder="Enter Your E-Mail">
-              <a href="#" class="button-white button">
+              <a href="#" class="button-white button" >
                 Join Now
                 {% render 'button-arrow' %}
               </a>
@@ -153,6 +156,11 @@
             "id": "title",
             "label": "Title Text"
         },
+        {
+          "type": "textarea",
+          "id": "subdetails",
+          "label": "Sub Title"
+       },
         {
             "type": "textarea",
             "id": "details",

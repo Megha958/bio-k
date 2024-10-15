@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -80,14 +80,14 @@
             "inner_menu_2": "products-by-benefit",
             "product1_bg": "shopify://shop_images/card_2.png",
             "desktop_image_1": "shopify://shop_images/image_25.png",
-            "header_text_1": "Why Bio-K+?",
-            "paragraph_text_1": "Learn why you should start your probiotics journey with Bio-K+",
+            "header_text_1": "The Science Behind  Bio-K+",
+            "paragraph_text_1": "",
             "cta_link_1": "",
             "cta_text_1": "Explore Now",
             "product2_bg": "shopify://shop_images/card_3.png",
             "desktop_image_2": "shopify://shop_images/a8337a28983f0fa11ca33a4028a8edce_1.png",
             "header_text_2": "Start Your Probiotics Journey with Bio-K+",
-            "paragraph_text_2": "Nunc vulputate lib ipsum et velit interdum, ac aliquet odio mattis.",
+            "paragraph_text_2": "",
             "cta_link_2": "",
             "cta_text_2": "Start Niow"
           }
@@ -114,8 +114,8 @@
             "case_study_link_3": "",
             "product1_bg": "shopify://shop_images/card_2.png",
             "desktop_image_1": "shopify://shop_images/image_25.png",
-            "header_text_1": "Why Bio-K+?",
-            "paragraph_text_1": "Learn why you should start your probiotics journey with Bio-K+",
+            "header_text_1": "The Science Behind Bio-K+",
+            "paragraph_text_1": "",
             "cta_link_1": "",
             "cta_text_1": "Explore Now"
           }
@@ -159,13 +159,13 @@
         "product1_bg": "shopify://shop_images/card_54220f20-18a9-49b5-a7e8-b85c8a24f993.png",
         "pdp_image_1": "shopify://shop_images/a8337a28983f0fa11ca33a4028a8edce_1_74d91ccd-22a2-4ae9-9d9c-4648fe320eb5.png",
         "header_text_1": "Start Your Probiotics Journey with Bio-K+",
-        "paragraph_text_1": "Rorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "paragraph_text_1": "",
         "cta_link_1": "",
         "cta_text_1": "Start Now",
         "product2_bg": "shopify://shop_images/card_d39811ec-e917-44e7-b192-ca4c04c18197.png",
         "pdp_image_2": "shopify://shop_images/image.png",
-        "header_text_2": "Why Bio-K+?",
-        "paragraph_text_2": "Learn why you should start your probiotics journey with Bio-K+",
+        "header_text_2": "The Science Behind  Bio-K+",
+        "paragraph_text_2": "",
         "cta_link_2": "",
         "cta_text_2": "Explore Now",
         "margin_bottom": 0,

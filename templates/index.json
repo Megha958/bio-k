@@ -186,6 +186,14 @@
             "text_style": "body"
           }
         },
+        "caption_mJRnpJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "Clinically proven stronger results with Bio-K+",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
         "button_cnhyDk": {
           "type": "button",
           "settings": {
@@ -198,6 +206,7 @@
       "block_order": [
         "heading_KqGTVn",
         "text_UeAeyw",
+        "caption_mJRnpJ",
         "button_cnhyDk"
       ],
       "settings": {
@@ -430,7 +439,7 @@
           "type": "review",
           "settings": {
             "star_count": "5",
-            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.",
+            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. tempus urna at turpis condimentum lobortis.",
             "product_image": "shopify://shop_images/john.png",
             "author_name": "Anne M.",
             "product_name": "Dairy Active Shot",
@@ -441,7 +450,7 @@
           "type": "review",
           "settings": {
             "star_count": "5",
-            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.",
+            "review_text": "Aaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. tempus urna at turpis condimentum lobortis.",
             "product_image": "shopify://shop_images/john.png",
             "author_name": "David B.",
             "product_name": "Dairy Active Shot",
@@ -506,6 +515,7 @@
         "full_width": true,
         "imagebg": "shopify://shop_images/Rectangle_2.png",
         "title": "Tap into a wealth of expert insights, tailored advice, and community support.",
+        "subdetails": "Bio-K+ Kommunity",
         "details": "Access exclusive masterclasses, personalized tips, and a network of health enthusiasts. Elevate your gut health with Bio-K+ probiotics and enjoy special perks in our vibrant Gut Kommunity!",
         "desktop_content_alignment": "left",
         "padding_top": 40,
@@ -588,7 +598,7 @@
           "type": "heading",
           "settings": {
             "heading": "Follow us on Instagram",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_Jqx3iD": {

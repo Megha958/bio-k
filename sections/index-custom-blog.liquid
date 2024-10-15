@@ -33,8 +33,12 @@
 <div class="index-article blog-latest-article section-padding">
   <div class="page-width">
     <div class="section-title {{ section.settings.desktop_content_alignment }}">
+      {% if section.settings.heading != blank %}
       <h2 class="h2">{{ section.settings.heading }}</h2>
-      <p>{{ section.settings.heading  }}</p>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+      <p>{{ section.settings.subheading  }}</p>
+      {% endif %}
     </div>
 
     <div class="latest-article-cards swiper">
@@ -72,7 +76,7 @@
                         {% endfor %}
                         
                         {% unless tag_found %}
-                          <div class="label label_1">{{ tag }}</div>
+                          <div class="label label_{{ forloop.index }}">{{ tag }}</div>
                         {% endunless %}
                       {% endfor %}
                 </div>
