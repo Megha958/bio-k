@@ -1072,7 +1072,7 @@ span.power-span {
 }
 
 .page-width {
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 /* slider */
 
